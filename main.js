@@ -12,7 +12,7 @@ const animateCounters = () => {
   counters.forEach((counter) => {
     const target = Number(counter.dataset.target);
     let current = 0;
-    const totalFrames = 280;
+    const totalFrames = 380;
     const increment = Math.max(1, Math.ceil(target / totalFrames));
 
     const updateCounter = () => {

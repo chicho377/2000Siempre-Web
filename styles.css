@@ -41,6 +41,12 @@ body {
   color: var(--brand-orange);
 }
 
+.navbar-logo {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
 .navbar-nav {
   gap: 10px;
   margin-left: auto;
@@ -509,6 +515,10 @@ footer {
 
   .navbar-brand {
     font-size: 1.2rem;
+  }
+
+  .navbar-logo {
+    height: 40px;
   }
 
   .navbar .container {

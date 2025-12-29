@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2000 Siempre</title>
+  <title>2000 Siempre - Constructora y otros</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,9 +24,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#inicio">Siempre<span>Constructora</span></a>
+      <a class="navbar-brand fw-bold" href="#inicio">2000<span>Siempre</span></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -53,7 +53,7 @@
             <a class="nav-link" href="#estadisticas">Impacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#galeria">Galería>Ga>
+            <a class="nav-link" href="#galeria">Galería</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contacto">Contacto</a>
@@ -64,53 +64,64 @@
   </nav>
 
   <header id="inicio" class="hero">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <source src="2000%20Siempre_%20Proyecto%20Ruta%2027.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
+        <div class="col-lg-7" data-aos="fade-right">
           <p class="text-uppercase fw-semibold mb-3">Constructora de confianza</p>
-          <h1 class="display-4 fw-bold">Construimos espacios que inspiran y perduran</h1>
+          <h1 class="display-4 fw-bold hero-title">
+            Construimos espacios <span>que inspiran y perduran</span>
+          </h1>
           <p class="lead mt-4">
             Soluciones integrales para proyectos residenciales, comerciales e industriales. Tecnología,
             seguridad y sostenibilidad al servicio de tu inversión.
           </p>
-          <div class="d-flex gap-3 mt-4">
-            <a href="#contacto" class="btn btn-primary btn-lg">Cotiza tu proyecto</a>
-            <a href="#servicios" class="btn btn-outline-light btn-lg">Conoce más</a>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#contacto" class="btn btn-primary btn-lg hero-cta">Cotiza tu proyecto</a>
+            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline">Conoce más</a>
           </div>
-        </div>
-        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
-          <div class="row g-3">
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-helmet-safety fa-2x text-primary mb-3"></i>
-                <h5 class="fw-bold">Seguridad total</h5>
-                <p class="mb-0">Protocolos certificados para cada obra.</p>
-              </div>
+          <div class="hero-badges mt-4">
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fa-solid fa-helmet-safety me-2"></i>Seguridad certificada
+            </span>
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fa-solid fa-seedling me-2"></i>Sostenibilidad real
+            </span>
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fa-solid fa-compass-drafting me-2"></i>Diseño contemporáneo
+            </span>
+          </div>
+          <div class="hero-stats mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <h3>+420</h3>
+              <p>Obras ejecutadas</p>
             </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
-                <h5 class="fw-bold">Sostenibilidad</h5>
-                <p class="mb-0">Diseños ecoeficientes y materiales responsables.</p>
-              </div>
+            <div>
+              <h3>36 años</h3>
+              <p>Experiencia sólida</p>
             </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-compass-drafting fa-2x text-warning mb-3"></i>
-                <h5 class="fw-bold">Diseño moderno</h5>
-                <p class="mb-0">Arquitectura funcional y estética.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-handshake-angle fa-2x text-primary mb-3"></i>
-                <h5 class="fw-bold">Acompañamiento</h5>
-                <p class="mb-0">Gestión integral en cada etapa.</p>
-              </div>
+            <div>
+              <h3>98%</h3>
+              <p>Clientes satisfechos</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+      <small>Desliza</small>
     </div>
   </header>
 
@@ -309,6 +320,93 @@
     </div>
   </section>
 
+  <section id="galeria" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="text-uppercase text-muted">Galería</p>
+        <h2 class="section-title">Proyectos que hablan por sí solos</h2>
+        <p class="mt-3 text-muted">
+          Una selección de obras entregadas que reflejan nuestro compromiso con la calidad, el diseño
+          y la innovación.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80"
+              alt="Complejo residencial moderno"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Residencial Mirador</h5>
+              <p class="mb-0">Diseño bioclimático y acabados premium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=800&q=80"
+              alt="Torre corporativa"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Torre Corporativa Norte</h5>
+              <p class="mb-0">Espacios flexibles para empresas globales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+              alt="Complejo urbano"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Distrito Urbano</h5>
+              <p class="mb-0">Infraestructura conectada y sostenible.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
+              alt="Proyecto industrial"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Planta Industrial Sigma</h5>
+              <p class="mb-0">Optimización logística y seguridad total.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80"
+              alt="Centro comercial"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Centro Comercial Plaza Viva</h5>
+              <p class="mb-0">Experiencias de compra con luz natural.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-card">
+            <img
+              src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80"
+              alt="Urbanismo residencial"
+            />
+            <div class="gallery-overlay">
+              <h5 class="mb-1">Conjunto Vista Azul</h5>
+              <p class="mb-0">Áreas sociales y zonas verdes integradas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contacto" class="py-5">
     <div class="container">
       <div class="row">
@@ -338,25 +436,32 @@
         </div>
         <div class="col-lg-7 mt-5 mt-lg-0" data-aos="fade-left">
           <div class="contact-section">
-            <form id="contactForm" class="row g-3">
+            <form id="contactForm" class="row g-3" novalidate>
+              <div class="col-12">
+                <p class="form-hint mb-0">Los campos marcados con <span class="required-marker">*</span> son obligatorios.</p>
+              </div>
               <div class="col-md-6">
-                <label class="form-label" for="nombre">Nombre</label>
+                <label class="form-label" for="nombre">Nombre <span class="required-marker">*</span></label>
                 <input type="text" class="form-control" id="nombre" required />
+                <div class="invalid-feedback">Escribe tu nombre completo.</div>
               </div>
               <div class="col-md-6">
                 <label class="form-label" for="empresa">Empresa</label>
                 <input type="text" class="form-control" id="empresa" />
+                <div class="form-text">Opcional: cuéntanos de tu empresa.</div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="correo">Correo</label>
+                <label class="form-label" for="correo">Correo <span class="required-marker">*</span></label>
                 <input type="email" class="form-control" id="correo" required />
+                <div class="invalid-feedback">Usa un correo válido (ej: nombre@correo.com).</div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="telefono">Teléfono</label>
+                <label class="form-label" for="telefono">Teléfono <span class="required-marker">*</span></label>
                 <input type="tel" class="form-control" id="telefono" required />
+                <div class="invalid-feedback">Ingresa un número con al menos 8 dígitos.</div>
               </div>
               <div class="col-12">
-                <label class="form-label" for="proyecto">Tipo de proyecto</label>
+                <label class="form-label" for="proyecto">Tipo de proyecto <span class="required-marker">*</span></label>
                 <select class="form-select" id="proyecto" required>
                   <option value="" selected disabled>Selecciona una opción</option>
                   <option>Residencial</option>
@@ -364,17 +469,20 @@
                   <option>Industrial</option>
                   <option>Infraestructura pública</option>
                 </select>
+                <div class="invalid-feedback">Selecciona un tipo de proyecto.</div>
               </div>
               <div class="col-12">
-                <label class="form-label" for="mensaje">Cuéntanos tu necesidad</label>
+                <label class="form-label" for="mensaje">Cuéntanos tu necesidad <span class="required-marker">*</span></label>
                 <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                <div class="invalid-feedback">Describe brevemente tu necesidad.</div>
               </div>
               <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="terminos" required />
                   <label class="form-check-label" for="terminos">
-                    Acepto el tratamiento de datos.
+                    Acepto el tratamiento de datos. <span class="required-marker">*</span>
                   </label>
+                  <div class="invalid-feedback">Debes aceptar el tratamiento de datos.</div>
                 </div>
                 <button type="submit" class="btn btn-contact btn-lg text-white">
                   Enviar solicitud

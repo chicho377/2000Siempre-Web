@@ -43,12 +43,13 @@ body {
 
 .navbar-logo {
   display: block;
-  height: 48px;
+  height: 56px;
   width: auto;
 }
 
 .navbar-nav {
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 16px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -58,8 +59,8 @@ body {
 .navbar .nav-link {
   color: rgba(11, 61, 145, 0.85);
   font-weight: 600;
-  padding: 12px 22px;
-  font-size: 1.05rem;
+  padding: 14px 22px;
+  font-size: 1.15rem;
   border-radius: 999px;
   transition: all 0.3s ease;
   text-align: center;
@@ -518,7 +519,7 @@ footer {
   }
 
   .navbar-logo {
-    height: 40px;
+    height: 46px;
   }
 
   .navbar .container {
@@ -526,11 +527,13 @@ footer {
   }
 
   .navbar-nav {
-    gap: 4px;
+    column-gap: 4px;
+    row-gap: 10px;
   }
 
   .navbar .nav-link {
-    padding: 10px 14px;
+    padding: 12px 14px;
+    font-size: 1.1rem;
     width: 100%;
     text-align: left;
   }

@@ -18,6 +18,14 @@ body {
   color: #1b1b1b;
 }
 
+.bot-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .topbar {
   position: fixed;
   top: 0;
@@ -543,10 +551,11 @@ footer {
 
 @media (max-width: 768px) {
   :root {
-    --topbar-height: 56px;
+    --topbar-height: 0px;
   }
 
   .topbar {
+    display: none;
     font-size: 0.85rem;
   }
 

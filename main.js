@@ -4,6 +4,58 @@ AOS.init({
   once: true,
 });
 
+if (window.gsap) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroTimeline = gsap.timeline({
+    defaults: { duration: 0.9, ease: "power3.out" },
+  });
+
+  heroTimeline
+    .from(".navbar", { y: -20, opacity: 0 })
+    .from(".hero .text-uppercase", { y: 20, opacity: 0 })
+    .from(".hero-title", { y: 30, opacity: 0 })
+    .from(".hero .lead", { y: 20, opacity: 0 })
+    .from(".hero .hero-cta, .hero .hero-cta-outline", {
+      y: 15,
+      opacity: 0,
+      stagger: 0.15,
+    })
+    .from(".hero-badges .hero-badge", {
+      y: 20,
+      opacity: 0,
+      stagger: 0.12,
+    })
+    .from(".hero-stats > div", {
+      y: 20,
+      opacity: 0,
+      stagger: 0.15,
+    });
+
+  const staggerSections = [
+    { trigger: "#servicios", targets: "#servicios .card" },
+    { trigger: "#proceso", targets: "#proceso .card" },
+    { trigger: "#proyectos", targets: "#proyectos .carousel, #proyectos ul li" },
+    { trigger: "#estadisticas", targets: "#estadisticas .stat-card" },
+    { trigger: "#galeria", targets: "#galeria .gallery-card" },
+    { trigger: "#contacto", targets: "#contacto .col-lg-5 > * , #contacto .contact-section" },
+  ];
+
+  staggerSections.forEach(({ trigger, targets }) => {
+    gsap.from(targets, {
+      scrollTrigger: {
+        trigger,
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.12,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  });
+}
+
 const statsSection = document.querySelector("#estadisticas");
 const counters = document.querySelectorAll(".stat-number");
 let countersStarted = false;

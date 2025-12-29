@@ -7,6 +7,19 @@ AOS.init({
 const statsSection = document.querySelector("#estadisticas");
 const counters = document.querySelectorAll(".stat-number");
 let countersStarted = false;
+const navbar = document.querySelector(".navbar");
+
+const updateNavbar = () => {
+  if (!navbar) return;
+  if (window.scrollY > 40) {
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+};
+
+window.addEventListener("scroll", updateNavbar);
+updateNavbar();
 
 const animateCounters = () => {
   counters.forEach((counter) => {

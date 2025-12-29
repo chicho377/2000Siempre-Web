@@ -5,6 +5,12 @@
   --brand-light: #f4f7fb;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: var(--brand-light);
@@ -21,6 +27,8 @@ body {
 
 .navbar .container {
   gap: 12px;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .navbar-brand {

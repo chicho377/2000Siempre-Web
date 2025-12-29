@@ -3,6 +3,7 @@
   --brand-blue-dark: #082f6b;
   --brand-orange: #f47c20;
   --brand-light: #f4f7fb;
+  --topbar-height: 40px;
 }
 
 html,
@@ -17,12 +18,67 @@ body {
   color: #1b1b1b;
 }
 
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--topbar-height);
+  background: #fff;
+  border-bottom: 1px solid rgba(11, 61, 145, 0.12);
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+}
+
+.topbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topbar-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+}
+
+.topbar-info i {
+  color: var(--brand-blue);
+  margin-right: 6px;
+}
+
+.topbar-separator {
+  color: #6c7a92;
+  font-weight: 600;
+}
+
+.topbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.topbar-links a {
+  color: #4a4a4a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.topbar-links a:hover,
+.topbar-links a:focus {
+  color: var(--brand-blue);
+}
+
 .navbar {
   background: #fff;
   box-shadow: 0 18px 40px rgba(3, 18, 48, 0.12);
-  padding: 26px 0;
   border-bottom: 1px solid rgba(11, 61, 145, 0.08);
   backdrop-filter: blur(8px);
+  top: var(--topbar-height);
 }
 
 .navbar .container {
@@ -41,8 +97,15 @@ body {
   color: var(--brand-orange);
 }
 
+.navbar-logo {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
 .navbar-nav {
-  gap: 10px;
+  column-gap: 10px;
+  row-gap: 16px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -52,8 +115,8 @@ body {
 .navbar .nav-link {
   color: rgba(11, 61, 145, 0.85);
   font-weight: 600;
-  padding: 12px 22px;
-  font-size: 1.05rem;
+  padding: 14px 22px;
+  font-size: 1.15rem;
   border-radius: 999px;
   transition: all 0.3s ease;
   text-align: center;
@@ -84,7 +147,7 @@ body {
   overflow: hidden;
   min-height: 92vh;
   color: #fff;
-  padding: 140px 0 120px;
+  padding: calc(140px + var(--topbar-height)) 0 120px;
 }
 
 .hero::before {
@@ -479,8 +542,27 @@ footer {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --topbar-height: 56px;
+  }
+
+  .topbar {
+    font-size: 0.85rem;
+  }
+
+  .topbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .topbar-info,
+  .topbar-links {
+    gap: 12px;
+  }
+
   .hero {
-    padding: 120px 0 80px;
+    padding: calc(120px + var(--topbar-height)) 0 80px;
   }
 
   .hero-scroll {
@@ -511,16 +593,22 @@ footer {
     font-size: 1.2rem;
   }
 
+  .navbar-logo {
+    height: 46px;
+  }
+
   .navbar .container {
     gap: 8px;
   }
 
   .navbar-nav {
-    gap: 4px;
+    column-gap: 4px;
+    row-gap: 10px;
   }
 
   .navbar .nav-link {
-    padding: 10px 14px;
+    padding: 12px 14px;
+    font-size: 1.1rem;
     width: 100%;
     text-align: left;
   }
@@ -539,7 +627,7 @@ footer {
 
 @media (max-width: 576px) {
   .hero {
-    padding: 110px 0 70px;
+    padding: calc(110px + var(--topbar-height)) 0 70px;
   }
 
   .hero h1 {

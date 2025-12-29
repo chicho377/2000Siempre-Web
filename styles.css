@@ -543,10 +543,11 @@ footer {
 
 @media (max-width: 768px) {
   :root {
-    --topbar-height: 56px;
+    --topbar-height: 0px;
   }
 
   .topbar {
+    display: none;
     font-size: 0.85rem;
   }
 

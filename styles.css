@@ -452,6 +452,36 @@ footer {
   .gallery-card img {
     height: 240px;
   }
+
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .navbar .container {
+    gap: 8px;
+  }
+
+  .navbar-nav {
+    gap: 4px;
+  }
+
+  .navbar .nav-link {
+    padding: 10px 14px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbar-collapse {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 16px;
+    background: rgba(8, 47, 107, 0.95);
+    box-shadow: 0 16px 30px rgba(3, 18, 48, 0.3);
+  }
 }
 
 @media (max-width: 576px) {

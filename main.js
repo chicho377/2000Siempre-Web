@@ -56,6 +56,8 @@ if (statsSection) {
 }
 
 const contactForm = document.querySelector("#contactForm");
+const botField = document.querySelector("#website");
+const formStartTime = Date.now();
 const formFields = {
   nombre: {
     label: "Nombre",
@@ -110,6 +112,27 @@ if (contactForm) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const errors = [];
+    const elapsed = Date.now() - formStartTime;
+
+    if (botField && botField.value.trim() !== "") {
+      swal({
+        title: "Verificación de seguridad",
+        text: "Se detectó actividad automatizada. Intenta nuevamente.",
+        icon: "error",
+        button: "Entendido",
+      });
+      return;
+    }
+
+    if (elapsed < 2000) {
+      swal({
+        title: "Verificación de seguridad",
+        text: "Por favor completa el formulario con calma antes de enviarlo.",
+        icon: "warning",
+        button: "Entendido",
+      });
+      return;
+    }
 
     Object.keys(formFields).forEach((fieldId) => {
       const isValid = validateField(fieldId);

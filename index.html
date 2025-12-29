@@ -64,53 +64,65 @@
   </nav>
 
   <header id="inicio" class="hero">
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      poster="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80"
+    >
+      <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-construction-site-9704/1080p.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
+        <div class="col-lg-7" data-aos="fade-right">
           <p class="text-uppercase fw-semibold mb-3">Constructora de confianza</p>
-          <h1 class="display-4 fw-bold">Construimos espacios que inspiran y perduran</h1>
+          <h1 class="display-4 fw-bold hero-title">
+            Construimos espacios <span>que inspiran y perduran</span>
+          </h1>
           <p class="lead mt-4">
             Soluciones integrales para proyectos residenciales, comerciales e industriales. Tecnología,
             seguridad y sostenibilidad al servicio de tu inversión.
           </p>
-          <div class="d-flex gap-3 mt-4">
-            <a href="#contacto" class="btn btn-primary btn-lg">Cotiza tu proyecto</a>
-            <a href="#servicios" class="btn btn-outline-light btn-lg">Conoce más</a>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a href="#contacto" class="btn btn-primary btn-lg hero-cta">Cotiza tu proyecto</a>
+            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline">Conoce más</a>
           </div>
-        </div>
-        <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
-          <div class="row g-3">
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-helmet-safety fa-2x text-primary mb-3"></i>
-                <h5 class="fw-bold">Seguridad total</h5>
-                <p class="mb-0">Protocolos certificados para cada obra.</p>
-              </div>
+          <div class="hero-badges mt-4">
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="100">
+              <i class="fa-solid fa-helmet-safety me-2"></i>Seguridad certificada
+            </span>
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="200">
+              <i class="fa-solid fa-seedling me-2"></i>Sostenibilidad real
+            </span>
+            <span class="hero-badge" data-aos="zoom-in" data-aos-delay="300">
+              <i class="fa-solid fa-compass-drafting me-2"></i>Diseño contemporáneo
+            </span>
+          </div>
+          <div class="hero-stats mt-4" data-aos="fade-up" data-aos-delay="400">
+            <div>
+              <h3>+420</h3>
+              <p>Obras ejecutadas</p>
             </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
-                <h5 class="fw-bold">Sostenibilidad</h5>
-                <p class="mb-0">Diseños ecoeficientes y materiales responsables.</p>
-              </div>
+            <div>
+              <h3>36 años</h3>
+              <p>Experiencia sólida</p>
             </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-compass-drafting fa-2x text-warning mb-3"></i>
-                <h5 class="fw-bold">Diseño moderno</h5>
-                <p class="mb-0">Arquitectura funcional y estética.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="card card-hover p-4">
-                <i class="fa-solid fa-handshake-angle fa-2x text-primary mb-3"></i>
-                <h5 class="fw-bold">Acompañamiento</h5>
-                <p class="mb-0">Gestión integral en cada etapa.</p>
-              </div>
+            <div>
+              <h3>98%</h3>
+              <p>Clientes satisfechos</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+      <small>Desliza</small>
     </div>
   </header>
 

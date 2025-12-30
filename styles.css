@@ -505,6 +505,47 @@ body {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+.section-space {
+  position: relative;
+  padding: 110px 0;
+}
+
+.section-glow::before,
+.section-glow::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(244, 124, 32, 0.18), transparent 65%);
+  filter: blur(1px);
+  animation: glowFloat 14s ease-in-out infinite;
+  z-index: 0;
+}
+
+.section-glow::before {
+  top: -120px;
+  right: 8%;
+}
+
+.section-glow::after {
+  bottom: -140px;
+  left: 6%;
+  animation-delay: 4s;
+}
+
+.section-glow > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))
+    translateY(var(--lift, 0px));
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
 .card-hover {
   border: none;
   border-radius: 20px;

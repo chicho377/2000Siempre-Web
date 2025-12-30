@@ -384,8 +384,38 @@ body {
 }
 
 .section-title {
+  position: relative;
+  display: inline-block;
   font-weight: 700;
   color: var(--brand-blue);
+  z-index: 1;
+}
+
+.section-title::before {
+  content: attr(data-bg);
+  position: absolute;
+  left: 0;
+  top: 55%;
+  transform: translateY(-50%);
+  font-size: clamp(2.4rem, 8.5vw, 6.4rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(11, 61, 145, 0.12);
+  white-space: nowrap;
+  z-index: -1;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  animation: titleReveal 4.8s steps(24, end) forwards;
+}
+
+.section-title.section-title--centered::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-title.section-title--light::before {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .card-hover {
@@ -730,10 +760,26 @@ footer {
   }
 }
 
+@keyframes titleReveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.2;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .section-title::before {
+    animation: none;
+    clip-path: inset(0 0 0 0);
   }
 }

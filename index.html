@@ -81,6 +81,9 @@
       </div>
     </div>
   </nav>
+  <button class="back-to-top" type="button" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <header id="inicio" class="hero">
     <video
@@ -95,9 +98,9 @@
     <div class="hero-video-progress" aria-hidden="true">
       <span class="hero-video-progress__fill"></span>
     </div>
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
+    <div class="hero-orb hero-orb-1" data-depth="18"></div>
+    <div class="hero-orb hero-orb-2" data-depth="12"></div>
+    <div class="hero-orb hero-orb-3" data-depth="8"></div>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7" data-aos="fade-right">
@@ -110,8 +113,8 @@
             seguridad y sostenibilidad al servicio de tu inversión.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#contacto" class="btn btn-primary btn-lg hero-cta">Cotiza tu proyecto</a>
-            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline">Conoce más</a>
+            <a href="#contacto" class="btn btn-primary btn-lg hero-cta btn-glow">Cotiza tu proyecto</a>
+            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline btn-glow">Conoce más</a>
           </div>
           <div class="hero-badges mt-4">
             <span class="hero-badge" data-aos="zoom-in" data-aos-delay="100">
@@ -147,7 +150,7 @@
     </div>
   </header>
 
-  <section id="servicios" class="py-5">
+  <section id="servicios" class="py-5 section-space section-glow">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <p class="text-uppercase text-muted">Nuestros servicios</p>
@@ -155,28 +158,28 @@
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" data-aos="zoom-in">
-          <div class="card card-hover h-100 p-4">
+          <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
             <h5 class="fw-bold">Construcción llave en mano</h5>
             <p>Desde planos hasta entrega final con acabados premium.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="card card-hover h-100 p-4">
+          <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-pen-ruler fa-2x text-warning mb-3"></i>
             <h5 class="fw-bold">Diseño y arquitectura</h5>
             <p>Conceptos personalizados, renders y visualizaciones 3D.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="card card-hover h-100 p-4">
+          <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-chart-line fa-2x text-success mb-3"></i>
             <h5 class="fw-bold">Gerencia de obra</h5>
             <p>Control de cronograma, presupuestos y calidad.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="card card-hover h-100 p-4">
+          <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-city fa-2x text-primary mb-3"></i>
             <h5 class="fw-bold">Infraestructura urbana</h5>
             <p>Soluciones para vías, parques y espacios públicos.</p>
@@ -186,7 +189,7 @@
     </div>
   </section>
 
-  <section id="proyectos" class="py-5 bg-white">
+  <section id="proyectos" class="py-5 bg-white section-space">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5" data-aos="fade-right">
@@ -246,7 +249,7 @@
     </div>
   </section>
 
-  <section id="proceso" class="py-5">
+  <section id="proceso" class="py-5 section-space section-glow">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up">
@@ -278,25 +281,25 @@
         <div class="col-lg-6" data-aos="fade-left">
           <div class="row g-4">
             <div class="col-md-6">
-              <div class="card card-hover p-4 h-100">
+              <div class="card card-hover tilt-card p-4 h-100">
                 <h5 class="fw-bold">Equipo experto</h5>
                 <p>Ingenieros, arquitectos y técnicos con alta especialización.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card card-hover p-4 h-100">
+              <div class="card card-hover tilt-card p-4 h-100">
                 <h5 class="fw-bold">Innovación continua</h5>
                 <p>Automatización, drones y monitoreo inteligente de obra.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card card-hover p-4 h-100">
+              <div class="card card-hover tilt-card p-4 h-100">
                 <h5 class="fw-bold">Certificaciones</h5>
                 <p>ISO 9001 y estándares internacionales de sostenibilidad.</p>
               </div>
             </div>
             <div class="col-md-6">
-              <div class="card card-hover p-4 h-100">
+              <div class="card card-hover tilt-card p-4 h-100">
                 <h5 class="fw-bold">Compras eficientes</h5>
                 <p>Alianzas estratégicas para reducir costos y tiempos.</p>
               </div>
@@ -307,7 +310,7 @@
     </div>
   </section>
 
-  <section id="estadisticas" class="stats py-5">
+  <section id="estadisticas" class="stats py-5 section-space">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <p class="text-uppercase text-light">Resultados</p>
@@ -315,25 +318,25 @@
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" data-aos="zoom-in">
-          <div class="stat-card text-center">
+          <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="420">0</div>
             <p class="mb-0">Proyectos finalizados</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="stat-card text-center">
+          <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="120">0</div>
             <p class="mb-0">Clientes corporativos</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="stat-card text-center">
+          <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="36">0</div>
             <p class="mb-0">Años de experiencia</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="stat-card text-center">
+          <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="98">0</div>
             <p class="mb-0">Satisfacción (%)</p>
           </div>
@@ -342,7 +345,7 @@
     </div>
   </section>
 
-  <section id="galeria" class="py-5 bg-white">
+  <section id="galeria" class="py-5 bg-white section-space section-glow">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <p class="text-uppercase text-muted">Galería</p>
@@ -354,7 +357,7 @@
       </div>
       <div class="row g-4">
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80"
               alt="Complejo residencial moderno"
@@ -366,7 +369,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=800&q=80"
               alt="Torre corporativa"
@@ -378,7 +381,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
               alt="Complejo urbano"
@@ -390,7 +393,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80"
               alt="Proyecto industrial"
@@ -402,7 +405,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80"
               alt="Centro comercial"
@@ -414,7 +417,7 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-card">
+          <div class="gallery-card tilt-card">
             <img
               src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=800&q=80"
               alt="Urbanismo residencial"
@@ -429,7 +432,7 @@
     </div>
   </section>
 
-  <section id="contacto" class="py-5">
+  <section id="contacto" class="py-5 section-space">
     <div class="container">
       <div class="row">
         <div class="col-lg-5" data-aos="fade-right">
@@ -517,7 +520,7 @@
                   </label>
                   <div class="invalid-feedback">Debes aceptar el tratamiento de datos.</div>
                 </div>
-                <button type="submit" class="btn btn-contact btn-lg text-white">
+                <button type="submit" class="btn btn-contact btn-lg text-white btn-glow">
                   Enviar solicitud
                 </button>
               </div>

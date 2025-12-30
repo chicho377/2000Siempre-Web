@@ -60,6 +60,9 @@ let countersStarted = false;
 const navbar = document.querySelector(".navbar");
 const backToTopButton = document.querySelector(".back-to-top");
 const tiltCards = document.querySelectorAll(".tilt-card");
+const navbarCollapse = document.querySelector("#navbarNav");
+const navbarToggler = document.querySelector(".navbar-toggler");
+const navbarLinks = document.querySelectorAll(".navbar .nav-link");
 
 const updateNavbar = () => {
   if (!navbar) return;
@@ -90,6 +93,17 @@ handleScroll();
 if (backToTopButton) {
   backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+if (navbarCollapse && navbarToggler && navbarLinks.length) {
+  navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (!navbarCollapse.classList.contains("show")) return;
+      const collapse = bootstrap.Collapse.getInstance(navbarCollapse) ||
+        new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      collapse.hide();
+    });
   });
 }
 

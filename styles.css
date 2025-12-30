@@ -165,11 +165,67 @@ body {
 }
 
 .navbar-toggler {
-  border-color: rgba(11, 61, 145, 0.3);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: rgba(11, 61, 145, 0.08);
+  box-shadow: 0 10px 24px rgba(3, 18, 48, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background: rgba(11, 61, 145, 0.16);
+  box-shadow: 0 12px 28px rgba(3, 18, 48, 0.18);
+  transform: translateY(-1px);
+}
+
+.navbar-toggler-icon {
+  width: 28px;
+  height: 2px;
+  background-color: var(--brand-blue-dark);
+  display: inline-block;
+  position: relative;
+  border-radius: 999px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 28px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: var(--brand-blue-dark);
+  transition: transform 0.2s ease, top 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-toggler-icon::before {
+  top: -8px;
+}
+
+.navbar-toggler-icon::after {
+  top: 8px;
 }
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0.2rem rgba(244, 124, 32, 0.35);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .hero {
@@ -829,17 +885,34 @@ footer {
     font-size: 1.1rem;
     width: 100%;
     text-align: left;
+    background: rgba(11, 61, 145, 0.05);
+    border: 1px solid rgba(11, 61, 145, 0.1);
+    box-shadow: 0 10px 18px rgba(3, 18, 48, 0.06);
   }
 
   .navbar-collapse {
     margin-top: 12px;
     padding: 12px;
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 16px 30px rgba(3, 18, 48, 0.15);
+    background: linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(235, 242, 255, 0.95));
+    box-shadow: 0 18px 38px rgba(3, 18, 48, 0.18);
+    border: 1px solid rgba(11, 61, 145, 0.12);
     width: 100%;
     max-height: calc(100vh - 90px);
     overflow-y: auto;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .navbar-collapse.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .navbar-collapse.collapsing {
+    opacity: 0;
+    transform: translateY(-6px);
   }
 }
 

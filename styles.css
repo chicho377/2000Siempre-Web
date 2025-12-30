@@ -878,6 +878,12 @@ footer {
   .navbar-nav {
     column-gap: 4px;
     row-gap: 10px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
   }
 
   .navbar .nav-link {
@@ -885,9 +891,17 @@ footer {
     font-size: 1.1rem;
     width: 100%;
     text-align: left;
-    background: rgba(11, 61, 145, 0.05);
+    background: linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(11, 61, 145, 0.02));
     border: 1px solid rgba(11, 61, 145, 0.1);
     box-shadow: 0 10px 18px rgba(3, 18, 48, 0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .nav-link:focus {
+    background: linear-gradient(135deg, rgba(11, 61, 145, 0.14), rgba(244, 124, 32, 0.08));
   }
 
   .navbar-collapse {

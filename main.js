@@ -4,6 +4,87 @@ AOS.init({
   once: true,
 });
 
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (window.gsap && window.ScrollTrigger && !prefersReducedMotion) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".hero-orb-1", {
+    y: -60,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".hero-orb-2", {
+    y: -40,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap.to(".hero-orb-3", {
+    y: 30,
+    scrollTrigger: {
+      trigger: ".hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      },
+    })
+    .to(
+      ".crane",
+      {
+        y: 70,
+        ease: "none",
+      },
+      0
+    )
+    .to(
+      ".crane-boom",
+      {
+        rotate: -10,
+        ease: "none",
+      },
+      0.05
+    )
+    .to(
+      ".crane-line",
+      {
+        height: 320,
+        ease: "none",
+      },
+      0.15
+    )
+    .to(
+      ".crane-load",
+      {
+        x: -20,
+        y: 14,
+        rotate: -4,
+        ease: "none",
+      },
+      0.2
+    );
+
+}
+
 const heroVideo = document.querySelector(".hero-video");
 const heroVideoProgress = document.querySelector(".hero-video-progress__fill");
 

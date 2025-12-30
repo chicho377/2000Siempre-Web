@@ -18,6 +18,135 @@ body {
   color: #1b1b1b;
 }
 
+.crane-scene {
+  position: fixed;
+  right: clamp(16px, 4vw, 36px);
+  top: 140px;
+  width: min(220px, 28vw);
+  height: 520px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.crane {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: bottom right;
+}
+
+.crane-mast {
+  position: absolute;
+  right: 24px;
+  bottom: 40px;
+  width: 16px;
+  height: 72%;
+  background: linear-gradient(180deg, #f7c55e, #d6792c);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.crane-cab {
+  position: absolute;
+  right: 6px;
+  bottom: calc(72% + 30px);
+  width: 60px;
+  height: 34px;
+  background: #f47c20;
+  border-radius: 8px 12px 8px 8px;
+  box-shadow: 0 12px 25px rgba(3, 18, 48, 0.2);
+}
+
+.crane-cab::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  width: 24px;
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.crane-boom {
+  position: absolute;
+  right: 32px;
+  bottom: calc(72% + 40px);
+  width: 170px;
+  height: 12px;
+  background: linear-gradient(90deg, #f7c55e, #f47c20);
+  border-radius: 999px;
+  transform-origin: right center;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.crane-boom-tip {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #f47c20;
+  transform: translateY(-50%);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+
+.crane-line {
+  position: absolute;
+  left: 0;
+  bottom: calc(72% + 40px);
+  width: 2px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.65);
+  transform-origin: top center;
+}
+
+.crane-hook {
+  position: absolute;
+  left: -6px;
+  bottom: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  border-top-color: transparent;
+  transform: rotate(-35deg);
+}
+
+.crane-load {
+  position: absolute;
+  left: -18px;
+  bottom: -12px;
+  width: 38px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #ffffff, #dfe6f2);
+  box-shadow: 0 10px 25px rgba(3, 18, 48, 0.25);
+}
+
+.crane-load::after {
+  content: "";
+  position: absolute;
+  inset: 6px 8px;
+  border-radius: 6px;
+  border: 2px dashed rgba(11, 61, 145, 0.35);
+}
+
+.section-title,
+.hero-title,
+.hero-badge,
+.hero-stats div,
+.card-hover,
+.timeline-item,
+.stat-card,
+.gallery-card,
+.contact-section {
+  will-change: transform, opacity;
+}
+
 .bot-field {
   position: absolute;
   left: -10000px;
@@ -574,6 +703,10 @@ footer {
     --topbar-height: 0px;
   }
 
+  .crane-scene {
+    display: none;
+  }
+
   .topbar {
     display: none;
     font-size: 0.85rem;
@@ -735,5 +868,9 @@ footer {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .crane-scene {
+    display: none;
   }
 }

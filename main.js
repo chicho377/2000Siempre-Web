@@ -4,6 +4,25 @@ AOS.init({
   once: true,
 });
 
+const heroVideo = document.querySelector(".hero-video");
+const heroVideoProgress = document.querySelector(".hero-video-progress__fill");
+
+const updateHeroVideoProgress = () => {
+  if (!heroVideo || !heroVideoProgress) return;
+  if (!heroVideo.duration || Number.isNaN(heroVideo.duration)) return;
+  const progress = Math.min(100, (heroVideo.currentTime / heroVideo.duration) * 100);
+  heroVideoProgress.style.width = `${progress}%`;
+};
+
+if (heroVideo && heroVideoProgress) {
+  heroVideo.addEventListener("loadedmetadata", updateHeroVideoProgress);
+  heroVideo.addEventListener("timeupdate", updateHeroVideoProgress);
+  heroVideo.addEventListener("seeked", updateHeroVideoProgress);
+  heroVideo.addEventListener("ended", () => {
+    heroVideoProgress.style.width = "0%";
+  });
+}
+
 const statsSection = document.querySelector("#estadisticas");
 const counters = document.querySelectorAll(".stat-number");
 let countersStarted = false;

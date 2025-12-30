@@ -388,6 +388,58 @@ body {
   color: var(--brand-blue);
 }
 
+.section-heading {
+  position: relative;
+  width: 100%;
+}
+
+.section-heading::before {
+  content: attr(data-title);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(2.5rem, 6vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(11, 61, 145, 0.1);
+  white-space: nowrap;
+  z-index: 0;
+  overflow: hidden;
+  width: 0;
+  animation: section-title-reveal 1.8s steps(var(--letters, 10)) forwards;
+}
+
+.section-heading--center::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-heading--light::before {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.section-heading > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes section-title-reveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(var(--letters, 10) * 1ch);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-heading::before {
+    animation: none;
+    width: calc(var(--letters, 10) * 1ch);
+  }
+}
+
 .card-hover {
   border: none;
   border-radius: 20px;

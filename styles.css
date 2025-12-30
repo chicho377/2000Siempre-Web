@@ -203,6 +203,17 @@ body {
   z-index: 2;
 }
 
+.hero-title {
+  font-size: clamp(2.8rem, 3.8vw, 4.4rem);
+  line-height: 1.05;
+  text-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  animation: titleReveal 1.2s ease both;
+}
+
+.hero p.lead {
+  font-size: 1.2rem;
+}
+
 .hero-title span {
   color: var(--brand-orange);
   position: relative;
@@ -274,11 +285,11 @@ body {
 }
 
 .hero-badge:nth-child(2) {
-  animation-delay: 0.6s;
+  animation: drift 7s ease-in-out infinite;
 }
 
 .hero-badge:nth-child(3) {
-  animation-delay: 1.2s;
+  animation: popGlow 5s ease-in-out infinite;
 }
 
 .hero-stats {
@@ -300,6 +311,7 @@ body {
 .hero-stats h3 {
   margin-bottom: 6px;
   font-weight: 700;
+  font-size: 1.9rem;
 }
 
 .hero-stats p {
@@ -351,7 +363,7 @@ body {
   background: radial-gradient(circle, rgba(244, 124, 32, 0.4), transparent 70%);
   filter: blur(2px);
   z-index: 1;
-  animation: float 10s ease-in-out infinite;
+  animation: orbFloat 12s ease-in-out infinite;
 }
 
 .hero-orb-1 {
@@ -386,6 +398,23 @@ body {
 .section-title {
   font-weight: 700;
   color: var(--brand-blue);
+  font-size: clamp(2rem, 2.6vw, 3.1rem);
+  position: relative;
+  display: inline-block;
+  animation: titleReveal 1s ease both;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--brand-orange), #ffd2a6, transparent);
+  opacity: 0.9;
+  animation: glowLine 4s ease-in-out infinite;
 }
 
 .card-hover {
@@ -403,6 +432,7 @@ body {
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
   border: 1px solid transparent;
+  animation: cardFloat 8s ease-in-out infinite;
 }
 
 .card-hover:hover {
@@ -414,6 +444,15 @@ body {
   color: #fff;
 }
 
+.stats h2 {
+  font-size: clamp(2rem, 2.6vw, 3.2rem);
+}
+
+.card-hover h5,
+.timeline-item h5 {
+  font-size: 1.25rem;
+}
+
 .stats .stat-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 18px;
@@ -421,6 +460,7 @@ body {
   height: 100%;
   box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.08);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: softGlow 6s ease-in-out infinite;
 }
 
 .stats .stat-card:hover {
@@ -429,9 +469,10 @@ body {
 }
 
 .stat-number {
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--brand-orange);
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-item img {
@@ -445,6 +486,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 18px 35px rgba(11, 61, 145, 0.15);
+  animation: float 9s ease-in-out infinite;
 }
 
 .gallery-card img {
@@ -505,6 +547,7 @@ body {
   border-radius: 30px;
   box-shadow: 0 20px 40px rgba(11, 61, 145, 0.12);
   padding: 50px;
+  animation: cardFloat 10s ease-in-out infinite;
 }
 
 .form-hint {
@@ -603,7 +646,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
   }
 
   .carousel-item img {
@@ -660,7 +703,7 @@ footer {
   }
 
   .hero h1 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
   }
 
   #contactForm .col-12.d-flex {
@@ -695,6 +738,69 @@ footer {
   }
   50% {
     transform: scale(1.03);
+  }
+}
+
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-10px) translateX(6px);
+  }
+}
+
+@keyframes popGlow {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(244, 124, 32, 0);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(244, 124, 32, 0.5);
+  }
+}
+
+@keyframes orbFloat {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) translateX(12px) scale(1.05);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes softGlow {
+  0%,
+  100% {
+    box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.08);
+  }
+  50% {
+    box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.18);
   }
 }
 
@@ -735,5 +841,17 @@ footer {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .hero-title,
+  .section-title,
+  .hero-badge,
+  .hero-stats div,
+  .hero-orb,
+  .card-hover,
+  .stats .stat-card,
+  .gallery-card,
+  .contact-section {
+    animation: none;
   }
 }

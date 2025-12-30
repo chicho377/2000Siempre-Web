@@ -58,6 +58,15 @@ if (statsSection) {
 const contactForm = document.querySelector("#contactForm");
 const botField = document.querySelector("#website");
 const formStartTime = Date.now();
+const submitButton = contactForm?.querySelector("button[type='submit']");
+// Configura estos valores con tus credenciales de EmailJS.
+// El correo destino puede ser el mismo que uses para enviar (ver template en EmailJS).
+const emailConfig = {
+  serviceId: "TU_SERVICE_ID",
+  templateId: "TU_TEMPLATE_ID",
+  publicKey: "TU_PUBLIC_KEY",
+  recipientEmail: "contacto@siempreconstructora.com",
+};
 const formFields = {
   nombre: {
     label: "Nombre",
@@ -101,6 +110,10 @@ const validateField = (fieldId) => {
 };
 
 if (contactForm) {
+  if (typeof emailjs !== "undefined") {
+    emailjs.init(emailConfig.publicKey);
+  }
+
   Object.keys(formFields).forEach((fieldId) => {
     const element = document.querySelector(`#${fieldId}`);
     if (!element) return;
@@ -109,7 +122,7 @@ if (contactForm) {
     element.addEventListener(eventName, () => validateField(fieldId));
   });
 
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const errors = [];
     const elapsed = Date.now() - formStartTime;
@@ -152,17 +165,67 @@ if (contactForm) {
     }
 
     swal({
-      title: "¡Mensaje enviado!",
-      text: "Gracias por contactarnos. Un asesor se comunicará contigo pronto.",
-      icon: "success",
-      button: "Aceptar",
+      title: "Enviando...",
+      text: "Estamos enviando tu solicitud. Por favor espera.",
+      icon: "info",
+      buttons: false,
+      closeOnClickOutside: false,
+      closeOnEsc: false,
     });
-    contactForm.reset();
-    Object.keys(formFields).forEach((fieldId) => {
-      const element = document.querySelector(`#${fieldId}`);
-      if (element) {
-        element.classList.remove("is-valid", "is-invalid");
-      }
-    });
+
+    if (typeof emailjs === "undefined") {
+      swal({
+        title: "Error al enviar",
+        text: "El servicio de correo no está disponible. Intenta más tarde.",
+        icon: "error",
+        button: "Entendido",
+      });
+      return;
+    }
+
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const templateParams = {
+        nombre: document.querySelector("#nombre")?.value.trim() ?? "",
+        empresa: document.querySelector("#empresa")?.value.trim() ?? "",
+        correo: document.querySelector("#correo")?.value.trim() ?? "",
+        telefono: document.querySelector("#telefono")?.value.trim() ?? "",
+        proyecto: document.querySelector("#proyecto")?.value.trim() ?? "",
+        mensaje: document.querySelector("#mensaje")?.value.trim() ?? "",
+        to_email: emailConfig.recipientEmail,
+        reply_to: document.querySelector("#correo")?.value.trim() ?? "",
+      };
+
+      await emailjs.send(
+        emailConfig.serviceId,
+        emailConfig.templateId,
+        templateParams,
+        emailConfig.publicKey
+      );
+
+      swal({
+        title: "¡Mensaje enviado!",
+        text: "Gracias por contactarnos. Un asesor se comunicará contigo pronto.",
+        icon: "success",
+        button: "Aceptar",
+      });
+      contactForm.reset();
+      Object.keys(formFields).forEach((fieldId) => {
+        const element = document.querySelector(`#${fieldId}`);
+        if (element) {
+          element.classList.remove("is-valid", "is-invalid");
+        }
+      });
+    } catch (error) {
+      swal({
+        title: "No pudimos enviar tu solicitud",
+        text: "Verifica la configuración del correo y vuelve a intentarlo.",
+        icon: "error",
+        button: "Entendido",
+      });
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }

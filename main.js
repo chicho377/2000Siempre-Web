@@ -4,6 +4,46 @@ AOS.init({
   once: true,
 });
 
+const setupConstructionAnimation = () => {
+  const scene = document.querySelector(".construction-scene");
+  if (!scene || typeof gsap === "undefined") return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const timeline = gsap.timeline({
+    repeat: -1,
+    yoyo: true,
+    defaults: { ease: "sine.inOut" },
+  });
+
+  timeline
+    .to("#crane-trolley", { x: 140, duration: 3.2 })
+    .to("#crane-hook-line", { scaleY: 1.6, duration: 1.8 }, "<")
+    .to("#crane-hook-load", { y: 42, duration: 1.8 }, "<")
+    .to("#construction-cart", { x: 150, duration: 3 }, "<")
+    .to("#crane-hook-line", { scaleY: 1, duration: 1.8 })
+    .to("#crane-hook-load", { y: 0, duration: 1.8 }, "<")
+    .to("#construction-cart", { x: -120, duration: 3.2 }, "<");
+
+  gsap.to("#crane-arm", {
+    rotate: -1.5,
+    transformOrigin: "100px 105px",
+    duration: 2.6,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+
+  gsap.to("#crane-hook-load", {
+    rotate: 3,
+    duration: 2.4,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+  });
+};
+
+setupConstructionAnimation();
+
 const heroVideo = document.querySelector(".hero-video");
 const heroVideoProgress = document.querySelector(".hero-video-progress__fill");
 

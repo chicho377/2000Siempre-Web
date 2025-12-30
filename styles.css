@@ -377,6 +377,69 @@ body {
   animation-delay: 2s;
 }
 
+.construction-showcase {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(234, 242, 255, 0.95));
+}
+
+.construction-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+}
+
+.construction-highlights h5 {
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-bottom: 4px;
+}
+
+.construction-highlights p {
+  margin: 0;
+  color: #546582;
+  font-size: 0.95rem;
+}
+
+.construction-scene {
+  position: relative;
+  border-radius: 26px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 30px 55px rgba(11, 61, 145, 0.16);
+  overflow: hidden;
+}
+
+.construction-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.scene-glow {
+  position: absolute;
+  inset: 10% 8%;
+  border-radius: 24px;
+  background: radial-gradient(circle at top right, rgba(244, 124, 32, 0.18), transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#crane-hook-line {
+  transform-origin: top center;
+  transform-box: fill-box;
+}
+
+#crane-arm {
+  transform-origin: left center;
+  transform-box: fill-box;
+}
+
+#crane-hook-load {
+  transform-origin: top center;
+  transform-box: fill-box;
+}
+
 .navbar.navbar-scrolled {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(6px);
@@ -651,6 +714,10 @@ footer {
     width: 100%;
     max-height: calc(100vh - 90px);
     overflow-y: auto;
+  }
+
+  .construction-scene {
+    padding: 16px;
   }
 }
 

@@ -6,6 +6,8 @@ AOS.init({
 
 const heroVideo = document.querySelector(".hero-video");
 const heroVideoProgress = document.querySelector(".hero-video-progress__fill");
+const heroSection = document.querySelector(".hero");
+const heroOrbs = document.querySelectorAll(".hero-orb");
 
 const updateHeroVideoProgress = () => {
   if (!heroVideo || !heroVideoProgress) return;
@@ -23,10 +25,49 @@ if (heroVideo && heroVideoProgress) {
   });
 }
 
+if (heroSection && heroOrbs.length) {
+  let heroTicking = false;
+
+  const handleHeroMove = (event) => {
+    if (heroTicking) return;
+    heroTicking = true;
+    window.requestAnimationFrame(() => {
+      const { left, top, width, height } = heroSection.getBoundingClientRect();
+      const x = (event.clientX - left - width / 2) / (width / 2);
+      const y = (event.clientY - top - height / 2) / (height / 2);
+
+      heroOrbs.forEach((orb) => {
+        const depth = Number(orb.dataset.depth || 10);
+        const translateX = x * depth;
+        const translateY = y * depth;
+        orb.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+      });
+      heroTicking = false;
+    });
+  };
+
+  heroSection.addEventListener("mousemove", handleHeroMove);
+  heroSection.addEventListener("mouseleave", () => {
+    heroOrbs.forEach((orb) => {
+      orb.style.transform = "translate3d(0, 0, 0)";
+    });
+  });
+}
+
 const statsSection = document.querySelector("#estadisticas");
 const counters = document.querySelectorAll(".stat-number");
 let countersStarted = false;
 const navbar = document.querySelector(".navbar");
+const backToTopButton = document.querySelector(".back-to-top");
+const tiltCards = document.querySelectorAll(".tilt-card");
+const parallaxSections = [
+  document.querySelector("#servicios"),
+  document.querySelector("#proyectos"),
+  document.querySelector("#proceso"),
+  document.querySelector("#estadisticas"),
+  document.querySelector("#galeria"),
+  document.querySelector("#contacto"),
+].filter(Boolean);
 
 const updateNavbar = () => {
   if (!navbar) return;
@@ -37,8 +78,47 @@ const updateNavbar = () => {
   }
 };
 
-window.addEventListener("scroll", updateNavbar);
-updateNavbar();
+const updateBackToTop = () => {
+  if (!backToTopButton) return;
+  if (window.scrollY > 280) {
+    backToTopButton.classList.add("is-visible");
+  } else {
+    backToTopButton.classList.remove("is-visible");
+  }
+};
+
+let parallaxTicking = false;
+const updateParallax = () => {
+  if (!parallaxSections.length) return;
+  parallaxSections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const midpoint = rect.top + rect.height / 2;
+    const offset = (midpoint - window.innerHeight / 2) / window.innerHeight;
+    const translate = Math.max(-20, Math.min(20, offset * -40));
+    section.style.setProperty("--parallax-offset", `${translate}px`);
+  });
+};
+
+const handleScroll = () => {
+  updateNavbar();
+  updateBackToTop();
+  if (!parallaxTicking) {
+    parallaxTicking = true;
+    requestAnimationFrame(() => {
+      updateParallax();
+      parallaxTicking = false;
+    });
+  }
+};
+
+window.addEventListener("scroll", handleScroll);
+handleScroll();
+
+if (backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 const animateCounters = () => {
   counters.forEach((counter) => {
@@ -73,6 +153,72 @@ const observer = new IntersectionObserver(
 if (statsSection) {
   observer.observe(statsSection);
 }
+
+if (tiltCards.length) {
+  tiltCards.forEach((card) => {
+    let rafId = null;
+
+    const handleMove = (event) => {
+      if (rafId) return;
+      rafId = requestAnimationFrame(() => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * 12;
+        const rotateX = ((y / rect.height) - 0.5) * -12;
+        card.style.setProperty("--tilt-x", `${rotateX.toFixed(2)}deg`);
+        card.style.setProperty("--tilt-y", `${rotateY.toFixed(2)}deg`);
+        rafId = null;
+      });
+    };
+
+    const resetTilt = () => {
+      card.style.setProperty("--tilt-x", "0deg");
+      card.style.setProperty("--tilt-y", "0deg");
+    };
+
+    card.addEventListener("mousemove", handleMove);
+    card.addEventListener("mouseleave", resetTilt);
+    card.addEventListener("blur", resetTilt);
+  });
+}
+
+const revealTargets = [
+  ".section-title",
+  ".card-hover",
+  ".gallery-card",
+  ".stat-card",
+  ".timeline-item",
+  ".contact-section",
+  ".hero-stats div",
+  ".hero-badge",
+  ".hero-scroll",
+].flatMap((selector) => Array.from(document.querySelectorAll(selector)));
+
+const uniqueRevealTargets = Array.from(new Set(revealTargets)).filter(Boolean);
+uniqueRevealTargets.forEach((element, index) => {
+  element.classList.add("scroll-reveal");
+  const delay = Math.min(index * 0.06, 0.4);
+  element.style.setProperty("--reveal-delay", `${delay}s`);
+});
+
+if (uniqueRevealTargets.length) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observerInstance.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+
+  uniqueRevealTargets.forEach((element) => revealObserver.observe(element));
+}
+
+parallaxSections.forEach((section) => section.classList.add("parallax-section"));
 
 const contactForm = document.querySelector("#contactForm");
 const botField = document.querySelector("#website");

@@ -418,6 +418,44 @@ body {
   color: rgba(255, 255, 255, 0.2);
 }
 
+.section-heading {
+  position: relative;
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.section-heading::before {
+  content: attr(data-bg);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(2.6rem, 9vw, 6.8rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(11, 61, 145, 0.12);
+  white-space: nowrap;
+  z-index: 0;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  animation: titleReveal 3.4s ease forwards;
+}
+
+.section-heading.is-centered::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-heading.is-light::before {
+  color: rgba(255, 255, 255, 0.18);
+}
+
+.section-heading > * {
+  position: relative;
+  z-index: 1;
+}
+
 .card-hover {
   border: none;
   border-radius: 20px;

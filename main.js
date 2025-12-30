@@ -58,6 +58,7 @@ const statsSection = document.querySelector("#estadisticas");
 const counters = document.querySelectorAll(".stat-number");
 let countersStarted = false;
 const navbar = document.querySelector(".navbar");
+const backToTopButton = document.querySelector(".back-to-top");
 const tiltCards = document.querySelectorAll(".tilt-card");
 
 const updateNavbar = () => {
@@ -69,8 +70,28 @@ const updateNavbar = () => {
   }
 };
 
-window.addEventListener("scroll", updateNavbar);
-updateNavbar();
+const updateBackToTop = () => {
+  if (!backToTopButton) return;
+  if (window.scrollY > 280) {
+    backToTopButton.classList.add("is-visible");
+  } else {
+    backToTopButton.classList.remove("is-visible");
+  }
+};
+
+const handleScroll = () => {
+  updateNavbar();
+  updateBackToTop();
+};
+
+window.addEventListener("scroll", handleScroll);
+handleScroll();
+
+if (backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 const animateCounters = () => {
   counters.forEach((counter) => {

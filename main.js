@@ -62,10 +62,10 @@ const submitButton = contactForm?.querySelector("button[type='submit']");
 // Configura estos valores con tus credenciales de EmailJS.
 // El correo destino puede ser el mismo que uses para enviar (ver template en EmailJS).
 const emailConfig = {
-  serviceId: "TU_SERVICE_ID",
-  templateId: "TU_TEMPLATE_ID",
-  publicKey: "TU_PUBLIC_KEY",
-  recipientEmail: "contacto@siempreconstructora.com",
+  serviceId: "service_cglw2gm",
+  templateId: "template_dkvl05j",
+  publicKey: "SgowLeMIqAxlzBs7s",
+  recipientEmail: "cotizaciones@2000siempre.com",
 };
 const formFields = {
   nombre: {

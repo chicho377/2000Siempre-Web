@@ -15,6 +15,7 @@
   const divider = projectModal.querySelector(".before-after__line");
   const handle = projectModal.querySelector(".before-after__handle");
   const rangeInput = projectModal.querySelector(".before-after__range");
+  const frame = projectModal.querySelector(".before-after__frame");
 
   const updateBeforeAfter = (value) => {
     if (!overlay || !divider || !handle) {
@@ -29,6 +30,48 @@
   rangeInput?.addEventListener("input", (event) => {
     updateBeforeAfter(event.target.value);
   });
+
+  let isDragging = false;
+
+  const updateFromPointer = (event) => {
+    if (!frame || !rangeInput) {
+      return;
+    }
+    const rect = frame.getBoundingClientRect();
+    const rawPosition = event.clientX - rect.left;
+    const clampedPosition = Math.min(Math.max(rawPosition, 0), rect.width);
+    const percentage = Math.round((clampedPosition / rect.width) * 100);
+    rangeInput.value = percentage;
+    updateBeforeAfter(percentage);
+  };
+
+  const startDrag = (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+    isDragging = true;
+    frame?.setPointerCapture?.(event.pointerId);
+    updateFromPointer(event);
+  };
+
+  const stopDrag = (event) => {
+    if (!isDragging) {
+      return;
+    }
+    isDragging = false;
+    frame?.releasePointerCapture?.(event.pointerId);
+  };
+
+  handle?.addEventListener("pointerdown", startDrag);
+  frame?.addEventListener("pointerdown", startDrag);
+  window.addEventListener("pointermove", (event) => {
+    if (!isDragging) {
+      return;
+    }
+    updateFromPointer(event);
+  });
+  window.addEventListener("pointerup", stopDrag);
+  window.addEventListener("pointercancel", stopDrag);
 
   projectModal.addEventListener("show.bs.modal", (event) => {
     const trigger = event.relatedTarget;

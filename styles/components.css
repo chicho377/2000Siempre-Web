@@ -211,6 +211,8 @@
   border-radius: 16px;
   overflow: hidden;
   background: #e9edf5;
+  touch-action: none;
+  cursor: ew-resize;
 }
 
 .before-after__image {
@@ -253,6 +255,8 @@
   place-items: center;
   color: var(--brand-blue);
   box-shadow: 0 12px 25px rgba(3, 18, 48, 0.25);
+  cursor: ew-resize;
+  touch-action: none;
 }
 
 .before-after__range {

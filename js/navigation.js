@@ -31,6 +31,44 @@
   window.addEventListener("scroll", handleScroll);
   handleScroll();
 
+  const prefersReducedMotion = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReducedMotion) {
+    let targetScroll = window.scrollY;
+    let isAnimating = false;
+    const scrollBoost = 1.2;
+    const clampTarget = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      targetScroll = Math.max(0, Math.min(targetScroll, maxScroll));
+    };
+    const animateScroll = () => {
+      const current = window.scrollY;
+      const distance = targetScroll - current;
+      if (Math.abs(distance) < 0.5) {
+        window.scrollTo(0, targetScroll);
+        isAnimating = false;
+        return;
+      }
+      window.scrollTo(0, current + distance * 0.2);
+      requestAnimationFrame(animateScroll);
+    };
+
+    window.addEventListener(
+      "wheel",
+      (event) => {
+        if (event.ctrlKey) return;
+        targetScroll += event.deltaY * scrollBoost;
+        clampTarget();
+        if (!isAnimating) {
+          isAnimating = true;
+          requestAnimationFrame(animateScroll);
+        }
+        event.preventDefault();
+      },
+      { passive: false }
+    );
+  }
+
   if (backToTopButton) {
     backToTopButton.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });

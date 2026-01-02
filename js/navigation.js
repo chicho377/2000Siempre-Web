@@ -47,4 +47,43 @@
       });
     });
   }
+
+  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  if (!prefersReducedMotion) {
+    let targetScrollY = window.scrollY;
+    let isAnimating = false;
+
+    const getScrollLimit = () => document.documentElement.scrollHeight - window.innerHeight;
+
+    const animateScroll = () => {
+      const currentScrollY = window.scrollY;
+      const distance = targetScrollY - currentScrollY;
+      const step = distance * 0.12;
+      if (Math.abs(distance) < 0.5) {
+        isAnimating = false;
+        return;
+      }
+      window.scrollTo({ top: currentScrollY + step });
+      requestAnimationFrame(animateScroll);
+    };
+
+    window.addEventListener(
+      "wheel",
+      (event) => {
+        if (event.ctrlKey) return;
+        event.preventDefault();
+        const delta = event.deltaY;
+        const speedBoost = Math.min(2.4, Math.max(1.1, Math.abs(delta) / 40 + 0.9));
+        targetScrollY = Math.min(
+          getScrollLimit(),
+          Math.max(0, targetScrollY + delta * speedBoost)
+        );
+        if (!isAnimating) {
+          isAnimating = true;
+          requestAnimationFrame(animateScroll);
+        }
+      },
+      { passive: false }
+    );
+  }
 })();

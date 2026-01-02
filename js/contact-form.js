@@ -12,29 +12,31 @@
     publicKey: "SgowLeMIqAxlzBs7s",
   };
 
+  const t = (key, vars) => window.siteI18n?.t(key, vars) ?? key;
+
   const formFields = {
     nombre: {
-      label: "Nombre",
+      labelKey: "form.fields.nombre",
       validator: (value) => value.trim().length >= 2,
     },
     correo: {
-      label: "Correo",
+      labelKey: "form.fields.correo",
       validator: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()),
     },
     telefono: {
-      label: "Teléfono",
-      validator: (value) => /^[0-9+\s()-]{7,}$/.test(value.trim()),
+      labelKey: "form.fields.telefono",
+      validator: (value) => /^[0-9+\\s()-]{7,}$/.test(value.trim()),
     },
     proyecto: {
-      label: "Tipo de proyecto",
+      labelKey: "form.fields.proyecto",
       validator: (value) => value.trim() !== "",
     },
     mensaje: {
-      label: "Mensaje",
+      labelKey: "form.fields.mensaje",
       validator: (value) => value.trim().length >= 10,
     },
     terminos: {
-      label: "Tratamiento de datos",
+      labelKey: "form.fields.terminos",
       validator: (value, element) => element.checked,
     },
   };
@@ -73,20 +75,20 @@
 
     if (botField && botField.value.trim() !== "") {
       swal({
-        title: "Verificación de seguridad",
-        text: "Se detectó actividad automatizada. Intenta nuevamente.",
+        title: t("form.alert.bot.title"),
+        text: t("form.alert.bot.text"),
         icon: "error",
-        button: "Entendido",
+        button: t("form.alert.bot.button"),
       });
       return;
     }
 
     if (elapsed < 2000) {
       swal({
-        title: "Verificación de seguridad",
-        text: "Por favor completa el formulario con calma antes de enviarlo.",
+        title: t("form.alert.speed.title"),
+        text: t("form.alert.speed.text"),
         icon: "warning",
-        button: "Entendido",
+        button: t("form.alert.speed.button"),
       });
       return;
     }
@@ -94,23 +96,23 @@
     Object.keys(formFields).forEach((fieldId) => {
       const isValid = validateField(fieldId);
       if (!isValid) {
-        errors.push(formFields[fieldId].label);
+        errors.push(t(formFields[fieldId].labelKey));
       }
     });
 
     if (errors.length > 0) {
       swal({
-        title: "Revisa los campos pendientes",
-        text: `Falta completar o corregir: ${errors.join(", ")}.`,
+        title: t("form.alert.errors.title"),
+        text: t("form.alert.errors.text", { fields: errors.join(", ") }),
         icon: "warning",
-        button: "Entendido",
+        button: t("form.alert.errors.button"),
       });
       return;
     }
 
     swal({
-      title: "Enviando...",
-      text: "Estamos enviando tu solicitud. Por favor espera.",
+      title: t("form.alert.sending.title"),
+      text: t("form.alert.sending.text"),
       icon: "info",
       buttons: false,
       closeOnClickOutside: false,
@@ -119,10 +121,10 @@
 
     if (typeof emailjs === "undefined") {
       swal({
-        title: "Error al enviar",
-        text: "El servicio de correo no está disponible. Intenta más tarde.",
+        title: t("form.alert.emailUnavailable.title"),
+        text: t("form.alert.emailUnavailable.text"),
         icon: "error",
-        button: "Entendido",
+        button: t("form.alert.emailUnavailable.button"),
       });
       return;
     }
@@ -148,10 +150,10 @@
       );
 
       swal({
-        title: "¡Mensaje enviado!",
-        text: "Gracias por contactarnos. Un asesor se comunicará contigo pronto.",
+        title: t("form.alert.success.title"),
+        text: t("form.alert.success.text"),
         icon: "success",
-        button: "Aceptar",
+        button: t("form.alert.success.button"),
       });
       contactForm.reset();
       Object.keys(formFields).forEach((fieldId) => {
@@ -162,10 +164,10 @@
       });
     } catch (error) {
       swal({
-        title: "No pudimos enviar tu solicitud",
-        text: "Verifica la configuración del correo y vuelve a intentarlo.",
+        title: t("form.alert.failure.title"),
+        text: t("form.alert.failure.text"),
         icon: "error",
-        button: "Entendido",
+        button: t("form.alert.failure.button"),
       });
     } finally {
       if (submitButton) submitButton.disabled = false;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>2000 Siempre - Constructora y otros</title>
+  <title data-i18n="page.title">2000 Siempre - Constructora y otros</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -36,8 +36,8 @@
         <span class="topbar-separator">ISO 9001</span>
       </div>
       <div class="topbar-links">
-        <a href="#contacto">Contacto</a>
-        <a href="#contacto">Empleo</a>
+        <a href="#contacto" data-i18n="topbar.contact">Contacto</a>
+        <a href="#contacto" data-i18n="topbar.jobs">Empleo</a>
       </div>
     </div>
   </div>
@@ -57,6 +57,7 @@
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
+        data-i18n-attrs="aria-label:nav.toggle"
         aria-label="Toggle navigation"
       >
         <span class="navbar-toggler-icon"></span>
@@ -64,31 +65,43 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#servicios">Servicios</a>
+            <a class="nav-link" href="#servicios" data-i18n="nav.services">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#proyectos">Proyectos</a>
+            <a class="nav-link" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#maquinaria">Maquinaria</a>
+            <a class="nav-link" href="#maquinaria" data-i18n="nav.equipment">Maquinaria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#proceso">Proceso</a>
+            <a class="nav-link" href="#proceso" data-i18n="nav.process">Proceso</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#estadisticas">Impacto</a>
+            <a class="nav-link" href="#estadisticas" data-i18n="nav.impact">Impacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#galeria">Galería</a>
+            <a class="nav-link" href="#galeria" data-i18n="nav.gallery">Galería</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contacto">Contacto</a>
+            <a class="nav-link" href="#contacto" data-i18n="nav.contact">Contacto</a>
           </li>
         </ul>
+        <div class="d-flex ms-lg-3 mt-3 mt-lg-0">
+          <button
+            id="languageToggle"
+            class="btn btn-outline-primary btn-sm"
+            type="button"
+            data-i18n="language.toggle"
+            data-i18n-attrs="aria-label:language.toggleAria"
+            aria-label="Cambiar idioma a inglés"
+          >
+            English
+          </button>
+        </div>
       </div>
     </div>
   </nav>
-  <button class="back-to-top" type="button" aria-label="Volver arriba">
+  <button class="back-to-top" type="button" data-i18n-attrs="aria-label:backToTop" aria-label="Volver arriba">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
@@ -108,17 +121,17 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7" data-aos="fade-right">
-          <p class="text-uppercase fw-semibold mb-3">Constructora de confianza</p>
-          <h1 class="display-4 fw-bold hero-title">
+          <p class="text-uppercase fw-semibold mb-3" data-i18n="hero.tagline">Constructora de confianza</p>
+          <h1 class="display-4 fw-bold hero-title" data-i18n-html="hero.title">
             Construimos espacios <span>que inspiran y perduran</span>
           </h1>
-          <p class="lead mt-4">
+          <p class="lead mt-4" data-i18n="hero.description">
             Soluciones integrales para proyectos residenciales, comerciales e industriales. Tecnología,
             seguridad y sostenibilidad al servicio de tu inversión.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
-            <a href="#contacto" class="btn btn-primary btn-lg hero-cta btn-glow">Cotiza tu proyecto</a>
-            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline btn-glow">Conoce más</a>
+            <a href="#contacto" class="btn btn-primary btn-lg hero-cta btn-glow" data-i18n="hero.ctaQuote">Cotiza tu proyecto</a>
+            <a href="#servicios" class="btn btn-outline-light btn-lg hero-cta-outline btn-glow" data-i18n="hero.ctaLearn">Conoce más</a>
           </div>
           <div class="hero-video-cta mt-4">
             <button
@@ -126,10 +139,11 @@
               type="button"
               data-bs-toggle="modal"
               data-bs-target="#heroVideoModal"
+              data-i18n-attrs="aria-label:hero.videoAria"
               aria-label="Ver video en pantalla completa"
             >
               <i class="fa-solid fa-play"></i>
-              Ver video completo
+              <span data-i18n="hero.videoButton">Ver video completo</span>
             </button>
           </div>
         </div>
@@ -137,7 +151,7 @@
     </div>
     <div class="hero-scroll">
       <span></span>
-      <small>Desliza</small>
+      <small data-i18n="hero.scroll">Desliza</small>
     </div>
   </header>
 
@@ -151,13 +165,13 @@
     <div class="modal-dialog modal-dialog-centered modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="heroVideoModalLabel">Video Ruta 27</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <h5 class="modal-title" id="heroVideoModalLabel" data-i18n="heroVideo.title">Video Ruta 27</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
           <video class="hero-modal-video" controls preload="metadata">
             <source src="VideoRuta27Cortado.mp4" type="video/mp4" />
-            Tu navegador no soporta la reproducción de video.
+            <span data-i18n="heroVideo.fallback">Tu navegador no soporta la reproducción de video.</span>
           </video>
         </div>
       </div>
@@ -167,36 +181,36 @@
   <section id="servicios" class="py-5 section-space section-glow">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <p class="text-uppercase text-muted">Nuestros servicios</p>
-        <h2 class="section-title">Soluciones completas para tu proyecto</h2>
+        <p class="text-uppercase text-muted" data-i18n="services.label">Nuestros servicios</p>
+        <h2 class="section-title" data-i18n="services.title">Soluciones completas para tu proyecto</h2>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" data-aos="zoom-in">
           <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
-            <h5 class="fw-bold">Construcción llave en mano</h5>
-            <p>Desde planos hasta entrega final con acabados premium.</p>
+            <h5 class="fw-bold" data-i18n="services.card1.title">Construcción llave en mano</h5>
+            <p data-i18n="services.card1.desc">Desde planos hasta entrega final con acabados premium.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
           <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-pen-ruler fa-2x text-warning mb-3"></i>
-            <h5 class="fw-bold">Diseño y arquitectura</h5>
-            <p>Conceptos personalizados, renders y visualizaciones 3D.</p>
+            <h5 class="fw-bold" data-i18n="services.card2.title">Diseño y arquitectura</h5>
+            <p data-i18n="services.card2.desc">Conceptos personalizados, renders y visualizaciones 3D.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
           <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-chart-line fa-2x text-success mb-3"></i>
-            <h5 class="fw-bold">Gerencia de obra</h5>
-            <p>Control de cronograma, presupuestos y calidad.</p>
+            <h5 class="fw-bold" data-i18n="services.card3.title">Gerencia de obra</h5>
+            <p data-i18n="services.card3.desc">Control de cronograma, presupuestos y calidad.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
           <div class="card card-hover tilt-card h-100 p-4">
             <i class="fa-solid fa-city fa-2x text-primary mb-3"></i>
-            <h5 class="fw-bold">Infraestructura urbana</h5>
-            <p>Soluciones para vías, parques y espacios públicos.</p>
+            <h5 class="fw-bold" data-i18n="services.card4.title">Infraestructura urbana</h5>
+            <p data-i18n="services.card4.desc">Soluciones para vías, parques y espacios públicos.</p>
           </div>
         </div>
       </div>
@@ -207,30 +221,31 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5" data-aos="fade-right">
-          <p class="text-uppercase text-muted">Portafolio</p>
-          <h2 class="section-title">Proyectos emblemáticos</h2>
-          <p class="mt-3">
+          <p class="text-uppercase text-muted" data-i18n="projects.label">Portafolio</p>
+          <h2 class="section-title" data-i18n="projects.title">Proyectos emblemáticos</h2>
+          <p class="mt-3" data-i18n="projects.description">
             Hemos acompañado a nuestros clientes en proyectos de alto impacto para la región. Desde
             complejos corporativos hasta desarrollos residenciales de alto nivel.
           </p>
           <ul class="list-unstyled mt-4">
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Centros logísticos y bodegas inteligentes.</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Viviendas ecoeficientes y sostenibles.</li>
-            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i>Espacios comerciales con diseño integral.</li>
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><span data-i18n="projects.bullet1">Centros logísticos y bodegas inteligentes.</span></li>
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><span data-i18n="projects.bullet2">Viviendas ecoeficientes y sostenibles.</span></li>
+            <li class="mb-2"><i class="fa-solid fa-circle-check text-success me-2"></i><span data-i18n="projects.bullet3">Espacios comerciales con diseño integral.</span></li>
           </ul>
         </div>
         <div class="col-lg-7" data-aos="fade-left">
           <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="0" class="active" aria-current="true" data-i18n-attrs="aria-label:carousel.project.slide1" aria-label="Diapositiva 1"></button>
+              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="1" data-i18n-attrs="aria-label:carousel.project.slide2" aria-label="Diapositiva 2"></button>
+              <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="2" data-i18n-attrs="aria-label:carousel.project.slide3" aria-label="Diapositiva 3"></button>
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
                   src="./img/3.png"
                   class="d-block w-100"
+                  data-i18n-attrs="alt:projects.carousel.alt1"
                   alt="Proyecto residencial"
                 />
               </div>
@@ -238,6 +253,7 @@
                 <img
                   src="./img/6.png"
                   class="d-block w-100"
+                  data-i18n-attrs="alt:projects.carousel.alt2"
                   alt="Complejo corporativo"
                 />
               </div>
@@ -245,17 +261,18 @@
                 <img
                   src="./img/Imagen10.png"
                   class="d-block w-100"
+                  data-i18n-attrs="alt:projects.carousel.alt3"
                   alt="Infraestructura urbana"
                 />
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
+              <span class="visually-hidden" data-i18n="common.previous">Anterior</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
+              <span class="visually-hidden" data-i18n="common.next">Siguiente</span>
             </button>
           </div>
         </div>
@@ -266,9 +283,9 @@
   <section id="maquinaria" class="py-5 section-space equipment-section">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <p class="text-uppercase text-muted">Maquinaria y equipo</p>
-        <h2 class="section-title">Tecnología pesada para proyectos de gran escala</h2>
-        <p class="mt-3 text-muted">
+        <p class="text-uppercase text-muted" data-i18n="equipment.label">Maquinaria y equipo</p>
+        <h2 class="section-title" data-i18n="equipment.title">Tecnología pesada para proyectos de gran escala</h2>
+        <p class="mt-3 text-muted" data-i18n="equipment.description">
           Contamos con una flota robusta y moderna para asegurar productividad, seguridad y precisión
           en cada obra. Desde movimiento de tierra hasta acabados industriales.
         </p>
@@ -276,24 +293,24 @@
       <div id="equipmentCarousel" class="carousel slide equipment-carousel" data-bs-ride="carousel" data-aos="zoom-in">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./img/4.png" class="d-block w-100" alt="Excavadoras y equipo pesado en obra" />
+            <img src="./img/4.png" class="d-block w-100" data-i18n-attrs="alt:equipment.carousel.alt1" alt="Excavadoras y equipo pesado en obra" />
           </div>
           <div class="carousel-item">
-            <img src="./img/2.png" class="d-block w-100" alt="Grúas y montaje estructural" />
+            <img src="./img/2.png" class="d-block w-100" data-i18n-attrs="alt:equipment.carousel.alt2" alt="Grúas y montaje estructural" />
           </div>
           <div class="carousel-item">
-            <img src="./img/1.png" class="d-block w-100" alt="Flota de maquinaria en planta industrial" />
+            <img src="./img/1.png" class="d-block w-100" data-i18n-attrs="alt:equipment.carousel.alt3" alt="Flota de maquinaria en planta industrial" />
           </div>
         </div>
       </div>
-      <div class="equipment-carousel-controls" aria-label="Controles de carrusel de maquinaria">
+      <div class="equipment-carousel-controls" data-i18n-attrs="aria-label:equipment.carousel.controls" aria-label="Controles de carrusel de maquinaria">
         <button class="carousel-control-prev" type="button" data-bs-target="#equipmentCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Anterior</span>
+          <span class="visually-hidden" data-i18n="common.previous">Anterior</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#equipmentCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Siguiente</span>
+          <span class="visually-hidden" data-i18n="common.next">Siguiente</span>
         </button>
       </div>
     </div>
@@ -303,28 +320,28 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up">
-          <p class="text-uppercase text-muted">Metodología</p>
-          <h2 class="section-title">Transparencia en cada etapa</h2>
-          <p class="mt-3">
+          <p class="text-uppercase text-muted" data-i18n="process.label">Metodología</p>
+          <h2 class="section-title" data-i18n="process.title">Transparencia en cada etapa</h2>
+          <p class="mt-3" data-i18n="process.description">
             Nuestro proceso está diseñado para reducir riesgos y asegurar la rentabilidad del proyecto.
             Cada etapa cuenta con especialistas dedicados y reportes en tiempo real.
           </p>
           <div class="timeline mt-4">
             <div class="timeline-item">
-              <h5 class="fw-bold">Diagnóstico y planeación</h5>
-              <p>Evaluamos viabilidad, presupuesto y cronograma de ejecución.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline1.title">Diagnóstico y planeación</h5>
+              <p data-i18n="process.timeline1.desc">Evaluamos viabilidad, presupuesto y cronograma de ejecución.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold">Diseño y preconstrucción</h5>
-              <p>Modelos BIM, coordinación de especialidades y aprobación legal.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline2.title">Diseño y preconstrucción</h5>
+              <p data-i18n="process.timeline2.desc">Modelos BIM, coordinación de especialidades y aprobación legal.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold">Construcción y control</h5>
-              <p>Seguimiento con KPIs, seguridad industrial y calidad certificada.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline3.title">Construcción y control</h5>
+              <p data-i18n="process.timeline3.desc">Seguimiento con KPIs, seguridad industrial y calidad certificada.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold">Entrega y postventa</h5>
-              <p>Documentación completa, garantías y acompañamiento continuo.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline4.title">Entrega y postventa</h5>
+              <p data-i18n="process.timeline4.desc">Documentación completa, garantías y acompañamiento continuo.</p>
             </div>
           </div>
         </div>
@@ -332,26 +349,26 @@
           <div class="row g-4">
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold">Equipo experto</h5>
-                <p>Ingenieros, arquitectos y técnicos con alta especialización.</p>
+                <h5 class="fw-bold" data-i18n="process.card1.title">Equipo experto</h5>
+                <p data-i18n="process.card1.desc">Ingenieros, arquitectos y técnicos con alta especialización.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold">Innovación continua</h5>
-                <p>Automatización, drones y monitoreo inteligente de obra.</p>
+                <h5 class="fw-bold" data-i18n="process.card2.title">Innovación continua</h5>
+                <p data-i18n="process.card2.desc">Automatización, drones y monitoreo inteligente de obra.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold">Certificaciones</h5>
-                <p>ISO 9001 y estándares internacionales de sostenibilidad.</p>
+                <h5 class="fw-bold" data-i18n="process.card3.title">Certificaciones</h5>
+                <p data-i18n="process.card3.desc">ISO 9001 y estándares internacionales de sostenibilidad.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold">Compras eficientes</h5>
-                <p>Alianzas estratégicas para reducir costos y tiempos.</p>
+                <h5 class="fw-bold" data-i18n="process.card4.title">Compras eficientes</h5>
+                <p data-i18n="process.card4.desc">Alianzas estratégicas para reducir costos y tiempos.</p>
               </div>
             </div>
           </div>
@@ -363,32 +380,32 @@
   <section id="estadisticas" class="stats py-5 section-space">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <p class="text-uppercase text-light">Resultados</p>
-        <h2 class="text-white fw-bold">Impacto que se puede medir</h2>
+        <p class="text-uppercase text-light" data-i18n="stats.label">Resultados</p>
+        <h2 class="text-white fw-bold" data-i18n="stats.title">Impacto que se puede medir</h2>
       </div>
       <div class="row g-4">
         <div class="col-md-6 col-lg-3" data-aos="zoom-in">
           <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="420">0</div>
-            <p class="mb-0">Proyectos finalizados</p>
+            <p class="mb-0" data-i18n="stats.item1">Proyectos finalizados</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
           <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="120">0</div>
-            <p class="mb-0">Clientes corporativos</p>
+            <p class="mb-0" data-i18n="stats.item2">Clientes corporativos</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
           <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="36">0</div>
-            <p class="mb-0">Años de experiencia</p>
+            <p class="mb-0" data-i18n="stats.item3">Años de experiencia</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
           <div class="stat-card text-center tilt-card">
             <div class="stat-number" data-target="98">0</div>
-            <p class="mb-0">Satisfacción (%)</p>
+            <p class="mb-0" data-i18n="stats.item4">Satisfacción (%)</p>
           </div>
         </div>
       </div>
@@ -398,9 +415,9 @@
   <section id="galeria" class="py-5 bg-white section-space section-glow">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
-        <p class="text-uppercase text-muted">Galería</p>
-        <h2 class="section-title">Proyectos que hablan por sí solos</h2>
-        <p class="mt-3 text-muted">
+        <p class="text-uppercase text-muted" data-i18n="gallery.label">Galería</p>
+        <h2 class="section-title" data-i18n="gallery.title">Proyectos que hablan por sí solos</h2>
+        <p class="mt-3 text-muted" data-i18n="gallery.description">
           Una selección de obras entregadas que reflejan nuestro compromiso con la calidad, el diseño
           y la innovación.
         </p>
@@ -414,17 +431,19 @@
             data-bs-target="#projectModal"
             data-title="Residencial Mirador"
             data-description="Complejo residencial con diseño bioclimático, terrazas panorámicas y acabados premium que priorizan la sostenibilidad."
+            data-i18n-attrs="data-title:gallery.item1.title,data-description:gallery.item1.desc"
             data-images="./img/Imagen8.png|./img/Imagen2.png|./img/Imagen3.png"
             data-before="./img/Imagen1.png"
             data-after="./img/Imagen8.png"
           >
             <img
               src="./img/Imagen8.png"
+              data-i18n-attrs="alt:gallery.item1.alt"
               alt="Complejo residencial moderno"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Residencial Mirador</h5>
-              <p class="mb-0">Diseño bioclimático y acabados premium.</p>
+              <h5 class="mb-1" data-i18n="gallery.item1.title">Residencial Mirador</h5>
+              <p class="mb-0" data-i18n="gallery.item1.overlay">Diseño bioclimático y acabados premium.</p>
             </div>
           </button>
         </div>
@@ -436,17 +455,19 @@
             data-bs-target="#projectModal"
             data-title="Torre Corporativa Norte"
             data-description="Torre inteligente con lobbies de doble altura, espacios flexibles para empresas globales y certificación energética."
+            data-i18n-attrs="data-title:gallery.item2.title,data-description:gallery.item2.desc"
             data-images="./img/Imagen6.png|./img/6.png|./img/Imagen10.png"
             data-before="./img/Imagen6.1.png"
             data-after="./img/Imagen6.png"
           >
             <img
               src="./img/Imagen6.png"
+              data-i18n-attrs="alt:gallery.item2.alt"
               alt="Torre corporativa"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Torre Corporativa Norte</h5>
-              <p class="mb-0">Espacios flexibles para empresas globales.</p>
+              <h5 class="mb-1" data-i18n="gallery.item2.title">Torre Corporativa Norte</h5>
+              <p class="mb-0" data-i18n="gallery.item2.overlay">Espacios flexibles para empresas globales.</p>
             </div>
           </button>
         </div>
@@ -458,17 +479,19 @@
             data-bs-target="#projectModal"
             data-title="Distrito Urbano"
             data-description="Proyecto de infraestructura conectada con plazas verdes, movilidad sostenible y equipamientos comunitarios."
+            data-i18n-attrs="data-title:gallery.item3.title,data-description:gallery.item3.desc"
             data-images="./img/8.png|./img/5.png|./img/7.png"
             data-before="./img/4.png"
             data-after="./img/8.png"
           >
             <img
               src="./img/8.png"
+              data-i18n-attrs="alt:gallery.item3.alt"
               alt="Complejo urbano"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Distrito Urbano</h5>
-              <p class="mb-0">Infraestructura conectada y sostenible.</p>
+              <h5 class="mb-1" data-i18n="gallery.item3.title">Distrito Urbano</h5>
+              <p class="mb-0" data-i18n="gallery.item3.overlay">Infraestructura conectada y sostenible.</p>
             </div>
           </button>
         </div>
@@ -480,17 +503,19 @@
             data-bs-target="#projectModal"
             data-title="Planta Industrial Sigma"
             data-description="Planta industrial con logística optimizada, zonas seguras y automatización para operaciones 24/7."
+            data-i18n-attrs="data-title:gallery.item4.title,data-description:gallery.item4.desc"
             data-images="./img/7.png|./img/1.png|./img/2.png"
             data-before="./img/1.png"
             data-after="./img/7.png"
           >
             <img
               src="./img/7.png"
+              data-i18n-attrs="alt:gallery.item4.alt"
               alt="Proyecto industrial"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Planta Industrial Sigma</h5>
-              <p class="mb-0">Optimización logística y seguridad total.</p>
+              <h5 class="mb-1" data-i18n="gallery.item4.title">Planta Industrial Sigma</h5>
+              <p class="mb-0" data-i18n="gallery.item4.overlay">Optimización logística y seguridad total.</p>
             </div>
           </button>
         </div>
@@ -502,17 +527,19 @@
             data-bs-target="#projectModal"
             data-title="Centro Comercial Plaza Viva"
             data-description="Centro comercial con luz natural, terrazas gastronómicas y un flujo peatonal diseñado para maximizar la experiencia."
+            data-i18n-attrs="data-title:gallery.item5.title,data-description:gallery.item5.desc"
             data-images="./img/Imagen9.png|./img/Imagen4.png|./img/Imagen5.png"
             data-before="./img/Imagen4.png"
             data-after="./img/Imagen9.png"
           >
             <img
               src="./img/Imagen9.png"
+              data-i18n-attrs="alt:gallery.item5.alt"
               alt="Centro comercial"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Centro Comercial Plaza Viva</h5>
-              <p class="mb-0">Experiencias de compra con luz natural.</p>
+              <h5 class="mb-1" data-i18n="gallery.item5.title">Centro Comercial Plaza Viva</h5>
+              <p class="mb-0" data-i18n="gallery.item5.overlay">Experiencias de compra con luz natural.</p>
             </div>
           </button>
         </div>
@@ -524,17 +551,19 @@
             data-bs-target="#projectModal"
             data-title="Conjunto Vista Azul"
             data-description="Urbanismo residencial con zonas verdes integradas, amenidades recreativas y circulación segura."
+            data-i18n-attrs="data-title:gallery.item6.title,data-description:gallery.item6.desc"
             data-images="./img/Imagen7.png|./img/Imagen8.png|./img/Imagen2.png"
             data-before="./img/Imagen2.png"
             data-after="./img/Imagen7.png"
           >
             <img
               src="./img/Imagen7.png"
+              data-i18n-attrs="alt:gallery.item6.alt"
               alt="Urbanismo residencial"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1">Conjunto Vista Azul</h5>
-              <p class="mb-0">Áreas sociales y zonas verdes integradas.</p>
+              <h5 class="mb-1" data-i18n="gallery.item6.title">Conjunto Vista Azul</h5>
+              <p class="mb-0" data-i18n="gallery.item6.overlay">Áreas sociales y zonas verdes integradas.</p>
             </div>
           </button>
         </div>
@@ -553,10 +582,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <div>
-            <p class="project-modal__badge mb-2">Detalle del proyecto</p>
-            <h3 class="modal-title" id="projectModalLabel">Proyecto destacado</h3>
+            <p class="project-modal__badge mb-2" data-i18n="projectModal.badge">Detalle del proyecto</p>
+            <h3 class="modal-title" id="projectModalLabel" data-i18n="projectModal.title">Proyecto destacado</h3>
           </div>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
           <div class="row g-4 align-items-start">
@@ -566,22 +595,22 @@
                 <div class="carousel-inner"></div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Anterior</span>
+                  <span class="visually-hidden" data-i18n="common.previous">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Siguiente</span>
+                  <span class="visually-hidden" data-i18n="common.next">Siguiente</span>
                 </button>
               </div>
             </div>
             <div class="col-lg-5">
-              <h5 class="fw-bold mb-2">Descripción</h5>
+              <h5 class="fw-bold mb-2" data-i18n="projectModal.descriptionTitle">Descripción</h5>
               <p class="project-modal__description text-muted mb-4"></p>
               <div class="before-after">
                 <div class="before-after__frame">
-                  <img class="before-after__image" data-before alt="Imagen antes del proyecto" />
+                  <img class="before-after__image" data-before data-i18n-attrs="alt:projectModal.beforeAlt" alt="Imagen antes del proyecto" />
                   <div class="before-after__overlay">
-                    <img class="before-after__image" data-after alt="Imagen después del proyecto" />
+                    <img class="before-after__image" data-after data-i18n-attrs="alt:projectModal.afterAlt" alt="Imagen después del proyecto" />
                   </div>
                   <div class="before-after__line" aria-hidden="true"></div>
                   <div class="before-after__handle" aria-hidden="true">
@@ -594,11 +623,12 @@
                   max="100"
                   value="50"
                   class="before-after__range"
+                  data-i18n-attrs="aria-label:projectModal.compareAria"
                   aria-label="Comparar antes y después"
                 />
                 <div class="before-after__labels">
-                  <span>Antes</span>
-                  <span>Después</span>
+                  <span data-i18n="projectModal.before">Antes</span>
+                  <span data-i18n="projectModal.after">Después</span>
                 </div>
               </div>
             </div>
@@ -612,9 +642,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-5" data-aos="fade-right">
-          <p class="text-uppercase text-muted">Contáctanos</p>
-          <h2 class="section-title">Conversemos sobre tu proyecto</h2>
-          <p class="mt-3">
+          <p class="text-uppercase text-muted" data-i18n="contact.label">Contáctanos</p>
+          <h2 class="section-title" data-i18n="contact.title">Conversemos sobre tu proyecto</h2>
+          <p class="mt-3" data-i18n="contact.description">
             Completa el formulario y un asesor se comunicará contigo en menos de 24 horas. También
             puedes escribirnos por nuestros canales directos.
           </p>
@@ -639,46 +669,46 @@
           <div class="contact-section">
             <form id="contactForm" class="row g-3" novalidate>
               <div class="col-12">
-                <p class="form-hint mb-0">Los campos marcados con <span class="required-marker">*</span> son obligatorios.</p>
+                <p class="form-hint mb-0" data-i18n-html="contact.formHint">Los campos marcados con <span class="required-marker">*</span> son obligatorios.</p>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="nombre">Nombre <span class="required-marker">*</span></label>
+                <label class="form-label" for="nombre" data-i18n-html="contact.nameLabel">Nombre <span class="required-marker">*</span></label>
                 <input type="text" class="form-control" id="nombre" required />
-                <div class="invalid-feedback">Escribe tu nombre completo.</div>
+                <div class="invalid-feedback" data-i18n="contact.nameError">Escribe tu nombre completo.</div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="empresa">Empresa</label>
+                <label class="form-label" for="empresa" data-i18n="contact.companyLabel">Empresa</label>
                 <input type="text" class="form-control" id="empresa" />
-                <div class="form-text">Opcional: cuéntanos de tu empresa.</div>
+                <div class="form-text" data-i18n="contact.companyHint">Opcional: cuéntanos de tu empresa.</div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="correo">Correo <span class="required-marker">*</span></label>
+                <label class="form-label" for="correo" data-i18n-html="contact.emailLabel">Correo <span class="required-marker">*</span></label>
                 <input type="email" class="form-control" id="correo" required />
-                <div class="invalid-feedback">Usa un correo válido (ej: nombre@correo.com).</div>
+                <div class="invalid-feedback" data-i18n="contact.emailError">Usa un correo válido (ej: nombre@correo.com).</div>
               </div>
               <div class="col-md-6">
-                <label class="form-label" for="telefono">Teléfono <span class="required-marker">*</span></label>
+                <label class="form-label" for="telefono" data-i18n-html="contact.phoneLabel">Teléfono <span class="required-marker">*</span></label>
                 <input type="tel" class="form-control" id="telefono" required />
-                <div class="invalid-feedback">Ingresa un número con al menos 8 dígitos.</div>
+                <div class="invalid-feedback" data-i18n="contact.phoneError">Ingresa un número con al menos 8 dígitos.</div>
               </div>
               <div class="col-12">
-                <label class="form-label" for="proyecto">Tipo de proyecto <span class="required-marker">*</span></label>
+                <label class="form-label" for="proyecto" data-i18n-html="contact.projectTypeLabel">Tipo de proyecto <span class="required-marker">*</span></label>
                 <select class="form-select" id="proyecto" required>
-                  <option value="" selected disabled>Selecciona una opción</option>
-                  <option>Residencial</option>
-                  <option>Comercial</option>
-                  <option>Industrial</option>
-                  <option>Infraestructura pública</option>
+                  <option value="" selected disabled data-i18n="contact.projectOptionSelect">Selecciona una opción</option>
+                  <option data-i18n="contact.projectOptionResidential">Residencial</option>
+                  <option data-i18n="contact.projectOptionCommercial">Comercial</option>
+                  <option data-i18n="contact.projectOptionIndustrial">Industrial</option>
+                  <option data-i18n="contact.projectOptionPublic">Infraestructura pública</option>
                 </select>
-                <div class="invalid-feedback">Selecciona un tipo de proyecto.</div>
+                <div class="invalid-feedback" data-i18n="contact.projectTypeError">Selecciona un tipo de proyecto.</div>
               </div>
               <div class="col-12">
-                <label class="form-label" for="mensaje">Cuéntanos tu necesidad <span class="required-marker">*</span></label>
+                <label class="form-label" for="mensaje" data-i18n-html="contact.messageLabel">Cuéntanos tu necesidad <span class="required-marker">*</span></label>
                 <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-                <div class="invalid-feedback">Describe brevemente tu necesidad.</div>
+                <div class="invalid-feedback" data-i18n="contact.messageError">Describe brevemente tu necesidad.</div>
               </div>
               <div class="bot-field" aria-hidden="true">
-                <label class="form-label" for="website">Sitio web</label>
+                <label class="form-label" for="website" data-i18n="contact.websiteLabel">Sitio web</label>
                 <input
                   type="text"
                   class="form-control"
@@ -691,12 +721,12 @@
               <div class="col-12 d-flex justify-content-between align-items-center">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="terminos" required />
-                  <label class="form-check-label" for="terminos">
+                  <label class="form-check-label" for="terminos" data-i18n-html="contact.termsLabel">
                     Acepto el tratamiento de datos. <span class="required-marker">*</span>
                   </label>
-                  <div class="invalid-feedback">Debes aceptar el tratamiento de datos.</div>
+                  <div class="invalid-feedback" data-i18n="contact.termsError">Debes aceptar el tratamiento de datos.</div>
                 </div>
-                <button type="submit" class="btn btn-contact btn-lg text-white btn-glow">
+                <button type="submit" class="btn btn-contact btn-lg text-white btn-glow" data-i18n="contact.submit">
                   Enviar solicitud
                 </button>
               </div>
@@ -712,10 +742,10 @@
       <div class="row align-items-center">
         <div class="col-md-6">
           <h5 class="fw-bold text-white">SiempreConstructora</h5>
-          <p class="mb-0">Construimos futuro con innovación y confianza.</p>
+          <p class="mb-0" data-i18n="footer.tagline">Construimos futuro con innovación y confianza.</p>
         </div>
         <div class="col-md-6 text-md-end mt-3 mt-md-0">
-          <small>© 2024 SiempreConstructora. Todos los derechos reservados.</small>
+          <small data-i18n="footer.rights">© 2024 SiempreConstructora. Todos los derechos reservados.</small>
         </div>
       </div>
     </div>
@@ -725,6 +755,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/app-init.js"></script>
   <script src="js/hero.js"></script>
   <script src="js/navigation.js"></script>

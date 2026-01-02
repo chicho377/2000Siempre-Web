@@ -79,13 +79,15 @@
   window.addEventListener("pointerup", stopDrag);
   window.addEventListener("pointercancel", stopDrag);
 
+  const t = (key, vars) => window.siteI18n?.t(key, vars) ?? key;
+
   projectModal.addEventListener("show.bs.modal", (event) => {
     const trigger = event.relatedTarget;
     if (!trigger) {
       return;
     }
 
-    const title = trigger.getAttribute("data-title") || "Proyecto destacado";
+    const title = trigger.getAttribute("data-title") || t("projectModal.defaultTitle");
     const description = trigger.getAttribute("data-description") || "";
     const images = (trigger.getAttribute("data-images") || "")
       .split("|")
@@ -111,7 +113,10 @@
         indicator.type = "button";
         indicator.dataset.bsTarget = "#projectModalCarousel";
         indicator.dataset.bsSlideTo = index;
-        indicator.setAttribute("aria-label", `Slide ${index + 1}`);
+        indicator.setAttribute(
+          "aria-label",
+          t("galleryModal.slideLabel", { index: `${index + 1}` })
+        );
         if (index === 0) {
           indicator.classList.add("active");
           indicator.setAttribute("aria-current", "true");
@@ -124,7 +129,7 @@
         const img = document.createElement("img");
         img.src = src;
         img.className = "d-block w-100";
-        img.alt = `${title} - vista ${index + 1}`;
+        img.alt = t("galleryModal.imageAlt", { title, index: `${index + 1}` });
         item.appendChild(img);
 
         carouselInner.appendChild(item);

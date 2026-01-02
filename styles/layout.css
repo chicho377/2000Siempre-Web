@@ -75,7 +75,7 @@
 }
 
 .navbar-brand span {
-  color: var(--brand-orange);
+  color: var(--brand-blue);
 }
 
 .navbar-logo {
@@ -118,7 +118,7 @@
   bottom: 6px;
   width: 0;
   height: 2px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   border-radius: 999px;
   transform: translateX(-50%);
   transition: width 0.3s ease;
@@ -130,7 +130,7 @@
 }
 
 .navbar .nav-link.active {
-  background: rgba(244, 124, 32, 0.16);
+  background: rgba(11, 61, 145, 0.16);
   color: var(--brand-blue-dark);
 }
 
@@ -214,6 +214,24 @@
   z-index: 1;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 14px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent-black),
+    var(--accent-black) 12px,
+    var(--accent-yellow) 12px,
+    var(--accent-yellow) 24px
+  );
+  z-index: 2;
+  opacity: 0.9;
+}
+
 .hero-video {
   position: absolute;
   inset: 0;
@@ -242,7 +260,7 @@
   display: block;
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--brand-orange), #ffffff);
+  background: linear-gradient(90deg, var(--brand-blue), #ffffff);
   transition: width 0.2s linear;
 }
 
@@ -258,7 +276,7 @@
 }
 
 .hero-title span {
-  color: var(--brand-orange);
+  color: #86b5ff;
   position: relative;
   display: inline-block;
 }
@@ -275,14 +293,14 @@
   width: 100%;
   height: 4px;
   border-radius: 999px;
-  background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+  background: linear-gradient(90deg, transparent, var(--brand-blue), transparent);
   animation: glowLine 3s ease-in-out infinite;
 }
 
 .hero .btn-primary {
-  background: var(--brand-orange);
-  border-color: var(--brand-orange);
-  box-shadow: 0 10px 25px rgba(244, 124, 32, 0.4);
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  box-shadow: 0 10px 25px rgba(11, 61, 145, 0.4);
 }
 
 .hero .btn-outline-light {
@@ -321,7 +339,7 @@
   left: 50%;
   width: 4px;
   height: 8px;
-  background: var(--brand-orange);
+  background: var(--brand-blue);
   border-radius: 999px;
   transform: translateX(-50%);
   animation: scroll 2s infinite;
@@ -334,8 +352,28 @@
 }
 
 .section-title {
+  position: relative;
   font-weight: 700;
   color: var(--brand-blue);
+  display: inline-block;
+  padding-bottom: 14px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 86px;
+  height: 6px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--accent-black),
+    var(--accent-black) 10px,
+    var(--accent-yellow) 10px,
+    var(--accent-yellow) 20px
+  );
 }
 
 .section-space {

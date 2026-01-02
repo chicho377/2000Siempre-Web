@@ -14,12 +14,17 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  font-size: 112.5%;
+}
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: var(--brand-light);
   color: #1b1b1b;
-  font-size: 1.02rem;
-  letter-spacing: 0.2px;
+  font-size: 1.12rem;
+  letter-spacing: 0.25px;
+  line-height: 1.6;
 }
 
 .bot-field {

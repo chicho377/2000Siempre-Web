@@ -3,6 +3,8 @@
   const heroVideoProgress = document.querySelector(".hero-video-progress__fill");
   const heroSection = document.querySelector(".hero");
   const heroOrbs = document.querySelectorAll(".hero-orb");
+  const heroModal = document.getElementById("heroVideoModal");
+  const heroModalVideo = document.querySelector(".hero-modal-video");
 
   const updateHeroVideoProgress = () => {
     if (!heroVideo || !heroVideoProgress) return;
@@ -46,6 +48,20 @@
       heroOrbs.forEach((orb) => {
         orb.style.transform = "translate3d(0, 0, 0)";
       });
+    });
+  }
+
+  if (heroModal && heroModalVideo) {
+    heroModal.addEventListener("shown.bs.modal", () => {
+      heroModalVideo.currentTime = 0;
+      heroModalVideo.muted = false;
+      heroModalVideo.play().catch(() => {});
+    });
+
+    heroModal.addEventListener("hidden.bs.modal", () => {
+      heroModalVideo.pause();
+      heroModalVideo.currentTime = 0;
+      heroModalVideo.muted = true;
     });
   }
 })();

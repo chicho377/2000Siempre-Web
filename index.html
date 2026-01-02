@@ -333,7 +333,17 @@
       </div>
       <div class="row g-4">
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Residencial Mirador"
+            data-description="Complejo residencial con diseño bioclimático, terrazas panorámicas y acabados premium que priorizan la sostenibilidad."
+            data-images="./img/Imagen8.png|./img/Imagen2.png|./img/Imagen3.png"
+            data-before="./img/Imagen1.png"
+            data-after="./img/Imagen8.png"
+          >
             <img
               src="./img/Imagen8.png"
               alt="Complejo residencial moderno"
@@ -342,10 +352,20 @@
               <h5 class="mb-1">Residencial Mirador</h5>
               <p class="mb-0">Diseño bioclimático y acabados premium.</p>
             </div>
-          </div>
+          </button>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Torre Corporativa Norte"
+            data-description="Torre inteligente con lobbies de doble altura, espacios flexibles para empresas globales y certificación energética."
+            data-images="./img/Imagen6.png|./img/6.png|./img/Imagen10.png"
+            data-before="./img/Imagen6.1.png"
+            data-after="./img/Imagen6.png"
+          >
             <img
               src="./img/Imagen6.png"
               alt="Torre corporativa"
@@ -354,10 +374,20 @@
               <h5 class="mb-1">Torre Corporativa Norte</h5>
               <p class="mb-0">Espacios flexibles para empresas globales.</p>
             </div>
-          </div>
+          </button>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Distrito Urbano"
+            data-description="Proyecto de infraestructura conectada con plazas verdes, movilidad sostenible y equipamientos comunitarios."
+            data-images="./img/8.png|./img/5.png|./img/7.png"
+            data-before="./img/4.png"
+            data-after="./img/8.png"
+          >
             <img
               src="./img/8.png"
               alt="Complejo urbano"
@@ -366,10 +396,20 @@
               <h5 class="mb-1">Distrito Urbano</h5>
               <p class="mb-0">Infraestructura conectada y sostenible.</p>
             </div>
-          </div>
+          </button>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Planta Industrial Sigma"
+            data-description="Planta industrial con logística optimizada, zonas seguras y automatización para operaciones 24/7."
+            data-images="./img/7.png|./img/1.png|./img/2.png"
+            data-before="./img/1.png"
+            data-after="./img/7.png"
+          >
             <img
               src="./img/7.png"
               alt="Proyecto industrial"
@@ -378,10 +418,20 @@
               <h5 class="mb-1">Planta Industrial Sigma</h5>
               <p class="mb-0">Optimización logística y seguridad total.</p>
             </div>
-          </div>
+          </button>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Centro Comercial Plaza Viva"
+            data-description="Centro comercial con luz natural, terrazas gastronómicas y un flujo peatonal diseñado para maximizar la experiencia."
+            data-images="./img/Imagen9.png|./img/Imagen4.png|./img/Imagen5.png"
+            data-before="./img/Imagen4.png"
+            data-after="./img/Imagen9.png"
+          >
             <img
               src="./img/Imagen9.png"
               alt="Centro comercial"
@@ -390,10 +440,20 @@
               <h5 class="mb-1">Centro Comercial Plaza Viva</h5>
               <p class="mb-0">Experiencias de compra con luz natural.</p>
             </div>
-          </div>
+          </button>
         </div>
         <div class="col-sm-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="gallery-card tilt-card">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Conjunto Vista Azul"
+            data-description="Urbanismo residencial con zonas verdes integradas, amenidades recreativas y circulación segura."
+            data-images="./img/Imagen7.png|./img/Imagen8.png|./img/Imagen2.png"
+            data-before="./img/Imagen2.png"
+            data-after="./img/Imagen7.png"
+          >
             <img
               src="./img/Imagen7.png"
               alt="Urbanismo residencial"
@@ -402,11 +462,77 @@
               <h5 class="mb-1">Conjunto Vista Azul</h5>
               <p class="mb-0">Áreas sociales y zonas verdes integradas.</p>
             </div>
-          </div>
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+  <div
+    class="modal fade project-modal"
+    id="projectModal"
+    tabindex="-1"
+    aria-labelledby="projectModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p class="project-modal__badge mb-2">Detalle del proyecto</p>
+            <h3 class="modal-title" id="projectModalLabel">Proyecto destacado</h3>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+              <div id="projectModalCarousel" class="carousel slide project-modal__carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators"></div>
+                <div class="carousel-inner"></div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectModalCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <h5 class="fw-bold mb-2">Descripción</h5>
+              <p class="project-modal__description text-muted mb-4"></p>
+              <div class="before-after">
+                <div class="before-after__frame">
+                  <img class="before-after__image" data-before alt="Imagen antes del proyecto" />
+                  <div class="before-after__overlay">
+                    <img class="before-after__image" data-after alt="Imagen después del proyecto" />
+                  </div>
+                  <div class="before-after__line" aria-hidden="true"></div>
+                  <div class="before-after__handle" aria-hidden="true">
+                    <i class="fa-solid fa-arrows-left-right"></i>
+                  </div>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="before-after__range"
+                  aria-label="Comparar antes y después"
+                />
+                <div class="before-after__labels">
+                  <span>Antes</span>
+                  <span>Después</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="contacto" class="py-5 section-space">
     <div class="container">
@@ -531,5 +657,6 @@
   <script src="js/stats.js"></script>
   <script src="js/tilt-cards.js"></script>
   <script src="js/contact-form.js"></script>
+  <script src="js/gallery-modal.js"></script>
 </body>
 </html>

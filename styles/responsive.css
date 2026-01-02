@@ -47,6 +47,24 @@
     height: 240px;
   }
 
+  .project-modal .modal-dialog {
+    margin: 1rem;
+  }
+
+  .project-modal .modal-header,
+  .project-modal .modal-body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .project-modal__carousel .carousel-item img {
+    height: 320px;
+  }
+
+  .before-after__image {
+    height: 220px;
+  }
+
   .navbar {
     padding: 12px 0;
   }
@@ -150,5 +168,13 @@
 
   .gallery-card img {
     height: 220px;
+  }
+
+  .project-modal__carousel .carousel-item img {
+    height: 260px;
+  }
+
+  .before-after__image {
+    height: 200px;
   }
 }

@@ -46,15 +46,15 @@
   .equipment-carousel .carousel-item img {
     height: 420px;
   }
-
-  .equipment-carousel .carousel-caption {
-    left: 6%;
-    right: 6%;
-    bottom: 12%;
+  .equipment-carousel-controls {
+    gap: 14px;
+    margin-top: 16px;
   }
 
-  .equipment-caption h3 {
-    font-size: 1.7rem;
+  .equipment-carousel-controls .carousel-control-prev,
+  .equipment-carousel-controls .carousel-control-next {
+    width: 46px;
+    height: 46px;
   }
 
   .gallery-card img {

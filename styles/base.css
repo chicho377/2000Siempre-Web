@@ -1,0 +1,29 @@
+:root {
+  --brand-blue: #0b3d91;
+  --brand-blue-dark: #082f6b;
+  --brand-orange: #f47c20;
+  --brand-light: #f4f7fb;
+  --topbar-height: 40px;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--brand-light);
+  color: #1b1b1b;
+  font-size: 1.02rem;
+  letter-spacing: 0.2px;
+}
+
+.bot-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

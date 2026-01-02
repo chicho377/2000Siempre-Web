@@ -213,6 +213,7 @@
   background: #e9edf5;
   touch-action: none;
   cursor: ew-resize;
+  user-select: none;
 }
 
 .before-after__image {
@@ -220,6 +221,8 @@
   height: 280px;
   object-fit: cover;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .before-after__overlay {

@@ -105,6 +105,16 @@
     <div class="hero-video-progress" aria-hidden="true">
       <span class="hero-video-progress__fill"></span>
     </div>
+    <button
+      class="hero-video-button btn btn-light btn-glow"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#heroVideoModal"
+      aria-label="Ver video en pantalla completa"
+    >
+      <i class="fa-solid fa-play me-2"></i>
+      Ver video completo
+    </button>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-7" data-aos="fade-right">
@@ -128,6 +138,29 @@
       <small>Desliza</small>
     </div>
   </header>
+
+  <div
+    class="modal fade hero-video-modal"
+    id="heroVideoModal"
+    tabindex="-1"
+    aria-labelledby="heroVideoModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="heroVideoModalLabel">Video Ruta 27</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <video class="hero-modal-video" controls preload="metadata">
+            <source src="VideoRuta27Cortado.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="servicios" class="py-5 section-space section-glow">
     <div class="container">

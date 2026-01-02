@@ -17,6 +17,12 @@
   const rangeInput = projectModal.querySelector(".before-after__range");
   const frame = projectModal.querySelector(".before-after__frame");
 
+  [beforeImage, afterImage].forEach((image) => {
+    image?.addEventListener("dragstart", (event) => {
+      event.preventDefault();
+    });
+  });
+
   const updateBeforeAfter = (value) => {
     if (!overlay || !divider || !handle) {
       return;

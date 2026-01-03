@@ -5,7 +5,7 @@
   particlesJS("stats-particles", {
     particles: {
       number: {
-        value: 60,
+        value: 90,
         density: { enable: true, value_area: 900 },
       },
       color: { value: ["#ffffff", "#cfe6ff", "#9fc5ff"] },

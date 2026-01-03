@@ -327,6 +327,7 @@
 .timeline {
   position: relative;
   padding-left: 30px;
+  overflow: hidden;
 }
 
 .timeline::before {
@@ -340,11 +341,27 @@
   border-radius: 4px;
 }
 
+.timeline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--brand-blue);
+  opacity: 0;
+  transform: translateX(-110%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.timeline--reveal::after {
+  animation: timeline-sweep 2.6s ease-in-out forwards;
+}
+
 .timeline-item {
   position: relative;
   padding-left: 35px;
   margin-bottom: 25px;
   transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 .timeline-item:hover {
@@ -361,6 +378,31 @@
   background: #fff;
   border: 4px solid var(--brand-blue);
   border-radius: 50%;
+}
+
+@keyframes timeline-sweep {
+  0% {
+    opacity: 0;
+    transform: translateX(-110%);
+  }
+  12% {
+    opacity: 0.95;
+    transform: translateX(-10%);
+  }
+  55% {
+    opacity: 0.95;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(110%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline--reveal::after {
+    animation: none;
+  }
 }
 
 .contact-section {

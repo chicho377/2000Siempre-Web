@@ -79,6 +79,20 @@
   background-size: 200% 200%;
   color: #fff;
   animation: gradientShift 12s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 2;
+}
+
+.stats-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .stats .stat-card {

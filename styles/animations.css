@@ -72,6 +72,18 @@
   }
 }
 
+@keyframes impactFloat {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-18px) translateX(10px);
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -85,6 +97,10 @@
   }
 
   .stats {
+    animation: none;
+  }
+
+  .impact-particles span {
     animation: none;
   }
 

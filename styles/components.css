@@ -75,10 +75,122 @@
 }
 
 .stats {
+  position: relative;
   background: linear-gradient(120deg, #082f6b, #0b3d91, #0f4db5);
   background-size: 200% 200%;
   color: #fff;
   animation: gradientShift 12s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 2;
+}
+
+.impact-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.impact-particles span {
+  position: absolute;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 18px rgba(125, 180, 255, 0.35);
+  opacity: 0.8;
+  animation: impactFloat 14s ease-in-out infinite;
+}
+
+.impact-particles span:nth-child(1) {
+  width: 6px;
+  height: 6px;
+  top: 18%;
+  left: 12%;
+  animation-duration: 11s;
+}
+
+.impact-particles span:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  top: 42%;
+  left: 8%;
+  animation-duration: 16s;
+  animation-delay: -4s;
+}
+
+.impact-particles span:nth-child(3) {
+  width: 4px;
+  height: 4px;
+  top: 30%;
+  right: 18%;
+  animation-duration: 12s;
+  animation-delay: -2s;
+}
+
+.impact-particles span:nth-child(4) {
+  width: 8px;
+  height: 8px;
+  top: 68%;
+  right: 12%;
+  animation-duration: 15s;
+  animation-delay: -6s;
+}
+
+.impact-particles span:nth-child(5) {
+  width: 5px;
+  height: 5px;
+  top: 12%;
+  right: 35%;
+  animation-duration: 13s;
+  animation-delay: -3s;
+}
+
+.impact-particles span:nth-child(6) {
+  width: 12px;
+  height: 12px;
+  top: 78%;
+  left: 24%;
+  animation-duration: 18s;
+  animation-delay: -5s;
+}
+
+.impact-particles span:nth-child(7) {
+  width: 7px;
+  height: 7px;
+  top: 55%;
+  left: 48%;
+  animation-duration: 14s;
+  animation-delay: -7s;
+}
+
+.impact-particles span:nth-child(8) {
+  width: 9px;
+  height: 9px;
+  top: 22%;
+  left: 62%;
+  animation-duration: 17s;
+  animation-delay: -1s;
+}
+
+.impact-particles span:nth-child(9) {
+  width: 5px;
+  height: 5px;
+  top: 82%;
+  right: 32%;
+  animation-duration: 12s;
+  animation-delay: -8s;
+}
+
+.impact-particles span:nth-child(10) {
+  width: 11px;
+  height: 11px;
+  top: 40%;
+  right: 6%;
+  animation-duration: 19s;
+  animation-delay: -9s;
 }
 
 .stats .stat-card {

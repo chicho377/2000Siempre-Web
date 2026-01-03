@@ -75,10 +75,45 @@
 }
 
 .stats {
+  position: relative;
   background: linear-gradient(120deg, #082f6b, #0b3d91, #0f4db5);
   background-size: 200% 200%;
   color: #fff;
   animation: gradientShift 12s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.stats::before,
+.stats::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.stats::before {
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.45) 0 1px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.3) 0 1.5px, transparent 3px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 0 1px, transparent 2.5px);
+  background-size: 140px 140px, 200px 200px, 260px 260px;
+  background-position: 0 0, 40px 60px, 80px 120px;
+  opacity: 0.5;
+}
+
+.stats::after {
+  background-image:
+    radial-gradient(circle, rgba(82, 196, 255, 0.35) 0 2px, transparent 4px),
+    radial-gradient(circle, rgba(244, 124, 32, 0.25) 0 1.5px, transparent 3px);
+  background-size: 180px 180px, 240px 240px;
+  background-position: 30px 20px, 120px 160px;
+  opacity: 0.35;
+  mix-blend-mode: screen;
+}
+
+.stats .container {
+  position: relative;
+  z-index: 1;
 }
 
 .stats .stat-card {

@@ -72,6 +72,15 @@
   }
 }
 
+@keyframes clientsScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -95,5 +104,10 @@
 
   .back-to-top {
     transition: none;
+  }
+
+  .clients-marquee__track {
+    animation: none;
+    transform: translateX(0);
   }
 }

@@ -202,6 +202,71 @@
   outline-offset: 4px;
 }
 
+.clients-section {
+  position: relative;
+}
+
+.clients-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 18px 0;
+  border-radius: 20px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.92), rgba(244, 247, 251, 0.6));
+  box-shadow: inset 0 0 18px rgba(3, 18, 48, 0.06);
+}
+
+.clients-marquee::before,
+.clients-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+}
+
+.clients-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+}
+
+.clients-marquee__track {
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation: clientsScroll 22s linear infinite;
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.clients-marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-right: 48px;
+  flex: 0 0 auto;
+}
+
+.clients-marquee img {
+  height: 64px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+
+.clients-marquee img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 .gallery-card {
   position: relative;
   border: none;

@@ -419,21 +419,22 @@
   transition: transform 2.6s ease;
 }
 
-.section-title::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 6px;
-  width: var(--excavator-width);
-  height: var(--excavator-height);
-  background-image: url("../img/excavadora.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  animation: excavatorDrive 6.5s linear infinite;
-  will-change: left;
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
-  pointer-events: none;
-  z-index: 1;
+.section-title::before { 
+  content: ""; 
+  position: absolute; 
+  left: 0; 
+  bottom: 6px; 
+  width: var(--excavator-width); 
+  height: var(--excavator-height); 
+  background-image: url("../img/excavadora.svg"); 
+  background-size: contain; 
+  background-repeat: no-repeat; 
+  background-position: center;  /* AGREGA ESTO */
+  transform-origin: center center;  /* AGREGA ESTO */
+  animation: excavatorDrive 8s ease-in-out infinite; 
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)); 
+  pointer-events: none; 
+  z-index: 1; 
 }
 
 .aos-init .section-title::after {

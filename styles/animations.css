@@ -72,12 +72,22 @@
   }
 }
 
-@keyframes excavatorDrive {
-  0% {
+@keyframes excavatorDrive { 
+  0%, 100% { 
     left: 0;
+    transform: scaleX(1);
   }
-  100% {
+  45% {
     left: calc(100% - var(--excavator-width));
+    transform: scaleX(1);
+  }
+  50% {
+    left: calc(100% - var(--excavator-width));
+    transform: scaleX(-1);
+  }
+  95% {
+    left: 0;
+    transform: scaleX(-1);
   }
 }
 
@@ -104,9 +114,5 @@
 
   .back-to-top {
     transition: none;
-  }
-
-  .section-title::before {
-    animation: none;
   }
 }

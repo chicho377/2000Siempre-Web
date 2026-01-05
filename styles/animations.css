@@ -72,6 +72,15 @@
   }
 }
 
+@keyframes excavatorDrive {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: calc(100% - var(--excavator-width)) 50%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -95,5 +104,9 @@
 
   .back-to-top {
     transition: none;
+  }
+
+  .section-title::before {
+    animation: none;
   }
 }

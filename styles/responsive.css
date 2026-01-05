@@ -128,8 +128,8 @@
   }
 
   .navbar .nav-link {
-    padding: 14px 16px;
-    font-size: 1.2rem;
+    padding: 12px 14px;
+    font-size: 1.05rem;
     width: 100%;
     text-align: left;
     background: linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(11, 61, 145, 0.02));

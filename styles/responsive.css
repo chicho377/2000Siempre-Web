@@ -57,6 +57,15 @@
     height: 54px;
   }
 
+  .clients-marquee__group {
+    gap: 32px;
+    padding-right: 32px;
+  }
+
+  .clients-marquee img {
+    height: 52px;
+  }
+
   .gallery-card img {
     height: 270px;
   }
@@ -186,6 +195,15 @@
 
   .equipment-carousel .carousel-item img {
     height: 400px;
+  }
+
+  .clients-marquee__group {
+    gap: 24px;
+    padding-right: 24px;
+  }
+
+  .clients-marquee img {
+    height: 46px;
   }
 
   .equipment-caption h3 {

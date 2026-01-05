@@ -653,3 +653,69 @@ footer {
 .footer-icon {
   color: #86b5ff;
 }
+
+.clients-section {
+  background: linear-gradient(180deg, rgba(250, 250, 252, 0.95), rgba(255, 255, 255, 0.98));
+}
+
+.clients-carousel {
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+}
+
+.clients-carousel::before,
+.clients-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(250, 250, 252, 1), rgba(250, 250, 252, 0));
+}
+
+.clients-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(250, 250, 252, 1), rgba(250, 250, 252, 0));
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: max-content;
+  animation: clients-marquee 26s linear infinite;
+}
+
+.clients-track:hover {
+  animation-play-state: paused;
+}
+
+.client-logo {
+  flex: 0 0 auto;
+  min-width: 170px;
+  height: 88px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid rgb(var(--logo-color) / 0.35);
+  background: linear-gradient(135deg, rgb(var(--logo-color) / 0.2), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 18px 32px rgba(11, 61, 145, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(var(--logo-color));
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.client-logo__name {
+  font-size: 0.95rem;
+}

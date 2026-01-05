@@ -36,6 +36,9 @@
       "services.card3.desc": "Control de cronograma, presupuestos y calidad.",
       "services.card4.title": "Infraestructura urbana",
       "services.card4.desc": "Soluciones para vías, parques y espacios públicos.",
+      "clients.title": "Nuestros clientes",
+      "clients.subtitle": "Marcas que confían en nuestra experiencia constructiva.",
+      "clients.carouselAria": "Carrusel de logos de clientes",
       "projects.label": "Portafolio",
       "projects.title": "Proyectos emblemáticos",
       "projects.description":
@@ -222,6 +225,9 @@
       "services.card3.desc": "Schedule, budget, and quality control.",
       "services.card4.title": "Urban infrastructure",
       "services.card4.desc": "Solutions for roads, parks, and public spaces.",
+      "clients.title": "Our clients",
+      "clients.subtitle": "Brands that trust our construction expertise.",
+      "clients.carouselAria": "Client logo carousel",
       "projects.label": "Portfolio",
       "projects.title": "Signature projects",
       "projects.description":

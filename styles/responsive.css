@@ -57,6 +57,20 @@
     height: 54px;
   }
 
+  .clients-carousel::before,
+  .clients-carousel::after {
+    width: 90px;
+  }
+
+  .client-logo {
+    min-width: 150px;
+    height: 78px;
+  }
+
+  .client-logo__name {
+    font-size: 0.85rem;
+  }
+
   .gallery-card img {
     height: 270px;
   }
@@ -190,6 +204,15 @@
 
   .equipment-caption h3 {
     font-size: 1.55rem;
+  }
+
+  .client-logo {
+    min-width: 130px;
+    height: 70px;
+  }
+
+  .client-logo__name {
+    font-size: 0.8rem;
   }
 
   .project-modal__carousel .carousel-item img {

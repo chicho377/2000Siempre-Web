@@ -60,6 +60,9 @@
       "equipment.carousel.alt2": "Grúas y montaje estructural",
       "equipment.carousel.alt3": "Flota de maquinaria en planta industrial",
       "equipment.carousel.controls": "Controles de carrusel de maquinaria",
+      "clients.label": "Nuestros clientes",
+      "clients.title": "Marcas que confían en nosotros",
+      "clients.carouselAria": "Carrusel de marcas clientes",
       "process.label": "Metodología",
       "process.title": "Transparencia en cada etapa",
       "process.description":
@@ -246,6 +249,9 @@
       "equipment.carousel.alt2": "Cranes and structural assembly",
       "equipment.carousel.alt3": "Machinery fleet at an industrial plant",
       "equipment.carousel.controls": "Equipment carousel controls",
+      "clients.label": "Our clients",
+      "clients.title": "Brands that trust us",
+      "clients.carouselAria": "Client brands carousel",
       "process.label": "Methodology",
       "process.title": "Transparency at every stage",
       "process.description":

@@ -72,6 +72,24 @@
   }
 }
 
+@keyframes excavatorDrive {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(calc(100% - var(--excavator-width)));
+  }
+  50% {
+    transform: translateX(calc(100% - var(--excavator-width))) scaleX(-1);
+  }
+  95% {
+    transform: translateX(0) scaleX(-1);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -95,5 +113,9 @@
 
   .back-to-top {
     transition: none;
+  }
+
+  .section-title::before {
+    animation: none;
   }
 }

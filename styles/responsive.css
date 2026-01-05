@@ -46,6 +46,15 @@
   .equipment-carousel .carousel-item img {
     height: 480px;
   }
+
+  .clients-logo {
+    height: 56px;
+  }
+
+  .clients-marquee__group {
+    gap: 32px;
+    padding: 0 28px;
+  }
   .equipment-carousel-controls {
     gap: 14px;
     margin-top: 16px;
@@ -186,6 +195,10 @@
 
   .equipment-carousel .carousel-item img {
     height: 400px;
+  }
+
+  .clients-logo {
+    height: 48px;
   }
 
   .equipment-caption h3 {

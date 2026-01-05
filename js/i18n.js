@@ -86,6 +86,8 @@
       "stats.item2": "Clientes corporativos",
       "stats.item3": "Años de experiencia",
       "stats.item4": "Satisfacción (%)",
+      "clients.label": "Nuestros clientes",
+      "clients.title": "Empresas que confían en nosotros",
       "gallery.label": "Galería",
       "gallery.title": "Proyectos que hablan por sí solos",
       "gallery.description":
@@ -272,6 +274,8 @@
       "stats.item2": "Corporate clients",
       "stats.item3": "Years of experience",
       "stats.item4": "Satisfaction (%)",
+      "clients.label": "Our clients",
+      "clients.title": "Brands that trust our team",
       "gallery.label": "Gallery",
       "gallery.title": "Projects that speak for themselves",
       "gallery.description":

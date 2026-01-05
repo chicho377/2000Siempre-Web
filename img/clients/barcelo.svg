@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="Barceló">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <path d="M30 80c10-26 30-44 62-44 20 0 38 8 52 22" stroke="#0f5a8a" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="60" cy="42" r="8" fill="#0f5a8a"/>
+  <text x="110" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="28" fill="#0f5a8a">BARCELÓ</text>
+</svg>

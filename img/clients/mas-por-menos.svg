@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="Más por menos">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <rect x="28" y="38" width="58" height="44" rx="12" fill="#a1202d"/>
+  <text x="42" y="67" font-family="'Arial Black', Arial, sans-serif" font-size="20" fill="#ffffff">M+</text>
+  <text x="104" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="24" fill="#a1202d">MÁS POR MENOS</text>
+</svg>

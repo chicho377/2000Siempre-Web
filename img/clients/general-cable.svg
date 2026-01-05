@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="General Cable">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <rect x="26" y="36" width="56" height="48" rx="10" fill="#0b3d91"/>
+  <path d="M34 74c18-8 24-24 40-32" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <text x="104" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="26" fill="#0b3d91">GENERAL CABLE</text>
+</svg>

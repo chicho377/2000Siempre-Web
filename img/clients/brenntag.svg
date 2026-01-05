@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="Brenntag">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <circle cx="70" cy="60" r="36" fill="#f36f21"/>
+  <path d="M70 34l18 52H52l18-52z" fill="#ffffff" opacity="0.95"/>
+  <text x="120" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="28" fill="#1b1b1b">BRENNTAG</text>
+</svg>

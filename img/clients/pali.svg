@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="Palí">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <circle cx="60" cy="60" r="28" fill="#4a4a4a"/>
+  <path d="M50 60h20" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <text x="112" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="28" fill="#4a4a4a">PALÍ</text>
+</svg>

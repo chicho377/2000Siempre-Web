@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="120" viewBox="0 0 320 120" role="img" aria-label="Maxi Palí">
+  <rect width="320" height="120" rx="24" fill="#ffffff"/>
+  <rect x="26" y="36" width="66" height="48" rx="14" fill="#3540b8"/>
+  <path d="M40 62h38" stroke="#edf0ff" stroke-width="6" stroke-linecap="round"/>
+  <text x="106" y="68" font-family="'Arial Black', Arial, sans-serif" font-size="26" fill="#3540b8">MAXI PALÍ</text>
+</svg>

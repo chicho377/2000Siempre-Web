@@ -426,7 +426,7 @@
   bottom: 0; 
   width: var(--excavator-width); 
   height: var(--excavator-height); 
-  background-image: url("../img/excavadora.svg"); 
+  background-image: url("../img/vagoneta.svg"); 
   background-size: contain; 
   background-repeat: no-repeat; 
   background-position: center;  /* AGREGA ESTO */

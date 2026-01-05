@@ -392,7 +392,7 @@
   font-weight: 700;
   color: var(--brand-blue);
   display: inline-block;
-  padding-bottom: 14px;
+  padding-bottom: 26px;
   font-size: 2.6rem;
   line-height: 1.15;
   --excavator-width: 42px;
@@ -403,7 +403,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -6px;
   width: 100%;
   height: 6px;
   border-radius: 999px;
@@ -423,7 +423,7 @@
   content: ""; 
   position: absolute; 
   left: 0; 
-  bottom: 6px; 
+  bottom: 0; 
   width: var(--excavator-width); 
   height: var(--excavator-height); 
   background-image: url("../img/excavadora.svg"); 
@@ -431,7 +431,7 @@
   background-repeat: no-repeat; 
   background-position: center;  /* AGREGA ESTO */
   transform-origin: center center;  /* AGREGA ESTO */
-  animation: excavatorDrive 8s ease-in-out infinite; 
+  animation: excavatorDrive 20s ease-in-out infinite; 
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)); 
   pointer-events: none; 
   z-index: 1; 

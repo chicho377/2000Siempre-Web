@@ -57,6 +57,16 @@
     height: 54px;
   }
 
+  .clients-marquee {
+    gap: 20px;
+  }
+
+  .client-card {
+    min-width: 150px;
+    padding: 14px 22px;
+    font-size: 0.85rem;
+  }
+
   .gallery-card img {
     height: 270px;
   }
@@ -186,6 +196,12 @@
 
   .equipment-carousel .carousel-item img {
     height: 400px;
+  }
+
+  .client-card {
+    min-width: 130px;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
   }
 
   .equipment-caption h3 {

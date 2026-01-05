@@ -72,6 +72,29 @@
   }
 }
 
+@keyframes excavatorDrive {
+  0% {
+    left: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  45% {
+    left: calc(100% - var(--excavator-width));
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    left: calc(100% - var(--excavator-width));
+    transform: translateY(0) scaleX(-1);
+  }
+  95% {
+    left: 0;
+    transform: translateY(0) scaleX(-1);
+  }
+  100% {
+    left: 0;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -95,5 +118,9 @@
 
   .back-to-top {
     transition: none;
+  }
+
+  .section-title::before {
+    animation: none;
   }
 }

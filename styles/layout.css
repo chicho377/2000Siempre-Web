@@ -446,6 +446,38 @@
   transform: scaleX(1);
 }
 
+/* Partículas de humo de la excavadora */
+.section-title .smoke-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, rgba(90, 90, 90, 0.5), transparent);
+  border-radius: 50%;
+  bottom: 25px;
+  left: 30px;
+  animation: excavatorDrive 20s ease-in-out infinite, smokeRise 1.8s ease-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-title .smoke-particle:nth-child(2) {
+  animation-delay: 0s, 0.3s;
+  width: 8px;
+  height: 8px;
+}
+
+.section-title .smoke-particle:nth-child(3) {
+  animation-delay: 0s, 0.6s;
+  width: 12px;
+  height: 12px;
+}
+
+.section-title .smoke-particle:nth-child(4) {
+  animation-delay: 0s, 0.9s;
+  width: 9px;
+  height: 9px;
+}
+
 .section-space {
   position: relative;
   padding: 130px 0;

@@ -449,32 +449,3 @@
   position: relative;
   padding: 130px 0;
 }
-
-.section-glow::before,
-.section-glow::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(244, 124, 32, 0.18), transparent 65%);
-  filter: blur(1px);
-  animation: glowFloat 14s ease-in-out infinite;
-  z-index: 0;
-}
-
-.section-glow::before {
-  top: -120px;
-  right: 8%;
-}
-
-.section-glow::after {
-  bottom: -140px;
-  left: 6%;
-  animation-delay: 4s;
-}
-
-.section-glow > .container {
-  position: relative;
-  z-index: 1;
-}

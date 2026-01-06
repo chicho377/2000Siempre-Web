@@ -395,8 +395,8 @@
   padding-bottom: 26px;
   font-size: 2.6rem;
   line-height: 1.15;
-  --excavator-width: 42px;
-  --excavator-height: 26px;
+  --excavator-width: 64px/*42px*/;
+  --excavator-height: 40px/*26px*/;
 }
 
 .section-title::after {

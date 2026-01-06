@@ -91,6 +91,22 @@
   }
 }
 
+@keyframes excavatorLine {
+  0%,
+  100% {
+    transform: scaleX(0);
+  }
+  45% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  95% {
+    transform: scaleX(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video {
     animation: none;
@@ -114,5 +130,10 @@
 
   .back-to-top {
     transition: none;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    animation: none;
   }
 }

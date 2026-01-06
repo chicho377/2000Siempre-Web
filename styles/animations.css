@@ -146,3 +146,28 @@
     transform: scaleX(1);  /* Se queda en 1, no regresa a 0 */
   }
 }
+
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-40px) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes smokePuff {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  90% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}

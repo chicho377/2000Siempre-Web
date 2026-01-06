@@ -116,3 +116,33 @@
     transition: none;
   }
 }
+/*
+@keyframes lineGrow {
+  0% {
+    transform: scaleX(0);
+  }
+  45% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  95% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}*/
+
+@keyframes lineGrow {
+  0% {
+    transform: scaleX(0);
+  }
+  45% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);  /* Se queda en 1, no regresa a 0 */
+  }
+}

@@ -72,3 +72,44 @@
     });
   });
 })();
+
+(() => {
+  const sectionTitles = Array.from(document.querySelectorAll(".section-title"));
+  if (!sectionTitles.length) return;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    sectionTitles.forEach((title) =>
+      title.style.setProperty("--underline-progress", "1")
+    );
+    return;
+  }
+
+  let ticking = false;
+
+  const updateProgress = () => {
+    const viewportHeight = window.innerHeight || 1;
+    const startPoint = viewportHeight * 0.85;
+    const endPoint = viewportHeight * 0.2;
+    const range = Math.max(1, startPoint - endPoint);
+
+    sectionTitles.forEach((title) => {
+      const rect = title.getBoundingClientRect();
+      const rawProgress = (startPoint - rect.top) / range;
+      const clamped = Math.min(1, Math.max(0, rawProgress));
+      title.style.setProperty("--underline-progress", clamped.toFixed(3));
+    });
+
+    ticking = false;
+  };
+
+  const requestTick = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(updateProgress);
+  };
+
+  updateProgress();
+  window.addEventListener("scroll", requestTick, { passive: true });
+  window.addEventListener("resize", requestTick);
+})();

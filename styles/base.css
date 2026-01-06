@@ -1,0 +1,36 @@
+:root {
+  --brand-blue: #0b3d91;
+  --brand-blue-dark: #082f6b;
+  --brand-orange: #f47c20;
+  --accent-yellow: #f9d648;
+  --accent-black: #111111;
+  --brand-light: #f4f7fb;
+  --topbar-height: 40px;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 112.5%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: var(--brand-light);
+  color: #1b1b1b;
+  font-size: 1.12rem;
+  letter-spacing: 0.25px;
+  line-height: 1.6;
+}
+
+.bot-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -1,6 +1,7 @@
 (() => {
   const navbar = document.querySelector(".navbar");
   const backToTopButton = document.querySelector(".back-to-top");
+  const whatsappButton = document.querySelector(".whatsapp-float");
   const navbarCollapse = document.querySelector("#navbarNav");
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarLinks = document.querySelectorAll(".navbar .nav-link");
@@ -23,9 +24,19 @@
     }
   };
 
+  const updateWhatsAppButton = () => {
+    if (!whatsappButton) return;
+    if (window.scrollY > 280) {
+      whatsappButton.classList.add("is-visible");
+    } else {
+      whatsappButton.classList.remove("is-visible");
+    }
+  };
+
   const handleScroll = () => {
     updateNavbar();
     updateBackToTop();
+    updateWhatsAppButton();
   };
 
   window.addEventListener("scroll", handleScroll);

@@ -35,6 +35,10 @@
     padding: 35px 25px;
   }
 
+  .whatsapp-card {
+    padding: 22px;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -102,6 +106,17 @@
     bottom: 22px;
     width: 48px;
     height: 48px;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 86px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float__label {
+    display: none;
   }
 
   .navbar-brand {

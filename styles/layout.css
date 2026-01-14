@@ -416,8 +416,8 @@
   );
   transform-origin: left;
   transform: scaleX(0/*1*/);
-  /*transition: transform 2.6s ease;*/
-  animation: lineGrow 20s ease-in-out forwards/*infinite*/;
+  transition: transform 2.6s ease;
+  animation: lineGrow 20s ease-in-out infinite/*forwars*/;
 }
 
 .section-title::before { 

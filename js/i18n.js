@@ -161,6 +161,11 @@
       "contact.termsLabel": "Acepto el tratamiento de datos. <span class=\"required-marker\">*</span>",
       "contact.termsError": "Debes aceptar el tratamiento de datos.",
       "contact.submit": "Enviar solicitud",
+      "contact.locationBadge": "Ubicación",
+      "contact.locationTitle": "Visítanos en nuestra sede",
+      "contact.locationDescription":
+        "Agenda una visita presencial y conoce de cerca nuestros proyectos en la zona.",
+      "contact.locationMapTitle": "Mapa de ubicación de 2000 Siempre",
       "whatsapp.badge": "WhatsApp directo",
       "whatsapp.title": "Atención inmediata con un asesor",
       "whatsapp.description":
@@ -376,6 +381,11 @@
       "contact.termsLabel": "I accept data processing. <span class=\"required-marker\">*</span>",
       "contact.termsError": "You must accept data processing.",
       "contact.submit": "Send request",
+      "contact.locationBadge": "Location",
+      "contact.locationTitle": "Visit our headquarters",
+      "contact.locationDescription":
+        "Schedule an in-person visit and get to know our projects in the area.",
+      "contact.locationMapTitle": "2000 Siempre location map",
       "whatsapp.badge": "WhatsApp direct",
       "whatsapp.title": "Instant help from an advisor",
       "whatsapp.description":

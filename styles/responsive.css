@@ -39,6 +39,15 @@
     padding: 22px;
   }
 
+  .location-card {
+    padding: 22px;
+  }
+
+  .location-card__map {
+    min-height: 240px;
+    aspect-ratio: 3 / 2;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
   }

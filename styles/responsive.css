@@ -104,6 +104,17 @@
     height: 48px;
   }
 
+  .whatsapp-float {
+    right: 16px;
+    bottom: 86px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float__label {
+    display: none;
+  }
+
   .navbar-brand {
     font-size: 1.35rem;
   }

@@ -139,6 +139,7 @@
       "contact.title": "Conversemos sobre tu proyecto",
       "contact.description":
         "Completa el formulario y un asesor se comunicará contigo en menos de 24 horas. También puedes escribirnos por nuestros canales directos.",
+      "contact.mapTitle": "Nuestra ubicación",
       "contact.formHint": "Los campos marcados con <span class=\"required-marker\">*</span> son obligatorios.",
       "contact.nameLabel": "Nombre <span class=\"required-marker\">*</span>",
       "contact.nameError": "Escribe tu nombre completo.",
@@ -358,6 +359,7 @@
       "contact.title": "Let's talk about your project",
       "contact.description":
         "Complete the form and an advisor will contact you within 24 hours. You can also reach us through our direct channels.",
+      "contact.mapTitle": "Our location",
       "contact.formHint": "Fields marked with <span class=\"required-marker\">*</span> are required.",
       "contact.nameLabel": "Name <span class=\"required-marker\">*</span>",
       "contact.nameError": "Enter your full name.",

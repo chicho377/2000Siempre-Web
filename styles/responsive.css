@@ -35,6 +35,10 @@
     padding: 35px 25px;
   }
 
+  .contact-map-frame {
+    height: 240px;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -203,6 +207,10 @@
 
   #contactForm .btn-contact {
     width: 100%;
+  }
+
+  .contact-map-frame {
+    height: 220px;
   }
 
   .gallery-card img {

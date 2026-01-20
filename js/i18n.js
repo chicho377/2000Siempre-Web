@@ -139,6 +139,11 @@
       "contact.title": "Conversemos sobre tu proyecto",
       "contact.description":
         "Completa el formulario y un asesor se comunicará contigo en menos de 24 horas. También puedes escribirnos por nuestros canales directos.",
+      "contact.mapBadge": "Ubicación",
+      "contact.mapTitle": "Nuestra ubicación",
+      "contact.mapDescription":
+        "Visítanos en nuestra sede principal para conversar sobre tu proyecto y conocer nuestras soluciones.",
+      "contact.locationTriggerAria": "Abrir ubicación en mapa",
       "contact.formHint": "Los campos marcados con <span class=\"required-marker\">*</span> son obligatorios.",
       "contact.nameLabel": "Nombre <span class=\"required-marker\">*</span>",
       "contact.nameError": "Escribe tu nombre completo.",
@@ -161,6 +166,35 @@
       "contact.termsLabel": "Acepto el tratamiento de datos. <span class=\"required-marker\">*</span>",
       "contact.termsError": "Debes aceptar el tratamiento de datos.",
       "contact.submit": "Enviar solicitud",
+      "whatsapp.badge": "WhatsApp directo",
+      "whatsapp.title": "Atención inmediata con un asesor",
+      "whatsapp.description":
+        "Escríbenos por WhatsApp para cotizar, coordinar visitas técnicas o resolver dudas en minutos.",
+      "whatsapp.modalTitle": "Conversemos por WhatsApp",
+      "whatsapp.modalDescription":
+        "Estamos listos para ayudarte con tu proyecto. Elige un motivo y abre el chat en segundos.",
+      "whatsapp.modalTriggerAria": "Abrir WhatsApp",
+      "whatsapp.feature1": "Respuesta rápida en horario laboral.",
+      "whatsapp.feature2": "Comparte planos, fotos o documentos.",
+      "whatsapp.feature3": "Seguimiento personalizado de tu proyecto.",
+      "whatsapp.cta": "Iniciar chat ahora",
+      "whatsapp.ctaAria": "Iniciar chat por WhatsApp",
+      "whatsapp.quickQuote": "Quiero cotizar",
+      "whatsapp.quickQuoteAria": "Enviar mensaje para cotizar",
+      "whatsapp.quickVisit": "Agendar visita",
+      "whatsapp.quickVisitAria": "Enviar mensaje para agendar visita",
+      "whatsapp.quickSupport": "Soporte y dudas",
+      "whatsapp.quickSupportAria": "Enviar mensaje para soporte y dudas",
+      "whatsapp.floatLabel": "WhatsApp",
+      "whatsapp.floatAria": "Abrir chat de WhatsApp",
+      "whatsapp.link":
+        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20un%20proyecto.",
+      "whatsapp.quickQuoteLink":
+        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20quiero%20cotizar%20un%20proyecto%20de%20construcci%C3%B3n.",
+      "whatsapp.quickVisitLink":
+        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20necesito%20agendar%20una%20visita%20t%C3%A9cnica.",
+      "whatsapp.quickSupportLink":
+        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20tengo%20una%20consulta%20sobre%20un%20proyecto%20en%20curso.",
       "footer.tagline": "Construimos futuro con innovación y confianza.",
       "footer.rights": "© 2024 SiempreConstructora. Todos los derechos reservados.",
       "form.fields.nombre": "Nombre",
@@ -329,6 +363,11 @@
       "contact.title": "Let's talk about your project",
       "contact.description":
         "Complete the form and an advisor will contact you within 24 hours. You can also reach us through our direct channels.",
+      "contact.mapBadge": "Location",
+      "contact.mapTitle": "Our location",
+      "contact.mapDescription":
+        "Visit our main office to discuss your project and learn about our solutions.",
+      "contact.locationTriggerAria": "Open location map",
       "contact.formHint": "Fields marked with <span class=\"required-marker\">*</span> are required.",
       "contact.nameLabel": "Name <span class=\"required-marker\">*</span>",
       "contact.nameError": "Enter your full name.",
@@ -351,6 +390,35 @@
       "contact.termsLabel": "I accept data processing. <span class=\"required-marker\">*</span>",
       "contact.termsError": "You must accept data processing.",
       "contact.submit": "Send request",
+      "whatsapp.badge": "WhatsApp direct",
+      "whatsapp.title": "Instant help from an advisor",
+      "whatsapp.description":
+        "Chat with us on WhatsApp to request a quote, schedule site visits, or resolve questions in minutes.",
+      "whatsapp.modalTitle": "Let's chat on WhatsApp",
+      "whatsapp.modalDescription":
+        "We are ready to help with your project. Pick a reason and open the chat in seconds.",
+      "whatsapp.modalTriggerAria": "Open WhatsApp",
+      "whatsapp.feature1": "Fast replies during business hours.",
+      "whatsapp.feature2": "Share plans, photos, or documents.",
+      "whatsapp.feature3": "Personalized project follow-up.",
+      "whatsapp.cta": "Start chat now",
+      "whatsapp.ctaAria": "Start WhatsApp chat",
+      "whatsapp.quickQuote": "Request a quote",
+      "whatsapp.quickQuoteAria": "Send message to request a quote",
+      "whatsapp.quickVisit": "Schedule a visit",
+      "whatsapp.quickVisitAria": "Send message to schedule a visit",
+      "whatsapp.quickSupport": "Support & questions",
+      "whatsapp.quickSupportAria": "Send message for support and questions",
+      "whatsapp.floatLabel": "WhatsApp",
+      "whatsapp.floatAria": "Open WhatsApp chat",
+      "whatsapp.link":
+        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20guidance%20on%20a%20project.",
+      "whatsapp.quickQuoteLink":
+        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20a%20construction%20quote.",
+      "whatsapp.quickVisitLink":
+        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20need%20to%20schedule%20a%20site%20visit.",
+      "whatsapp.quickSupportLink":
+        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20have%20a%20question%20about%20an%20ongoing%20project.",
       "footer.tagline": "We build the future with innovation and trust.",
       "footer.rights": "© 2024 SiempreConstructora. All rights reserved.",
       "form.fields.nombre": "Name",

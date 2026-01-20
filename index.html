@@ -107,6 +107,19 @@
   <button class="back-to-top" type="button" data-i18n-attrs="aria-label:backToTop" aria-label="Volver arriba">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+  <a
+    class="whatsapp-float"
+    data-i18n-attrs="href:whatsapp.link,aria-label:whatsapp.floatAria"
+    href="https://wa.me/573004567890"
+    target="_blank"
+    rel="noopener"
+    aria-label="Abrir chat de WhatsApp"
+  >
+    <span class="whatsapp-float__icon">
+      <i class="fa-brands fa-whatsapp"></i>
+    </span>
+    <span class="whatsapp-float__label" data-i18n="whatsapp.floatLabel">WhatsApp</span>
+  </a>
 
   <header id="inicio" class="hero">
     <video
@@ -754,6 +767,26 @@
             <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/dosmil-siempre-constructora-y-otros-20049a228/">
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
+            <button
+              class="btn btn-outline-primary whatsapp-social-trigger"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#whatsappModal"
+              data-i18n-attrs="aria-label:whatsapp.modalTriggerAria"
+              aria-label="Abrir WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+            <button
+              class="btn btn-outline-primary location-social-trigger"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#locationModal"
+              data-i18n-attrs="aria-label:contact.locationTriggerAria"
+              aria-label="Abrir ubicación"
+            >
+              <i class="fa-solid fa-location-dot"></i>
+            </button>
           </div>
         </div>
         <div class="col-lg-7 mt-5 mt-lg-0" data-aos="fade-left">
@@ -841,6 +874,127 @@
       </div>
     </div>
   </footer>
+
+  <div
+    class="modal fade whatsapp-modal"
+    id="whatsappModal"
+    tabindex="-1"
+    aria-labelledby="whatsappModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="whatsappModalLabel" data-i18n="whatsapp.modalTitle">Conversemos por WhatsApp</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="whatsapp-modal__hero">
+            <span class="whatsapp-modal__badge" data-i18n="whatsapp.badge">WhatsApp directo</span>
+            <p class="whatsapp-modal__description" data-i18n="whatsapp.modalDescription">
+              Estamos listos para ayudarte con tu proyecto. Elige un motivo y abre el chat en segundos.
+            </p>
+          </div>
+          <div class="whatsapp-modal__actions">
+            <a
+              class="btn btn-success whatsapp-modal__cta"
+              data-i18n="whatsapp.cta"
+              data-i18n-attrs="href:whatsapp.link,aria-label:whatsapp.ctaAria"
+              href="https://wa.me/573004567890"
+              target="_blank"
+              rel="noopener"
+              aria-label="Iniciar chat por WhatsApp"
+            >
+              Iniciar chat ahora
+            </a>
+            <div class="whatsapp-modal__quick">
+              <a
+                class="whatsapp-quick-link"
+                data-i18n="whatsapp.quickQuote"
+                data-i18n-attrs="href:whatsapp.quickQuoteLink,aria-label:whatsapp.quickQuoteAria"
+                href="https://wa.me/573004567890"
+                target="_blank"
+                rel="noopener"
+                aria-label="Enviar mensaje para cotizar"
+              >
+                Quiero cotizar
+              </a>
+              <a
+                class="whatsapp-quick-link"
+                data-i18n="whatsapp.quickVisit"
+                data-i18n-attrs="href:whatsapp.quickVisitLink,aria-label:whatsapp.quickVisitAria"
+                href="https://wa.me/573004567890"
+                target="_blank"
+                rel="noopener"
+                aria-label="Enviar mensaje para agendar visita"
+              >
+                Agendar visita
+              </a>
+              <a
+                class="whatsapp-quick-link"
+                data-i18n="whatsapp.quickSupport"
+                data-i18n-attrs="href:whatsapp.quickSupportLink,aria-label:whatsapp.quickSupportAria"
+                href="https://wa.me/573004567890"
+                target="_blank"
+                rel="noopener"
+                aria-label="Enviar mensaje para soporte y dudas"
+              >
+                Soporte y dudas
+              </a>
+            </div>
+          </div>
+          <div class="whatsapp-modal__features">
+            <div class="whatsapp-modal__feature">
+              <i class="fa-solid fa-clock"></i>
+              <span data-i18n="whatsapp.feature1">Respuesta rápida en horario laboral.</span>
+            </div>
+            <div class="whatsapp-modal__feature">
+              <i class="fa-solid fa-file-arrow-up"></i>
+              <span data-i18n="whatsapp.feature2">Comparte planos, fotos o documentos.</span>
+            </div>
+            <div class="whatsapp-modal__feature">
+              <i class="fa-solid fa-user-check"></i>
+              <span data-i18n="whatsapp.feature3">Seguimiento personalizado de tu proyecto.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="modal fade location-modal"
+    id="locationModal"
+    tabindex="-1"
+    aria-labelledby="locationModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="location-modal__title">
+            <span class="location-modal__badge" data-i18n="contact.mapBadge">Ubicación</span>
+            <h5 class="modal-title" id="locationModalLabel" data-i18n="contact.mapTitle">Nuestra ubicación</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="location-modal__description" data-i18n="contact.mapDescription">
+            Visítanos en nuestra sede principal para conversar sobre tu proyecto y conocer nuestras soluciones.
+          </p>
+          <div class="location-modal__frame">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d982.0227898847722!2d-84.3237694304973!3d10.091606999376161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa059bff3a43803%3A0xf5180a81a29a6566!2s2000Siempre%20constructora%20y%20otros!5e0!3m2!1ses!2scr!4v1768359618333!5m2!1ses!2scr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de 2000Siempre"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

@@ -35,6 +35,10 @@
     padding: 35px 25px;
   }
 
+  .location-modal__frame {
+    height: 260px;
+  }
+
   .hero h1 {
     font-size: 2.8rem;
   }
@@ -102,6 +106,17 @@
     bottom: 22px;
     width: 48px;
     height: 48px;
+  }
+
+  .whatsapp-float {
+    right: 16px;
+    bottom: 86px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float__label {
+    display: none;
   }
 
   .navbar-brand {
@@ -192,6 +207,10 @@
 
   #contactForm .btn-contact {
     width: 100%;
+  }
+
+  .location-modal__frame {
+    height: 220px;
   }
 
   .gallery-card img {

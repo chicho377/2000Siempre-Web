@@ -128,6 +128,8 @@
       muted
       loop
       playsinline
+      webkit-playsinline
+      preload="auto"
     >
       <source src="VideoRuta27Cortado.mp4" type="video/mp4" />
     </video>
@@ -185,7 +187,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
         </div>
         <div class="modal-body">
-          <video class="hero-modal-video" controls preload="metadata">
+          <video class="hero-modal-video" controls playsinline webkit-playsinline preload="auto">
             <source src="VideoRuta27Cortado.mp4" type="video/mp4" />
             <span data-i18n="heroVideo.fallback">Tu navegador no soporta la reproducción de video.</span>
           </video>

@@ -54,8 +54,7 @@
   if (heroModal && heroModalVideo) {
     heroModal.addEventListener("shown.bs.modal", () => {
       heroModalVideo.currentTime = 0;
-      heroModalVideo.muted = false;
-      heroModalVideo.play().catch(() => {});
+      heroModalVideo.load();
     });
 
     heroModal.addEventListener("hidden.bs.modal", () => {

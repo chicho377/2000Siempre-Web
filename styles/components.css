@@ -115,6 +115,51 @@
   color: var(--brand-orange);
 }
 
+.process-special {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-special .container {
+  position: relative;
+  z-index: 2;
+}
+
+.process-character {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  width: min(30vw, 300px);
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 18px 36px rgba(3, 18, 48, 0.25));
+}
+
+.process-character img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.stats-special::after {
+  content: "";
+  position: absolute;
+  left: clamp(12px, 4vw, 28px);
+  top: clamp(12px, 4vw, 24px);
+  width: min(18vw, 140px);
+  height: min(18vw, 140px);
+  background: url("../img/specialSiempre/sello-2000-siempre.png") no-repeat center / contain;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.35));
+}
+
+.stats-special .container {
+  position: relative;
+  z-index: 2;
+}
+
 .carousel-item img {
   height: 540px;
   object-fit: cover;

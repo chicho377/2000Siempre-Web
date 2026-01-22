@@ -115,6 +115,53 @@
   color: var(--brand-orange);
 }
 
+.process-special {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-special .container {
+  position: relative;
+  z-index: 2;
+}
+
+.process-cards {
+  padding-right: clamp(120px, 18vw, 220px);
+}
+
+.process-character {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  width: min(30vw, 300px);
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 20px 45px rgba(3, 18, 48, 0.28));
+}
+
+.process-character img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.process-seal {
+  position: absolute;
+  left: clamp(16px, 4vw, 40px);
+  top: clamp(18px, 4vw, 48px);
+  width: min(14vw, 120px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.28;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+}
+
+.process-seal img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .carousel-item img {
   height: 540px;
   object-fit: cover;

@@ -97,6 +97,22 @@
     height: 220px;
   }
 
+  .process-special::after {
+    right: 50%;
+    bottom: -60px;
+    transform: translateX(50%);
+    width: min(70vw, 320px);
+    height: min(70vw, 320px);
+    opacity: 0.14;
+  }
+
+  .stats-special::after {
+    left: 50%;
+    width: min(60vw, 260px);
+    height: min(60vw, 260px);
+    opacity: 0.16;
+  }
+
   .navbar {
     padding: 12px 0;
   }

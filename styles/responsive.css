@@ -97,6 +97,22 @@
     height: 220px;
   }
 
+  .special-siempre__hero {
+    min-height: 360px;
+    padding: 20px 16px 0;
+  }
+
+  .special-siempre__hero img {
+    max-height: 360px;
+    transform: translateY(-8px);
+  }
+
+  .special-siempre__seal-card {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
   .navbar {
     padding: 12px 0;
   }

@@ -90,6 +90,16 @@
       "stats.item2": "Clientes corporativos",
       "stats.item3": "Años de experiencia",
       "stats.item4": "Satisfacción (%)",
+      "special.label": "Especial Siempre",
+      "special.title": "Un sello que acompaña cada obra",
+      "special.description":
+        "Integramos talento, precisión y un estándar propio de calidad que se nota desde el primer render hasta la entrega final.",
+      "special.feature1": "Acompañamiento cercano de principio a fin.",
+      "special.feature2": "Diseño con identidad y propósito.",
+      "special.feature3": "Detalles que diferencian cada proyecto.",
+      "special.badge": "El poder de la verdad",
+      "special.kidAlt": "Personaje de 2000 Siempre con un ave en la mano",
+      "special.sealAlt": "Sello de 2000 Siempre",
       "gallery.label": "Galería",
       "gallery.title": "Proyectos que hablan por sí solos",
       "gallery.description":
@@ -314,6 +324,16 @@
       "stats.item2": "Corporate clients",
       "stats.item3": "Years of experience",
       "stats.item4": "Satisfaction (%)",
+      "special.label": "Siempre special",
+      "special.title": "A signature that supports every build",
+      "special.description":
+        "We blend talent, precision, and our own quality standard that shows up from the first render to the final handoff.",
+      "special.feature1": "Close guidance from start to finish.",
+      "special.feature2": "Design with identity and purpose.",
+      "special.feature3": "Details that set every project apart.",
+      "special.badge": "The power of truth",
+      "special.kidAlt": "2000 Siempre character holding a bird",
+      "special.sealAlt": "2000 Siempre seal",
       "gallery.label": "Gallery",
       "gallery.title": "Projects that speak for themselves",
       "gallery.description":

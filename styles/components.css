@@ -115,6 +115,112 @@
   color: var(--brand-orange);
 }
 
+.special-siempre {
+  background: linear-gradient(135deg, rgba(244, 247, 251, 0.95), rgba(255, 255, 255, 0.7));
+  position: relative;
+  overflow: hidden;
+}
+
+.special-siempre::before,
+.special-siempre::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(11, 61, 145, 0.15), transparent 70%);
+  opacity: 0.6;
+}
+
+.special-siempre::before {
+  width: 360px;
+  height: 360px;
+  top: -120px;
+  left: -140px;
+}
+
+.special-siempre::after {
+  width: 280px;
+  height: 280px;
+  bottom: -140px;
+  right: -100px;
+}
+
+.special-siempre .container {
+  position: relative;
+  z-index: 1;
+}
+
+.special-siempre__label {
+  letter-spacing: 0.2em;
+  font-weight: 600;
+}
+
+.special-siempre__list {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 32px;
+  display: grid;
+  gap: 14px;
+}
+
+.special-siempre__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 600;
+  color: #1d2a44;
+}
+
+.special-siempre__list li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--brand-orange);
+  margin-top: 2px;
+}
+
+.special-siempre__seal-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 24px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 40px rgba(3, 18, 48, 0.12);
+}
+
+.special-siempre__seal-label {
+  font-weight: 700;
+  color: var(--brand-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+}
+
+.special-siempre__seal {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(11, 61, 145, 0.25));
+}
+
+.special-siempre__hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px 20px 0;
+  background: linear-gradient(160deg, rgba(11, 61, 145, 0.08), rgba(244, 124, 32, 0.08));
+  border-radius: 28px;
+  box-shadow: 0 28px 60px rgba(3, 18, 48, 0.18);
+  min-height: 480px;
+}
+
+.special-siempre__hero img {
+  max-width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  transform: translateY(-18px);
+}
+
 .carousel-item img {
   height: 540px;
   object-fit: cover;

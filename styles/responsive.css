@@ -98,11 +98,13 @@
   }
 
   .process-character {
-    right: 50%;
-    bottom: 4px;
-    width: min(66vw, 300px);
-    transform: translateX(50%);
-    opacity: 0.9;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(62vw, 250px);
+    margin: 16px auto 0;
+    transform: none;
+    opacity: 0.95;
   }
 
   .stats-special::after {

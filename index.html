@@ -481,13 +481,76 @@
         </div>
       </div>
     </div>
-    <div class="process-character" aria-hidden="true">
+    <button
+      class="process-character process-character-trigger"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#siroModal"
+      data-i18n-attrs="aria-label:siro.modalTriggerAria"
+      aria-label="Abrir historia completa de Siro"
+    >
       <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
         <source src="./personaje2.webm" type="video/webm" />
-        <img src="./videoPersonaje540p.gif" alt="" />
+        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
       </video>
-    </div>
+      <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Siro</span>
+    </button>
   </section>
+
+  <div class="modal fade siro-modal" id="siroModal" tabindex="-1" aria-labelledby="siroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="siroModalLabel" data-i18n="siro.modalTitle">Siro: guardián de cada proyecto</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+              <div id="siroModalCarousel" class="carousel slide siro-modal-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#siroModalCarousel" data-bs-slide-to="0" class="active" aria-current="true" data-i18n-attrs="aria-label:siro.carousel.slide1" aria-label="Foto 1 de Siro"></button>
+                  <button type="button" data-bs-target="#siroModalCarousel" data-bs-slide-to="1" data-i18n-attrs="aria-label:siro.carousel.slide2" aria-label="Foto 2 de Siro"></button>
+                  <button type="button" data-bs-target="#siroModalCarousel" data-bs-slide-to="2" data-i18n-attrs="aria-label:siro.carousel.slide3" aria-label="Foto 3 de Siro"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/Imagen10.png" class="d-block w-100" data-i18n-attrs="alt:siro.carousel.alt1" alt="Siro liderando proyectos de alto impacto" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Imagen9.png" class="d-block w-100" data-i18n-attrs="alt:siro.carousel.alt2" alt="Siro en supervisión de calidad" />
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/Imagen7.png" class="d-block w-100" data-i18n-attrs="alt:siro.carousel.alt3" alt="Siro impulsando innovación y eficiencia" />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#siroModalCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" data-i18n="common.previous">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#siroModalCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden" data-i18n="common.next">Siguiente</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="siro-modal-info">
+                <p class="text-uppercase text-muted mb-2" data-i18n="siro.modalTag">Identidad</p>
+                <p class="mb-4" data-i18n="siro.modalDescription">Siro es nuestro personaje insignia: inspira confianza, innovación y compromiso en cada obra.</p>
+                <h4 class="siro-modal-subtitle" data-i18n="siro.modalPowersTitle">Superpoderes de Siro</h4>
+                <ul class="list-unstyled siro-modal-powers mb-0">
+                  <li><i class="fa-solid fa-shield-halved text-primary me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower1">Transforma desafíos en planes accionables.</span></li>
+                  <li><i class="fa-solid fa-bolt text-warning me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower2">Motiva al equipo para mantener estándares de excelencia.</span></li>
+                  <li><i class="fa-solid fa-microchip text-success me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower3">Cuida cada detalle para entregar resultados duraderos.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <section id="estadisticas" class="stats py-5 section-space stats-special">
     <div id="stats-particles" class="stats-particles" aria-hidden="true"></div>
@@ -1019,5 +1082,6 @@
   <script src="js/particles-impact.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/gallery-modal.js"></script>
+  <script src="js/siro.js"></script>
 </body>
 </html>

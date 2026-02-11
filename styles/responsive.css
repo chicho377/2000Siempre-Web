@@ -90,7 +90,7 @@
   }
 
   .project-modal__carousel .carousel-item img {
-    height: 320px;
+    height: 350px;
   }
 
   .before-after__image {
@@ -257,5 +257,30 @@
 
   .before-after__image {
     height: 200px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .siro-modal-carousel .carousel-item img {
+    height: 350px;
+  }
+
+  .siro-modal-info {
+    margin-top: 4px;
+  }
+
+  .process-character-trigger__hint {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .siro-modal-carousel .carousel-item img {
+    height: 270px;
+  }
+
+  .process-character-trigger__hint {
+    font-size: 0.7rem;
+    padding: 5px 10px;
   }
 }

@@ -72,12 +72,12 @@
   }
 }
 
-@keyframes excavatorDrive { 
-  0%, 100% { 
+@keyframes excavatorDrive {
+  0% {
     left: 0;
     transform: scaleX(1);
   }
-  45% {
+  49.9% {
     left: calc(100% - var(--excavator-width));
     transform: scaleX(1);
   }
@@ -85,7 +85,7 @@
     left: calc(100% - var(--excavator-width));
     transform: scaleX(-1);
   }
-  95% {
+  100% {
     left: 0;
     transform: scaleX(-1);
   }
@@ -121,14 +121,8 @@
   0% {
     transform: scaleX(0);
   }
-  45% {
-    transform: scaleX(1);
-  }
   50% {
     transform: scaleX(1);
-  }
-  95% {
-    transform: scaleX(0);
   }
   100% {
     transform: scaleX(0);

@@ -264,8 +264,22 @@
 }
 
 @media (max-width: 991.98px) {
-  .siro-modal-carousel .carousel-item img {
-    height: 350px;
+  .siro-modal-story {
+    grid-template-columns: 1fr;
+  }
+
+  .siro-modal-hero {
+    min-height: 360px;
+  }
+
+  .siro-modal-character {
+    max-height: 320px;
+  }
+
+  .siro-modal-villain {
+    width: min(460px, 125%);
+    opacity: 0.55;
+    transform: translate(10%, -4%) scale(1.04);
   }
 
   .siro-modal-info {
@@ -278,8 +292,19 @@
 }
 
 @media (max-width: 575.98px) {
-  .siro-modal-carousel .carousel-item img {
-    height: 270px;
+  .siro-modal-hero {
+    min-height: 300px;
+    padding: 16px;
+  }
+
+  .siro-modal-character {
+    max-height: 250px;
+  }
+
+  .siro-modal-villain {
+    width: 120%;
+    opacity: 0.5;
+    transform: translate(6%, -8%) scale(1);
   }
 
   .process-character-trigger__hint {

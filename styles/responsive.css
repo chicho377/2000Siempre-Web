@@ -264,8 +264,16 @@
 }
 
 @media (max-width: 991.98px) {
-  .siro-modal-carousel .carousel-item img {
-    height: 350px;
+  .siro-modal-story {
+    grid-template-columns: 1fr;
+  }
+
+  .siro-modal-hero {
+    min-height: 360px;
+  }
+
+  .siro-modal-character {
+    max-height: 320px;
   }
 
   .siro-modal-info {
@@ -278,8 +286,13 @@
 }
 
 @media (max-width: 575.98px) {
-  .siro-modal-carousel .carousel-item img {
-    height: 270px;
+  .siro-modal-hero {
+    min-height: 300px;
+    padding: 16px;
+  }
+
+  .siro-modal-character {
+    max-height: 250px;
   }
 
   .process-character-trigger__hint {

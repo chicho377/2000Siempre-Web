@@ -63,8 +63,8 @@
 }
 
 .navbar .container {
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
   max-width: 100%;
 }
 
@@ -85,23 +85,25 @@
 }
 
 .navbar-nav {
-  column-gap: 10px;
+  column-gap: 2px;
   row-gap: 16px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .navbar .nav-link {
   color: rgba(11, 61, 145, 0.85);
   font-weight: 600;
-  padding: 12px 20px;
-  font-size: 1.1rem;
+  padding: 10px 12px;
+  font-size: 1rem;
   border-radius: 999px;
   transition: all 0.3s ease;
   text-align: center;
   position: relative;
+  white-space: nowrap;
 }
 
 .navbar .nav-link:hover,
@@ -127,6 +129,10 @@
 .navbar .nav-link:hover::after,
 .navbar .nav-link:focus::after {
   width: 55%;
+}
+
+.navbar .d-flex {
+  flex-shrink: 0;
 }
 
 .navbar .nav-link.active {

@@ -381,7 +381,7 @@
   left: 50%;
   width: 4px;
   height: 8px;
-  background: var(--brand-blue);
+  background: var(--brand-orange);
   border-radius: 999px;
   transform: translateX(-50%);
   animation: scroll 2s infinite;

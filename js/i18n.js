@@ -248,13 +248,13 @@
       "whatsapp.floatLabel": "WhatsApp",
       "whatsapp.floatAria": "Abrir chat de WhatsApp",
       "whatsapp.link":
-        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20un%20proyecto.",
+        "https://wa.me/50689162000?text=Hola%20equipo%20de%202000%20Siempre%2C%20me%20gustar%C3%ADa%20recibir%20asesor%C3%ADa%20sobre%20un%20proyecto.",
       "whatsapp.quickQuoteLink":
-        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20quiero%20cotizar%20un%20proyecto%20de%20construcci%C3%B3n.",
+        "https://wa.me/50689162000?text=Hola%20equipo%20de%202000%20Siempre%2C%20quiero%20cotizar%20un%20proyecto%20de%20construcci%C3%B3n.",
       "whatsapp.quickVisitLink":
-        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20necesito%20agendar%20una%20visita%20t%C3%A9cnica.",
+        "https://wa.me/50689162000?text=Hola%20equipo%20de%202000%20Siempre%2C%20necesito%20agendar%20una%20visita%20t%C3%A9cnica.",
       "whatsapp.quickSupportLink":
-        "https://wa.me/573004567890?text=Hola%20equipo%20de%202000%20Siempre%2C%20tengo%20una%20consulta%20sobre%20un%20proyecto%20en%20curso.",
+        "https://wa.me/50689162000?text=Hola%20equipo%20de%202000%20Siempre%2C%20tengo%20una%20consulta%20sobre%20un%20proyecto%20en%20curso.",
       "footer.tagline": "Construimos futuro con innovación y confianza.",
       "footer.rights": "© 2024 SiempreConstructora. Todos los derechos reservados.",
       "form.fields.nombre": "Nombre",
@@ -532,13 +532,13 @@
       "whatsapp.floatLabel": "WhatsApp",
       "whatsapp.floatAria": "Open WhatsApp chat",
       "whatsapp.link":
-        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20guidance%20on%20a%20project.",
+        "https://wa.me/50689162000?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20guidance%20on%20a%20project.",
       "whatsapp.quickQuoteLink":
-        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20a%20construction%20quote.",
+        "https://wa.me/50689162000?text=Hi%202000%20Siempre%20team%2C%20I%20would%20like%20a%20construction%20quote.",
       "whatsapp.quickVisitLink":
-        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20need%20to%20schedule%20a%20site%20visit.",
+        "https://wa.me/50689162000?text=Hi%202000%20Siempre%20team%2C%20I%20need%20to%20schedule%20a%20site%20visit.",
       "whatsapp.quickSupportLink":
-        "https://wa.me/573004567890?text=Hi%202000%20Siempre%20team%2C%20I%20have%20a%20question%20about%20an%20ongoing%20project.",
+        "https://wa.me/50689162000?text=Hi%202000%20Siempre%20team%2C%20I%20have%20a%20question%20about%20an%20ongoing%20project.",
       "footer.tagline": "We build the future with innovation and trust.",
       "footer.rights": "© 2024 SiempreConstructora. All rights reserved.",
       "form.fields.nombre": "Name",

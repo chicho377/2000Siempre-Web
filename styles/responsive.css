@@ -323,10 +323,20 @@
     max-height: 250px;
   }
 
+  .siro-modal-villain-wrap {
+    padding: 10px;
+  }
+
   .siro-modal-villain {
-    width: 120%;
+    width: min(360px, 96%);
+    max-width: 100%;
     opacity: 0.5;
-    transform: translate(6%, -8%) scale(1);
+    transform: translate(0, 0) scale(0.92);
+  }
+
+  .siro-modal-villain-gallery {
+    grid-template-columns: repeat(3, minmax(74px, 1fr));
+    gap: 8px;
   }
 
   .process-character-trigger__hint {

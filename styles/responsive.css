@@ -291,17 +291,30 @@
   }
 
   .siro-modal-hero {
-    min-height: 360px;
+    min-height: 500px;
+    padding: 16px 18px 200px;
+  }
+
+  .siro-modal-character-row {
+    left: 14px;
+    right: 14px;
+    bottom: 40px;
+    gap: 8px 12px;
   }
 
   .siro-modal-character {
-    max-height: 320px;
+    max-height: 190px;
+  }
+
+  .siro-modal-character-row .siro-modal-character:nth-child(1),
+  .siro-modal-character-row .siro-modal-character:nth-child(3) {
+    max-height: 220px;
   }
 
   .siro-modal-villain {
-    width: min(460px, 125%);
-    opacity: 0.55;
-    transform: translate(10%, -4%) scale(1.04);
+    width: min(400px, 108%);
+    opacity: 0.52;
+    transform: translate(4%, -10%) scale(0.96);
   }
 
   .siro-modal-info {
@@ -315,18 +328,35 @@
 
 @media (max-width: 575.98px) {
   .siro-modal-hero {
-    min-height: 300px;
-    padding: 16px;
+    min-height: 450px;
+    padding: 14px 12px 186px;
+  }
+
+  .siro-modal-character-row {
+    left: 8px;
+    right: 8px;
+    bottom: 34px;
+    gap: 6px 8px;
   }
 
   .siro-modal-character {
-    max-height: 250px;
+    max-height: 160px;
+  }
+
+  .siro-modal-character-row .siro-modal-character:nth-child(1),
+  .siro-modal-character-row .siro-modal-character:nth-child(3) {
+    max-height: 188px;
+  }
+
+  .siro-modal-villain-wrap {
+    padding: 8px;
   }
 
   .siro-modal-villain {
-    width: 120%;
-    opacity: 0.5;
-    transform: translate(6%, -8%) scale(1);
+    width: min(260px, 78%);
+    max-width: 100%;
+    opacity: 0.48;
+    transform: translate(0, -14%) scale(0.82);
   }
 
   .process-character-trigger__hint {

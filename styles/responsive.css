@@ -66,13 +66,18 @@
   }
 
   .client-card {
-    min-width: 160px;
+    min-width: 245px;
     padding: 12px 18px;
   }
 
   .client-card img {
-    max-width: 120px;
-    max-height: 46px;
+    max-width: 205px;
+    max-height: 74px;
+  }
+
+  .client-card img.logo-ruta27 {
+    max-width: 165px;
+    max-height: 60px;
   }
 
   .gallery-card img {
@@ -85,7 +90,7 @@
   }
 
   .about-value-pill {
-    min-width: 170px;
+    min-width: 220px;
     width: calc(50% - 10px);
     padding: 10px 16px;
     font-size: 0.92rem;
@@ -254,12 +259,17 @@
   }
 
   .client-card {
-    min-width: 140px;
+    min-width: 220px;
   }
 
   .client-card img {
-    max-width: 110px;
-    max-height: 40px;
+    max-width: 185px;
+    max-height: 66px;
+  }
+
+  .client-card img.logo-ruta27 {
+    max-width: 145px;
+    max-height: 52px;
   }
 
   .equipment-caption h3 {

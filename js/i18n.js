@@ -256,7 +256,7 @@
       "whatsapp.quickSupportLink":
         "https://wa.me/50689162000?text=Hola%20equipo%20de%202000%20Siempre%2C%20tengo%20una%20consulta%20sobre%20un%20proyecto%20en%20curso.",
       "footer.tagline": "Construimos futuro con innovación y confianza.",
-      "footer.rights": "© 2024 SiempreConstructora. Todos los derechos reservados.",
+      "footer.rights": "© 2026 2000siempre. Todos los derechos reservados.",
       "form.fields.nombre": "Nombre",
       "form.fields.correo": "Correo",
       "form.fields.telefono": "Teléfono",
@@ -540,7 +540,7 @@
       "whatsapp.quickSupportLink":
         "https://wa.me/50689162000?text=Hi%202000%20Siempre%20team%2C%20I%20have%20a%20question%20about%20an%20ongoing%20project.",
       "footer.tagline": "We build the future with innovation and trust.",
-      "footer.rights": "© 2024 SiempreConstructora. All rights reserved.",
+      "footer.rights": "© 2026 2000siempre. All rights reserved.",
       "form.fields.nombre": "Name",
       "form.fields.correo": "Email",
       "form.fields.telefono": "Phone",

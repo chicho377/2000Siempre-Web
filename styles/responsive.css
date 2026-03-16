@@ -66,17 +66,34 @@
   }
 
   .client-card {
-    min-width: 160px;
+    min-width: 260px;
     padding: 12px 18px;
   }
 
   .client-card img {
-    max-width: 120px;
-    max-height: 46px;
+    max-width: 220px;
+    max-height: 80px;
+  }
+
+  .client-card img.logo-ruta27 {
+    max-width: 175px;
+    max-height: 64px;
   }
 
   .gallery-card img {
     height: 270px;
+  }
+
+
+  .about-values-list {
+    gap: 12px;
+  }
+
+  .about-value-pill {
+    min-width: 235px;
+    width: calc(50% - 10px);
+    padding: 10px 16px;
+    font-size: 0.92rem;
   }
 
   .project-modal .modal-dialog {
@@ -90,11 +107,31 @@
   }
 
   .project-modal__carousel .carousel-item img {
-    height: 320px;
+    height: 350px;
   }
 
   .before-after__image {
     height: 220px;
+  }
+
+  .process-character {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    display: block;
+    width: min(62vw, 250px);
+    margin: 16px auto 0;
+    transform: none;
+    opacity: 0.95;
+  }
+
+  .stats-special::after {
+    left: 50%;
+    top: 16px;
+    width: min(26vw, 120px);
+    height: min(26vw, 120px);
+    transform: translateX(-50%);
+    opacity: 0.16;
   }
 
   .navbar {
@@ -222,12 +259,17 @@
   }
 
   .client-card {
-    min-width: 140px;
+    min-width: 235px;
   }
 
   .client-card img {
-    max-width: 110px;
-    max-height: 40px;
+    max-width: 200px;
+    max-height: 72px;
+  }
+
+  .client-card img.logo-ruta27 {
+    max-width: 155px;
+    max-height: 56px;
   }
 
   .equipment-caption h3 {
@@ -240,5 +282,83 @@
 
   .before-after__image {
     height: 200px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .siro-modal-story {
+    grid-template-columns: 1fr;
+  }
+
+  .siro-modal-hero {
+    min-height: 560px;
+    padding: 16px 18px 228px;
+  }
+
+  .siro-modal-character-row {
+    left: 14px;
+    right: 14px;
+    bottom: 44px;
+    gap: 10px 12px;
+  }
+
+  .siro-modal-character {
+    height: 260px;
+  }
+
+  .siro-modal-character-row .siro-modal-character:nth-child(3) {
+    height: 276px;
+  }
+
+  .siro-modal-villain {
+    width: min(400px, 108%);
+    opacity: 0.52;
+    transform: translate(4%, -10%) scale(0.96);
+  }
+
+  .siro-modal-info {
+    margin-top: 4px;
+  }
+
+  .process-character-trigger__hint {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .siro-modal-hero {
+    min-height: 500px;
+    padding: 14px 12px 212px;
+  }
+
+  .siro-modal-character-row {
+    left: 8px;
+    right: 8px;
+    bottom: 36px;
+    gap: 6px 8px;
+  }
+
+  .siro-modal-character {
+    height: 220px;
+  }
+
+  .siro-modal-character-row .siro-modal-character:nth-child(3) {
+    height: 236px;
+  }
+
+  .siro-modal-villain-wrap {
+    padding: 8px;
+  }
+
+  .siro-modal-villain {
+    width: min(260px, 78%);
+    max-width: 100%;
+    opacity: 0.48;
+    transform: translate(0, -14%) scale(0.82);
+  }
+
+  .process-character-trigger__hint {
+    font-size: 0.7rem;
+    padding: 5px 10px;
   }
 }

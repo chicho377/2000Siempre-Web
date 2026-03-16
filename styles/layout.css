@@ -63,8 +63,8 @@
 }
 
 .navbar .container {
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
   max-width: 100%;
 }
 
@@ -85,23 +85,25 @@
 }
 
 .navbar-nav {
-  column-gap: 10px;
+  column-gap: 2px;
   row-gap: 16px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .navbar .nav-link {
   color: rgba(11, 61, 145, 0.85);
   font-weight: 600;
-  padding: 12px 20px;
-  font-size: 1.1rem;
+  padding: 10px 12px;
+  font-size: 1rem;
   border-radius: 999px;
   transition: all 0.3s ease;
   text-align: center;
   position: relative;
+  white-space: nowrap;
 }
 
 .navbar .nav-link:hover,
@@ -127,6 +129,10 @@
 .navbar .nav-link:hover::after,
 .navbar .nav-link:focus::after {
   width: 55%;
+}
+
+.navbar .d-flex {
+  flex-shrink: 0;
 }
 
 .navbar .nav-link.active {
@@ -375,7 +381,7 @@
   left: 50%;
   width: 4px;
   height: 8px;
-  background: var(--brand-blue);
+  background: var(--brand-orange);
   border-radius: 999px;
   transform: translateX(-50%);
   animation: scroll 2s infinite;
@@ -392,20 +398,22 @@
   font-weight: 700;
   color: var(--brand-blue);
   display: inline-block;
-  padding-bottom: 38px;
+  padding-bottom: 48px;
   font-size: 2.6rem;
   line-height: 1.15;
-  --excavator-width: 64px/*42px*/;
-  --excavator-height: 40px/*26px*/;
+  --excavator-width: 88px;
+  --excavator-height: 52px;
+  --haul-animation-duration: 24s;
+  --line-under-truck-scale: 0.18;
 }
 
 .section-title::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -14px;
+  bottom: -20px;
   width: 100%;
-  height: 6px;
+  height: 8px;
   border-radius: 999px;
   background: repeating-linear-gradient(
     45deg,
@@ -415,35 +423,38 @@
     var(--accent-yellow) 20px
   );
   transform-origin: left;
-  transform: scaleX(0/*1*/);
-  transition: transform 2.6s ease;
-  animation: lineGrow 20s ease-in-out infinite/*forwars*/;
+  transform: scaleX(0);
+  animation: lineGrow var(--haul-animation-duration) linear infinite;
+  animation-play-state: paused;
 }
 
 .section-title::before { 
   content: ""; 
   position: absolute; 
   left: 0; 
-  bottom: -14px; 
+  bottom: -19px; 
   width: var(--excavator-width); 
   height: var(--excavator-height); 
   background-image: url("../img/vagoneta.svg"); 
   background-size: contain; 
   background-repeat: no-repeat; 
-  background-position: center;  /* AGREGA ESTO */
-  transform-origin: center center;  /* AGREGA ESTO */
-  animation: excavatorDrive 20s ease-in-out infinite; 
+  background-position: center;
+  transform-origin: center center;
+  animation: excavatorDrive var(--haul-animation-duration) linear infinite;
+  animation-play-state: paused;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2)); 
   pointer-events: none; 
   z-index: 1; 
 }
 
-.aos-init .section-title::after {
-  transform: scaleX(0);
+.aos-init .section-title::after,
+.aos-init .section-title::before {
+  animation-play-state: paused;
 }
 
-.aos-animate .section-title::after {
-  transform: scaleX(1);
+.aos-animate .section-title::after,
+.aos-animate .section-title::before {
+  animation-play-state: running;
 }
 
 .section-space {

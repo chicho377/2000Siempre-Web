@@ -32,12 +32,10 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-info">
-        <span><i class="fa-solid fa-phone"></i> +(506) 2519-7000</span>
-        <span class="topbar-separator">ISO 9001</span>
+        <span><i class="fa-solid fa-phone"></i> +(506) 8916-2000</span>
       </div>
       <div class="topbar-links">
         <a href="#contacto" data-i18n="topbar.contact">Contacto</a>
-        <a href="#contacto" data-i18n="topbar.jobs">Empleo</a>
       </div>
     </div>
   </div>
@@ -64,6 +62,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros" data-i18n="nav.about">Nosotros</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="#servicios" data-i18n="nav.services">Servicios</a>
           </li>
@@ -110,7 +111,7 @@
   <a
     class="whatsapp-float"
     data-i18n-attrs="href:whatsapp.link,aria-label:whatsapp.floatAria"
-    href="https://wa.me/573004567890"
+    href="https://wa.me/50689162000"
     target="_blank"
     rel="noopener"
     aria-label="Abrir chat de WhatsApp"
@@ -196,41 +197,84 @@
     </div>
   </div>
 
+  <section id="nosotros" class="py-5 bg-white section-space about-section">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <p class="text-uppercase text-muted" data-i18n="about.label">Nosotros</p>
+        <h2 class="section-title" data-i18n="about.title">¿Qué es 2000 Siempre?</h2>
+        <p class="mt-3 mx-auto about-description" data-i18n="about.description">
+          Es una empresa familiar dedicada a la construcción y otros negocios, cuya idea es brindar proyectos y experiencias de calidad, formados y respaldados sobre principios espirituales.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="card card-hover h-100 p-4 about-card">
+            <h5 class="fw-bold mb-3 about-card-title" data-i18n="about.vision.title">Visión</h5>
+            <p class="mb-0" data-i18n="about.vision.desc">Lograr el avance constructivo con un servicio de calidad a un costo accesible ante la demanda.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card card-hover h-100 p-4 about-card">
+            <h5 class="fw-bold mb-3 about-card-title" data-i18n="about.mission.title">Misión</h5>
+            <p class="mb-0" data-i18n="about.mission.desc">Ser parte del progreso, alusivo a la construcción y otros.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" data-aos="fade-up" data-aos-delay="150">
+        <h3 class="about-values-title" data-i18n="about.values.title">Nuestros valores</h3>
+        <div class="about-values-list">
+          <span class="about-value-pill" data-i18n="about.values.item1">Desición</span>
+          <span class="about-value-pill" data-i18n="about.values.item2">Disciplina</span>
+          <span class="about-value-pill" data-i18n="about.values.item4">Constancia</span>
+          <span class="about-value-pill" data-i18n="about.values.item3">Agradecimiento</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="servicios" class="py-5 section-space">
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <p class="text-uppercase text-muted" data-i18n="services.label">Nuestros servicios</p>
-        <h2 class="section-title" data-i18n="services.title">Soluciones completas para tu proyecto</h2>
+        <h2 class="section-title" data-i18n="services.title">Servicios especializados para infraestructura y mantenimiento</h2>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+
+      <div class="row g-4" id="projectsGalleryGrid">
+        <div class="col-md-6" data-aos="zoom-in">
           <div class="card card-hover tilt-card h-100 p-4">
-            <i class="fa-solid fa-building fa-2x text-primary mb-3"></i>
-            <h5 class="fw-bold" data-i18n="services.card1.title">Construcción llave en mano</h5>
-            <p data-i18n="services.card1.desc">Desde planos hasta entrega final con acabados premium.</p>
+            <i class="fa-solid fa-seedling fa-2x text-success mb-3"></i>
+            <h5 class="fw-bold" data-i18n="services.group1.title">Mantenimiento y preparación de superficies</h5>
+            <p class="mb-0" data-i18n="services.group1.desc">Mantenimiento de Jardinería y zonas verdes, Movimientos de tierras, Rectificación de suelos y losas, y Mantenimiento Industrial.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="card card-hover tilt-card h-100 p-4">
-            <i class="fa-solid fa-pen-ruler fa-2x text-warning mb-3"></i>
-            <h5 class="fw-bold" data-i18n="services.card2.title">Diseño y arquitectura</h5>
-            <p data-i18n="services.card2.desc">Conceptos personalizados, renders y visualizaciones 3D.</p>
+            <i class="fa-solid fa-road fa-2x text-primary mb-3"></i>
+            <h5 class="fw-bold" data-i18n="services.group2.title">Pavimentación y obra vial</h5>
+            <p class="mb-0" data-i18n="services.group2.desc">Bases y Colocación de asfaltos, Colocación de Concreto, Colocación de Flex Beam, Conformación de Bajantes, y Colocación de cuneta prefabricada y revestida.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
           <div class="card card-hover tilt-card h-100 p-4">
-            <i class="fa-solid fa-chart-line fa-2x text-success mb-3"></i>
-            <h5 class="fw-bold" data-i18n="services.card3.title">Gerencia de obra</h5>
-            <p data-i18n="services.card3.desc">Control de cronograma, presupuestos y calidad.</p>
+            <i class="fa-solid fa-water fa-2x text-info mb-3"></i>
+            <h5 class="fw-bold" data-i18n="services.group3.title">Drenajes y protección hidráulica</h5>
+            <p class="mb-0" data-i18n="services.group3.desc">Refuerzo de alcantarilla y soluciones de manejo de agua para mayor durabilidad y seguridad en la infraestructura.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="card card-hover tilt-card h-100 p-4">
-            <i class="fa-solid fa-city fa-2x text-primary mb-3"></i>
-            <h5 class="fw-bold" data-i18n="services.card4.title">Infraestructura urbana</h5>
-            <p data-i18n="services.card4.desc">Soluciones para vías, parques y espacios públicos.</p>
+            <i class="fa-solid fa-paint-roller fa-2x text-warning mb-3"></i>
+            <h5 class="fw-bold" data-i18n="services.group4.title">Acabados industriales y protección final</h5>
+            <p class="mb-0" data-i18n="services.group4.desc">Pulido de piso, Aplicación de pintura epoxica, Tratamiento de pasillos y demarcación en pintura epoxica, Tratamiento de uretano cementico industrial, Aplicación de pintura con pigmentos metálicos, Tratamientos de sellos rígidos y semi rígidos, e Impermeabilización de azoteas.</p>
           </div>
         </div>
+
+
       </div>
     </div>
   </section>
@@ -350,103 +394,81 @@
     >
       <div class="clients-track">
         <div class="client-card">
-          <img src="./img/Logos/Adastra.png" alt="Logo Brenntag" />
+          <img src="./img/LogosCarruselGris/logoAD.png" alt="Logo Adastra" />
         </div>
         <div class="client-card">
-          <img src="./img/Logos/BN.png" alt="Logo General Cable" />
+          <img src="./img/LogosCarruselGris/logoBN.png" alt="Logo BN" />
         </div>
         <div class="client-card">
-          <img src="./img/Logos/ccss.jpg" alt="Logo BCIE" />
+          <img src="./img/LogosCarruselGris/logoCCSS.png" alt="Logo CCSS" />
         </div>
         <div class="client-card">
-          <img src="./img/Logos/Cuesa.png" alt="Logo La Cueva" />
+          <img src="./img/LogosCarruselGris/logoCuesa.png" alt="Logo Cuesa" />
         </div>
         <div class="client-card">
-          <img src="./img/Logos/Geofortis.png" alt="Logo Grupo RZ" />
+          <img src="./img/LogosCarruselGris/logoGeo.png" alt="Logo Geofortis" />
         </div>
         <div class="client-card">
-          <img src="./img/Logos/H&M.png" alt="Logo Registro Nacional" />
+          <img src="./img/LogosCarruselGris/logoHM.png" alt="Logo H&M" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/ICE.png" alt="Logo INS" />
+          <img src="./img/LogosCarruselGris/logoICE.png" alt="Logo ICE" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/Laica.png" alt="Logo Más por menos" />
+          <img src="./img/LogosCarruselGris/logoLaica.png" alt="Logo Laica" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/Pedregal.png" alt="Logo Maxi Palí" />
+          <img src="./img/LogosCarruselGris/logoMuni.png" alt="Logo Municipalidad" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/Plycem.jpg" alt="Logo Palí" />
+          <img src="./img/LogosCarruselGris/logoPedregal.png" alt="Logo Pedregal" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/Recope.jpg" alt="Logo Barceló" />
-        </div>
-      </div>
-      <div class="clients-track" aria-hidden="true">
-        <div class="client-card">
-          <img src="img/Logos/Ruta 27.png" alt="" />
+          <img src="./img/LogosCarruselGris/logoPlycem.png" alt="Logo Plycem" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/Sur.png" alt="" />
+          <img src="./img/LogosCarruselGris/logoRecope.png" alt="Logo Recope" />
         </div>
         <div class="client-card">
-          <img src="img/Logos/TRAESA.png" alt="" />
+          <img class="logo-ruta27" src="./img/LogosCarruselGris/logoRuta27.png" alt="Logo Ruta 27" />
         </div>
         <div class="client-card">
-          <img src="img/logos/la-cueva.png" alt="" />
+          <img src="./img/LogosCarruselGris/logoSUR.png" alt="Logo SUR" />
         </div>
         <div class="client-card">
-          <img src="img/logos/grupo-rz.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/registro-nacional.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/ins.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/mas-por-menos.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/maxi-pali.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/pali.png" alt="" />
-        </div>
-        <div class="client-card">
-          <img src="img/logos/barcelo.png" alt="" />
+          <img src="./img/LogosCarruselGris/logoTraesa.png" alt="Logo Traesa" />
         </div>
       </div>
     </div>
   </section>
 
-  <section id="proceso" class="py-5 section-space">
+  <section id="proceso" class="py-5 section-space process-special">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-up">
           <p class="text-uppercase text-muted" data-i18n="process.label">Metodología</p>
-          <h2 class="section-title" data-i18n="process.title">Transparencia en cada etapa</h2>
+          <h2 class="section-title" data-i18n="process.title">Nuestro compromiso en cada proyecto</h2>
           <p class="mt-3" data-i18n="process.description">
-            Nuestro proceso está diseñado para reducir riesgos y asegurar la rentabilidad del proyecto.
-            Cada etapa cuenta con especialistas dedicados y reportes en tiempo real.
+            Nuestro trabajo se basa en la planificación, la calidad y el cumplimiento. En cada obra
+            aplicamos procesos que garantizan seguridad, eficiencia y resultados duraderos para
+            nuestros clientes.
           </p>
           <div class="timeline mt-4">
             <div class="timeline-item">
-              <h5 class="fw-bold" data-i18n="process.timeline1.title">Diagnóstico y planeación</h5>
-              <p data-i18n="process.timeline1.desc">Evaluamos viabilidad, presupuesto y cronograma de ejecución.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline1.title">Planificación y supervisión</h5>
+              <p data-i18n="process.timeline1.desc">Cada proyecto es dirigido por supervisores con experiencia en construcción, quienes se encargan de coordinar las actividades y asegurar que el trabajo se ejecute correctamente desde el inicio hasta la finalización.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold" data-i18n="process.timeline2.title">Diseño y preconstrucción</h5>
-              <p data-i18n="process.timeline2.desc">Modelos BIM, coordinación de especialidades y aprobación legal.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline2.title">Calidad de materiales</h5>
+              <p data-i18n="process.timeline2.desc">Trabajamos con materiales de primera calidad y proveedores confiables para garantizar la durabilidad y el buen desempeño de cada obra realizada.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold" data-i18n="process.timeline3.title">Construcción y control</h5>
-              <p data-i18n="process.timeline3.desc">Seguimiento con KPIs, seguridad industrial y calidad certificada.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline3.title">Cumplimiento de plazos</h5>
+              <p data-i18n="process.timeline3.desc">Nos comprometemos a respetar los tiempos establecidos para cada proyecto, organizando los recursos y las actividades para cumplir con los cronogramas acordados.</p>
             </div>
             <div class="timeline-item">
-              <h5 class="fw-bold" data-i18n="process.timeline4.title">Entrega y postventa</h5>
-              <p data-i18n="process.timeline4.desc">Documentación completa, garantías y acompañamiento continuo.</p>
+              <h5 class="fw-bold" data-i18n="process.timeline4.title">Garantía y respaldo</h5>
+              <p data-i18n="process.timeline4.desc">Brindamos garantía en nuestros trabajos según el tipo de proyecto y los acuerdos establecidos con cada cliente, ofreciendo respaldo y confianza en cada servicio.</p>
             </div>
           </div>
         </div>
@@ -454,35 +476,89 @@
           <div class="row g-4">
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold" data-i18n="process.card1.title">Equipo experto</h5>
-                <p data-i18n="process.card1.desc">Ingenieros, arquitectos y técnicos con alta especialización.</p>
+                <h5 class="fw-bold" data-i18n="process.card1.title">Equipo con experiencia</h5>
+                <p data-i18n="process.card1.desc">Contamos con personal capacitado y supervisión profesional para asegurar una correcta ejecución de cada proyecto.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold" data-i18n="process.card2.title">Innovación continua</h5>
-                <p data-i18n="process.card2.desc">Automatización, drones y monitoreo inteligente de obra.</p>
+                <h5 class="fw-bold" data-i18n="process.card2.title">Seguridad ocupacional</h5>
+                <p data-i18n="process.card2.desc">Aplicamos protocolos de seguridad y utilizamos equipo de protección para garantizar la seguridad de todo el personal en obra.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold" data-i18n="process.card3.title">Certificaciones</h5>
-                <p data-i18n="process.card3.desc">ISO 9001 y estándares internacionales de sostenibilidad.</p>
+                <h5 class="fw-bold" data-i18n="process.card3.title">Gestión ambiental</h5>
+                <p data-i18n="process.card3.desc">Promovemos prácticas responsables con el medio ambiente mediante el uso adecuado de recursos y la protección del entorno.</p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="card card-hover tilt-card p-4 h-100">
-                <h5 class="fw-bold" data-i18n="process.card4.title">Compras eficientes</h5>
-                <p data-i18n="process.card4.desc">Alianzas estratégicas para reducir costos y tiempos.</p>
+                <h5 class="fw-bold" data-i18n="process.card4.title">Responsabilidad social</h5>
+                <p data-i18n="process.card4.desc">Participamos en programas de voluntariado y acciones comunitarias que contribuyen al desarrollo social y ambiental.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <button
+      class="process-character process-character-trigger"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#siroModal"
+      data-i18n-attrs="aria-label:siro.modalTriggerAria"
+      aria-label="Abrir historia completa de Ciro"
+    >
+      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
+        <source src="./personaje2.webm" type="video/webm" />
+        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
+      </video>
+      <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
+    </button>
   </section>
 
-  <section id="estadisticas" class="stats py-5 section-space">
+  <div class="modal fade siro-modal" id="siroModal" tabindex="-1" aria-labelledby="siroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title h5 mb-0" id="siroModalLabel" data-i18n="siro.modalTitle">Ciro: promesa de amor que inspira</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" data-i18n-attrs="aria-label:common.close" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="siro-modal-story">
+            <div class="siro-modal-hero">
+              <div class="siro-modal-character-row" aria-label="Variantes de Ciro">
+                <img src="./img/especialSiempre/Special SiempreSinFondo.png" class="siro-modal-character" alt="Ciro en su forma principal" />
+                <img src="./img/especialSiempre/ciroCapa.png" class="siro-modal-character" alt="Ciro en versión capa" />
+                <img src="./img/especialSiempre/CiroParm.png" class="siro-modal-character" alt="Ciro en versión parm" />
+              </div>
+              <div class="siro-modal-villain-wrap" aria-hidden="true">
+                <img src="./img/especialSiempre/Maligno.png" class="siro-modal-villain" data-i18n-attrs="alt:siro.villain.alt" alt="Sombra amorfa y transparente" />
+              </div>
+            </div>
+            <div class="siro-modal-info">
+              <p class="text-uppercase text-muted mb-2" data-i18n="siro.modalTag">Origen</p>
+              <p class="mb-3" data-i18n="siro.modalDescription">Ciro nace de una promesa de amor para su pueblo, inspirada en Isaías 45. No es solo un personaje: representa a toda persona que elige levantarse, hacer el bien y convertirse en esperanza para los demás.</p>
+              <h4 class="siro-modal-subtitle" data-i18n="siro.modalPowersTitle">Los 4 poderes de Ciro</h4>
+              <ul class="list-unstyled siro-modal-powers mb-4">
+                <li><i class="fa-solid fa-star text-primary me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower1">Su ejemplo transforma: cada acción inspira, se multiplica y anima a otros a seguir el camino correcto.</span></li>
+                <li><i class="fa-solid fa-hand-holding-heart text-danger me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower2">Tiene el poder de dar: desde una sonrisa sincera hasta aliento en los momentos más difíciles.</span></li>
+                <li><i class="fa-solid fa-shield-heart text-success me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower3">Tiene el poder de no hacer el mal: elige proteger en lugar de dañar y vive el perdón como una verdadera fortaleza.</span></li>
+                <li><i class="fa-solid fa-gem text-warning me-2" aria-hidden="true"></i><span data-i18n="siro.modalPower4">Tiene el poder de vivir sus valores: practica el respeto, la honestidad, la solidaridad y la responsabilidad para construir un mejor mañana.</span></li>
+              </ul>
+              <div class="siro-modal-shadow">
+                <h5 class="siro-modal-subtitle mb-2" data-i18n="siro.villain.title">El maligno</h5>
+                <p class="mb-0" data-i18n="siro.villain.description">Es una sombra transparente, amorfa e inerte que intenta infiltrarse en los superhéroes para desviarlos y convertirlos en aquello que no están llamados a ser.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="estadisticas" class="stats py-5 section-space stats-special">
     <div id="stats-particles" class="stats-particles" aria-hidden="true"></div>
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
@@ -504,13 +580,13 @@
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
           <div class="stat-card text-center tilt-card">
-            <div class="stat-number" data-target="36">0</div>
-            <p class="mb-0" data-i18n="stats.item3">Años de experiencia</p>
+            <div class="stat-number" data-target="2009">0</div>
+            <p class="mb-0" data-i18n="stats.item3">Desde</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
           <div class="stat-card text-center tilt-card">
-            <div class="stat-number" data-target="98">0</div>
+            <div class="stat-number" data-target="99">0</div>
             <p class="mb-0" data-i18n="stats.item4">Satisfacción (%)</p>
           </div>
         </div>
@@ -535,21 +611,21 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Residencial Mirador"
-            data-description="Complejo residencial con diseño bioclimático, terrazas panorámicas y acabados premium que priorizan la sostenibilidad."
+            data-title="Proyecto Bosque del Niño"
+            data-description="Proyecto Bosque del Niño con colocación de asfalto y adoquín para mejorar accesos y circulación interna."
             data-i18n-attrs="data-title:gallery.item1.title,data-description:gallery.item1.desc"
-            data-images="./img/Imagen8.png|./img/Imagen2.png|./img/Imagen3.png"
-            data-before="./img/Imagen1.png"
-            data-after="./img/Imagen8.png"
+            data-images="./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/Diseño sin título.png|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/1.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/3.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/4.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/6.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/7.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/10.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/Img1.jpeg|./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/img3.jpeg"
+            data-before="./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/antes.jpeg"
+            data-after="./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/despues.png"
           >
             <img
-              src="./img/Imagen8.png"
+              src="./img/Proyectos/Proyecto Bosque del Niño, Colocación de Asfalto y Adoquin/despues.png"
               data-i18n-attrs="alt:gallery.item1.alt"
-              alt="Complejo residencial moderno"
+              alt="Proyecto Bosque del Niño"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item1.title">Residencial Mirador</h5>
-              <p class="mb-0" data-i18n="gallery.item1.overlay">Diseño bioclimático y acabados premium.</p>
+              <h5 class="mb-1" data-i18n="gallery.item1.title">Proyecto Bosque del Niño</h5>
+              <p class="mb-0" data-i18n="gallery.item1.overlay">Colocación de asfalto y adoquín.</p>
             </div>
           </button>
         </div>
@@ -559,21 +635,21 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Torre Corporativa Norte"
-            data-description="Torre inteligente con lobbies de doble altura, espacios flexibles para empresas globales y certificación energética."
+            data-title="Colocación de Asfalto y Adoquin"
+            data-description="Proyecto de colocación de asfalto en zona cárnica para optimizar tránsito y operación diaria."
             data-i18n-attrs="data-title:gallery.item2.title,data-description:gallery.item2.desc"
-            data-images="./img/Imagen6.png|./img/6.png|./img/Imagen10.png"
-            data-before="./img/Imagen6.1.png"
-            data-after="./img/Imagen6.png"
+            data-images="./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/556380431_1234588445349641_41645035348983888_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/556473317_1234588338682985_7556632631702618931_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/556511413_1234588478682971_7258250459517822187_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/557014680_1234588512016301_7841735525512049153_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/557823302_1234588408682978_3183559708200792873_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/558612831_1234588365349649_6181078524226467114_n.jpg|./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/558827634_1234588542016298_6331649210039655414_n.jpg"
+            data-before="./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/558827634_1234588542016298_6331649210039655414_n.jpg"
+            data-after="./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/558827634_1234588542016298_6331649210039655414_n.jpg"
           >
             <img
-              src="./img/Imagen6.png"
+              src="./img/Proyectos/Proyecto Carnicas, Trabajo de Asfalto/558827634_1234588542016298_6331649210039655414_n.jpg"
               data-i18n-attrs="alt:gallery.item2.alt"
-              alt="Torre corporativa"
+              alt="Colocación de Asfalto y Adoquin"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item2.title">Torre Corporativa Norte</h5>
-              <p class="mb-0" data-i18n="gallery.item2.overlay">Espacios flexibles para empresas globales.</p>
+              <h5 class="mb-1" data-i18n="gallery.item2.title">Colocación de Asfalto y Adoquin</h5>
+              <p class="mb-0" data-i18n="gallery.item2.overlay">Mejora operativa en superficie asfaltada.</p>
             </div>
           </button>
         </div>
@@ -583,21 +659,21 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Distrito Urbano"
-            data-description="Proyecto de infraestructura conectada con plazas verdes, movilidad sostenible y equipamientos comunitarios."
+            data-title="Proyecto Concreto Ciudad Colon"
+            data-description="Proyecto de concreto en Ciudad Colón para reforzar estructura vial y durabilidad del acabado final."
             data-i18n-attrs="data-title:gallery.item3.title,data-description:gallery.item3.desc"
-            data-images="./img/8.png|./img/5.png|./img/7.png"
-            data-before="./img/4.png"
-            data-after="./img/8.png"
+            data-images="./img/Proyectos/Proyecto Concreto, Ciudad Colon/2.png|./img/Proyectos/Proyecto Concreto, Ciudad Colon/3.png"
+            data-before="./img/Proyectos/Proyecto Concreto, Ciudad Colon/antes.png"
+            data-after="./img/Proyectos/Proyecto Concreto, Ciudad Colon/despues.png"
           >
             <img
-              src="./img/8.png"
+              src="./img/Proyectos/Proyecto Concreto, Ciudad Colon/despues.png"
               data-i18n-attrs="alt:gallery.item3.alt"
-              alt="Complejo urbano"
+              alt="Proyecto Concreto Ciudad Colon"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item3.title">Distrito Urbano</h5>
-              <p class="mb-0" data-i18n="gallery.item3.overlay">Infraestructura conectada y sostenible.</p>
+              <h5 class="mb-1" data-i18n="gallery.item3.title">Proyecto Concreto Ciudad Colon</h5>
+              <p class="mb-0" data-i18n="gallery.item3.overlay">Obra de concreto para alta durabilidad.</p>
             </div>
           </button>
         </div>
@@ -607,21 +683,21 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Planta Industrial Sigma"
-            data-description="Planta industrial con logística optimizada, zonas seguras y automatización para operaciones 24/7."
+            data-title="Proyecto LAICA en Grecia Alajuela"
+            data-description="Intervención en instalaciones de LAICA en Grecia, Alajuela, con mejoras de infraestructura y acabados."
             data-i18n-attrs="data-title:gallery.item4.title,data-description:gallery.item4.desc"
-            data-images="./img/7.png|./img/1.png|./img/2.png"
-            data-before="./img/1.png"
-            data-after="./img/7.png"
+            data-images="./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/486329279_1084431380365349_5978015667747540299_n.jpg|./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/486343746_1084431313698689_5947218813003320382_n.jpg|./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/486501608_1084431370365350_7134020911207146656_n.jpg|./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/486608163_1084431327032021_8030000322377794774_n.jpg|./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/486723611_1084431153698705_3383112750268286485_n.jpg|./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/480962203_1084431123698708_4138155767627067625_n.jpg"
+            data-before="./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/antes.jpg"
+            data-after="./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/despues.jpg"
           >
             <img
-              src="./img/7.png"
+              src="./img/Proyectos/Proyecto LAICA, en Grecia, Alajuela,/portada.jpg"
               data-i18n-attrs="alt:gallery.item4.alt"
-              alt="Proyecto industrial"
+              alt="Proyecto LAICA en Grecia Alajuela"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item4.title">Planta Industrial Sigma</h5>
-              <p class="mb-0" data-i18n="gallery.item4.overlay">Optimización logística y seguridad total.</p>
+              <h5 class="mb-1" data-i18n="gallery.item4.title">Proyecto LAICA en Grecia Alajuela</h5>
+              <p class="mb-0" data-i18n="gallery.item4.overlay">Mejoras de infraestructura industrial.</p>
             </div>
           </button>
         </div>
@@ -631,21 +707,21 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Centro Comercial Plaza Viva"
-            data-description="Centro comercial con luz natural, terrazas gastronómicas y un flujo peatonal diseñado para maximizar la experiencia."
+            data-title="Proyecto Liberia Adastra Rocket"
+            data-description="Proyecto Liberia Adastra Rocket con adecuación de superficies y mejoramiento de entorno operativo."
             data-i18n-attrs="data-title:gallery.item5.title,data-description:gallery.item5.desc"
-            data-images="./img/Imagen9.png|./img/Imagen4.png|./img/Imagen5.png"
-            data-before="./img/Imagen4.png"
-            data-after="./img/Imagen9.png"
+            data-images="./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen2.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen3.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen4.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen5.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen6.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen6.1.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen9.png|./img/Proyectos/Proyecto Liberia, Adastra Rocket/Imagen1.png"
+            data-before="./img/Proyectos/Proyecto Liberia, Adastra Rocket/antes.png"
+            data-after="./img/Proyectos/Proyecto Liberia, Adastra Rocket/despues.jpeg"
           >
             <img
-              src="./img/Imagen9.png"
+              src="./img/Proyectos/Proyecto Liberia, Adastra Rocket/portada.png"
               data-i18n-attrs="alt:gallery.item5.alt"
-              alt="Centro comercial"
+              alt="Proyecto Liberia Adastra Rocket"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item5.title">Centro Comercial Plaza Viva</h5>
-              <p class="mb-0" data-i18n="gallery.item5.overlay">Experiencias de compra con luz natural.</p>
+              <h5 class="mb-1" data-i18n="gallery.item5.title">Proyecto Liberia Adastra Rocket</h5>
+              <p class="mb-0" data-i18n="gallery.item5.overlay">Adecuación integral de superficies.</p>
             </div>
           </button>
         </div>
@@ -655,24 +731,187 @@
             class="gallery-card tilt-card gallery-trigger"
             data-bs-toggle="modal"
             data-bs-target="#projectModal"
-            data-title="Conjunto Vista Azul"
-            data-description="Urbanismo residencial con zonas verdes integradas, amenidades recreativas y circulación segura."
+            data-title="Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27"
+            data-description="Canalización de aguas en el Km 44 de la Ruta Nacional 27 para mejorar drenaje y seguridad vial."
             data-i18n-attrs="data-title:gallery.item6.title,data-description:gallery.item6.desc"
-            data-images="./img/Imagen7.png|./img/Imagen8.png|./img/Imagen2.png"
-            data-before="./img/Imagen2.png"
-            data-after="./img/Imagen7.png"
+            data-images="./img/Proyectos/Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27/img.jpg|./img/Proyectos/Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27/img1.jpg"
+            data-before="./img/Proyectos/Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27/antes.jpg"
+            data-after="./img/Proyectos/Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27/despues.jpg"
           >
             <img
-              src="./img/Imagen7.png"
+              src="./img/Proyectos/Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27/despues.jpg"
               data-i18n-attrs="alt:gallery.item6.alt"
-              alt="Urbanismo residencial"
+              alt="Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27"
             />
             <div class="gallery-overlay">
-              <h5 class="mb-1" data-i18n="gallery.item6.title">Conjunto Vista Azul</h5>
-              <p class="mb-0" data-i18n="gallery.item6.overlay">Áreas sociales y zonas verdes integradas.</p>
+              <h5 class="mb-1" data-i18n="gallery.item6.title">Proyecto canalización de aguas en el Km 44 de la Ruta Nacional 27</h5>
+              <p class="mb-0" data-i18n="gallery.item6.overlay">Canalización para mejorar drenaje vial.</p>
             </div>
           </button>
         </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Proyecto Grupo Sur Química"
+            data-description="Intervención de pavimento y adecuaciones operativas en planta de Grupo Sur Química."
+            data-i18n-attrs="data-title:gallery.item7.title,data-description:gallery.item7.desc"
+            data-images="./img/Proyectos/Proyecto Grupo Sur Quimica/474982149_1012034537456242_2120751441016743512_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475111398_1012034410789588_2562875088082496034_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475176212_1012034414122921_2424194473173978438_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475266492_1012034437456252_5333696733567275858_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475311858_1012034444122918_5580999495438214201_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475406268_1012034447456251_4919007742094641262_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475406270_1012034574122905_5631900263595019097_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475460275_1012034557456240_5706610728006159553_n.jpg|./img/Proyectos/Proyecto Grupo Sur Quimica/475549234_1012034420789587_4588973475181174897_n.jpg"
+            data-before="./img/Proyectos/Proyecto Grupo Sur Quimica/474982149_1012034537456242_2120751441016743512_n.jpg"
+            data-after="./img/Proyectos/Proyecto Grupo Sur Quimica/475549234_1012034420789587_4588973475181174897_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto Grupo Sur Quimica/475549234_1012034420789587_4588973475181174897_n.jpg" data-i18n-attrs="alt:gallery.item7.alt" alt="Proyecto Grupo Sur Química" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item7.title">Proyecto Grupo Sur Química</h5>
+              <p class="mb-0" data-i18n="gallery.item7.overlay">Mejora de superficie para operación industrial.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in" data-aos-delay="100">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Proyecto Pedregal"
+            data-description="Trabajos de mejoramiento vial y conformación de superficie en proyecto Pedregal."
+            data-i18n-attrs="data-title:gallery.item8.title,data-description:gallery.item8.desc"
+            data-images="./img/Proyectos/Proyecto PEDREGAL/481671894_1068294811979006_260898191714516555_n.jpg|./img/Proyectos/Proyecto PEDREGAL/481771645_1068295091978978_57600857928212786_n.jpg|./img/Proyectos/Proyecto PEDREGAL/481901574_1068294881978999_3616109293070544028_n.jpg|./img/Proyectos/Proyecto PEDREGAL/481993949_1068295145312306_8015042130090943639_n.jpg|./img/Proyectos/Proyecto PEDREGAL/481998978_1068295245312296_5923228771600854278_n.jpg|./img/Proyectos/Proyecto PEDREGAL/482005234_1068295181978969_4733052473289703783_n.jpg|./img/Proyectos/Proyecto PEDREGAL/482022438_1068294978645656_8233587004043322636_n.jpg|./img/Proyectos/Proyecto PEDREGAL/482024237_1068294818645672_2194744397838856783_n.jpg"
+            data-before="./img/Proyectos/Proyecto PEDREGAL/481671894_1068294811979006_260898191714516555_n.jpg"
+            data-after="./img/Proyectos/Proyecto PEDREGAL/482024237_1068294818645672_2194744397838856783_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto PEDREGAL/482005234_1068295181978969_4733052473289703783_n.jpg" data-i18n-attrs="alt:gallery.item8.alt" alt="Proyecto Pedregal" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item8.title">Proyecto Pedregal</h5>
+              <p class="mb-0" data-i18n="gallery.item8.overlay">Mejoramiento vial en entorno industrial.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in" data-aos-delay="200">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Peaje Pozón Orotina"
+            data-description="Mantenimiento de marquesinas y adecuaciones estructurales en peaje Pozón, Orotina."
+            data-i18n-attrs="data-title:gallery.item9.title,data-description:gallery.item9.desc"
+            data-images="./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/486812801_1086411800167307_204011877717546043_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/486844827_1086411570167330_8747592910824381150_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/486944137_1086411793500641_6546619847138963507_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487409727_1086411553500665_1824845012685816656_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487502023_1086411546833999_5231815655332409769_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487517852_1086411550167332_3478473922536704529_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487698107_1086411790167308_6901991362445391068_n.jpg|./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487827216_1086411796833974_2014450935102402271_n.jpg"
+            data-before="./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/486812801_1086411800167307_204011877717546043_n.jpg"
+            data-after="./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487827216_1086411796833974_2014450935102402271_n.jpg"
+          >
+            <img src="./img/Proyectos/Peaje Pozon Orotina, Mantenimiento de Marquesinas/487698107_1086411790167308_6901991362445391068_n.jpg" data-i18n-attrs="alt:gallery.item9.alt" alt="Peaje Pozón Orotina" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item9.title">Peaje Pozón Orotina</h5>
+              <p class="mb-0" data-i18n="gallery.item9.overlay">Mantenimiento integral de marquesinas.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Bajante de agua Km 58"
+            data-description="Construcción de bajante de agua en el Km 58 de la Ruta Nacional 27 para control de escorrentías."
+            data-i18n-attrs="data-title:gallery.item10.title,data-description:gallery.item10.desc"
+            data-images="./img/Proyectos/Proyecto realizado en el Km 58 de la Ruta Nacional 27, Bajante de Agua/486457238_1083631393778681_7565450983047667878_n.jpg|./img/Proyectos/Proyecto realizado en el Km 58 de la Ruta Nacional 27, Bajante de Agua/486692503_1083631340445353_2090421865799474209_n.jpg"
+            data-before="./img/Proyectos/Proyecto realizado en el Km 58 de la Ruta Nacional 27, Bajante de Agua/486457238_1083631393778681_7565450983047667878_n.jpg"
+            data-after="./img/Proyectos/Proyecto realizado en el Km 58 de la Ruta Nacional 27, Bajante de Agua/486692503_1083631340445353_2090421865799474209_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto realizado en el Km 58 de la Ruta Nacional 27, Bajante de Agua/486692503_1083631340445353_2090421865799474209_n.jpg" data-i18n-attrs="alt:gallery.item10.alt" alt="Bajante de agua Km 58" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item10.title">Bajante de agua Km 58</h5>
+              <p class="mb-0" data-i18n="gallery.item10.overlay">Control hidráulico para mayor seguridad vial.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in" data-aos-delay="100">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Proyecto Km 34 Ruta 27"
+            data-description="Obras de mejora y canalización en el Km 34 de la Ruta Nacional 27 para reforzar drenaje y estabilidad."
+            data-i18n-attrs="data-title:gallery.item11.title,data-description:gallery.item11.desc"
+            data-images="./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/486523837_1083645713777249_1825612792679484864_n.jpg|./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/486600781_1083645680443919_3205417998964505052_n.jpg|./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/486779253_1083645797110574_28308330250224681_n.jpg|./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/487056963_1083645440443943_5583362329243553108_n.jpg"
+            data-before="./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/486523837_1083645713777249_1825612792679484864_n.jpg"
+            data-after="./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/487056963_1083645440443943_5583362329243553108_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto realizado en el Km 34 de la Ruta Nacional 27/487056963_1083645440443943_5583362329243553108_n.jpg" data-i18n-attrs="alt:gallery.item11.alt" alt="Proyecto Km 34 Ruta 27" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item11.title">Proyecto Km 34 Ruta 27</h5>
+              <p class="mb-0" data-i18n="gallery.item11.overlay">Mejoras de canalización y protección vial.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in" data-aos-delay="200">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Proyecto Níspero Guanacaste"
+            data-description="Instalación de barrera Flex Beam en Níspero, Guanacaste, para aumentar seguridad en carretera."
+            data-i18n-attrs="data-title:gallery.item12.title,data-description:gallery.item12.desc"
+            data-images="./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/Portada.jpeg|./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504405280_1139689571506196_6006399848113304729_n.jpg|./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504681113_1139689604839526_2397952052064824965_n.jpg|./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504838041_1139689668172853_6653635380665486406_n.jpg|./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504864309_1139689714839515_5958536501672688360_n.jpg|./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504987823_1139689641506189_1572934109003632303_n.jpg"
+            data-before="./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504405280_1139689571506196_6006399848113304729_n.jpg"
+            data-after="./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/504987823_1139689641506189_1572934109003632303_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto Nispero Guanacaste, Colocación Flex Beam/Portada.jpeg" data-i18n-attrs="alt:gallery.item12.alt" alt="Proyecto Níspero Guanacaste" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item12.title">Proyecto Níspero Guanacaste</h5>
+              <p class="mb-0" data-i18n="gallery.item12.overlay">Colocación de Flex Beam para seguridad vial.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Manejo de aguas pluviales"
+            data-description="Obra de manejo de aguas pluviales con cunetas y bajante para mejorar evacuación hidráulica."
+            data-i18n-attrs="data-title:gallery.item13.title,data-description:gallery.item13.desc"
+            data-images="./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486399794_1084685950339892_2010856111510444380_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486408425_1084685947006559_5001182564378298317_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486412471_1084685923673228_3354375884537317223_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486528381_1084685953673225_8140107103645656234_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486611308_1084685983673222_43058433611261063_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486657276_1084686087006545_8863494057179759629_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486693825_1084686067006547_4218075306430812738_n.jpg|./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486768459_1084685957006558_6654318948397131427_n.jpg"
+            data-before="./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486399794_1084685950339892_2010856111510444380_n.jpg"
+            data-after="./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486768459_1084685957006558_6654318948397131427_n.jpg"
+          >
+            <img src="./img/Proyectos/Proyecto de obra de Manjeo de Aguas pluviales, colocación de cunetas y bajante/486768459_1084685957006558_6654318948397131427_n.jpg" data-i18n-attrs="alt:gallery.item13.alt" alt="Manejo de aguas pluviales" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item13.title">Manejo de aguas pluviales</h5>
+              <p class="mb-0" data-i18n="gallery.item13.overlay">Cunetas y bajante para control de escorrentía.</p>
+            </div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-4 extra-project d-none" data-aos="zoom-in" data-aos-delay="100">
+          <button
+            type="button"
+            class="gallery-card tilt-card gallery-trigger"
+            data-bs-toggle="modal"
+            data-bs-target="#projectModal"
+            data-title="Cabezal y muro PK56"
+            data-description="Construcción de cabezal y muro en PK56 para reforzar estabilidad y conducción del flujo hídrico."
+            data-i18n-attrs="data-title:gallery.item14.title,data-description:gallery.item14.desc"
+            data-images="./img/Proyectos/Construcción de cabezal y muro PK56/Imagen1.png|./img/Proyectos/Construcción de cabezal y muro PK56/Imagen2.png|./img/Proyectos/Construcción de cabezal y muro PK56/Imagen3.png|./img/Proyectos/Construcción de cabezal y muro PK56/Imagen4.png|./img/Proyectos/Construcción de cabezal y muro PK56/Imagen5.png|./img/Proyectos/Construcción de cabezal y muro PK56/Imagen6.png|./img/Proyectos/Construcción de cabezal y muro PK56/image7.png|./img/Proyectos/Construcción de cabezal y muro PK56/imagen8.png|./img/Proyectos/Construcción de cabezal y muro PK56/imagen9.png|./img/Proyectos/Construcción de cabezal y muro PK56/imagen10.png|./img/Proyectos/Construcción de cabezal y muro PK56/imagen11.png"
+            data-before="./img/Proyectos/Construcción de cabezal y muro PK56/Imagen1.png"
+            data-after="./img/Proyectos/Construcción de cabezal y muro PK56/Imagen6.png"
+          >
+            <img src="./img/Proyectos/Construcción de cabezal y muro PK56/Imagen6.png" data-i18n-attrs="alt:gallery.item14.alt" alt="Cabezal y muro PK56" />
+            <div class="gallery-overlay">
+              <h5 class="mb-1" data-i18n="gallery.item14.title">Cabezal y muro PK56</h5>
+              <p class="mb-0" data-i18n="gallery.item14.overlay">Obra estructural para encauzamiento seguro.</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="text-center mt-5" data-aos="fade-up">
+        <button type="button" id="toggleProjectsBtn" class="btn btn-outline-success px-4 py-2" data-i18n="gallery.showMore">Ver más</button>
       </div>
     </div>
   </section>
@@ -755,9 +994,9 @@
             puedes escribirnos por nuestros canales directos.
           </p>
           <div class="mt-4">
-            <p><i class="fa-solid fa-phone footer-icon me-2"></i>+57 300 456 7890</p>
-            <p><i class="fa-solid fa-envelope footer-icon me-2"></i>contacto@siempreconstructora.com</p>
-            <p><i class="fa-solid fa-location-dot footer-icon me-2"></i>Av. Innovación 123, Medellín</p>
+            <p><i class="fa-solid fa-phone footer-icon me-2"></i>+506 8916-2000 / 8988-2000</p>
+            <p><i class="fa-solid fa-envelope footer-icon me-2"></i>cotizaciones@2000siempre.com</p>
+            <p><i class="fa-solid fa-location-dot footer-icon me-2"></i>Costa Rica, Provincia de Alajuela, Grecia</p>
           </div>
           <div class="d-flex gap-3 mt-4">
             <a class="btn btn-outline-primary" href="https://www.facebook.com/2000siemprecr/">
@@ -867,11 +1106,11 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
-          <h5 class="fw-bold text-white">SiempreConstructora</h5>
+          <h5 class="fw-bold text-white">2000siempre</h5>
           <p class="mb-0" data-i18n="footer.tagline">Construimos futuro con innovación y confianza.</p>
         </div>
         <div class="col-md-6 text-md-end mt-3 mt-md-0">
-          <small data-i18n="footer.rights">© 2024 SiempreConstructora. Todos los derechos reservados.</small>
+          <small data-i18n="footer.rights">© 2026 2000siempre. Todos los derechos reservados.</small>
         </div>
       </div>
     </div>
@@ -902,7 +1141,7 @@
               class="btn btn-success whatsapp-modal__cta"
               data-i18n="whatsapp.cta"
               data-i18n-attrs="href:whatsapp.link,aria-label:whatsapp.ctaAria"
-              href="https://wa.me/573004567890"
+              href="https://wa.me/50689162000"
               target="_blank"
               rel="noopener"
               aria-label="Iniciar chat por WhatsApp"
@@ -914,7 +1153,7 @@
                 class="whatsapp-quick-link"
                 data-i18n="whatsapp.quickQuote"
                 data-i18n-attrs="href:whatsapp.quickQuoteLink,aria-label:whatsapp.quickQuoteAria"
-                href="https://wa.me/573004567890"
+                href="https://wa.me/50689162000"
                 target="_blank"
                 rel="noopener"
                 aria-label="Enviar mensaje para cotizar"
@@ -925,7 +1164,7 @@
                 class="whatsapp-quick-link"
                 data-i18n="whatsapp.quickVisit"
                 data-i18n-attrs="href:whatsapp.quickVisitLink,aria-label:whatsapp.quickVisitAria"
-                href="https://wa.me/573004567890"
+                href="https://wa.me/50689162000"
                 target="_blank"
                 rel="noopener"
                 aria-label="Enviar mensaje para agendar visita"
@@ -936,7 +1175,7 @@
                 class="whatsapp-quick-link"
                 data-i18n="whatsapp.quickSupport"
                 data-i18n-attrs="href:whatsapp.quickSupportLink,aria-label:whatsapp.quickSupportAria"
-                href="https://wa.me/573004567890"
+                href="https://wa.me/50689162000"
                 target="_blank"
                 rel="noopener"
                 aria-label="Enviar mensaje para soporte y dudas"
@@ -1012,5 +1251,6 @@
   <script src="js/particles-impact.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/gallery-modal.js"></script>
+  <script src="js/gallery-toggle.js"></script>
 </body>
 </html>

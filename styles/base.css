@@ -27,6 +27,30 @@ body {
   line-height: 1.6;
 }
 
+/* Scrollbar styling */
+html {
+  scrollbar-width: auto;
+  scrollbar-color: var(--brand-blue) #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--brand-blue);
+  border-radius: 12px;
+  border: 3px solid #ffffff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-blue-dark);
+}
+
 .bot-field {
   position: absolute;
   left: -10000px;

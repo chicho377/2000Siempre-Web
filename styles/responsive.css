@@ -299,9 +299,9 @@
   }
 
   .siro-modal-villain {
-    width: min(460px, 125%);
-    opacity: 0.55;
-    transform: translate(10%, -4%) scale(1.04);
+    width: min(160px, 30%);
+    opacity: 0.68;
+    transform: none;
   }
 
   .siro-modal-info {
@@ -324,9 +324,9 @@
   }
 
   .siro-modal-villain {
-    width: 120%;
-    opacity: 0.5;
-    transform: translate(6%, -8%) scale(1);
+    width: min(120px, 29%);
+    opacity: 0.64;
+    transform: none;
   }
 
   .process-character-trigger__hint {

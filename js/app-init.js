@@ -8,6 +8,21 @@
 })();
 
 (() => {
+  const clientsMarquee = document.querySelector(".clients-marquee");
+  const clientsTrack = clientsMarquee?.querySelector(".clients-track");
+  if (!clientsTrack) return;
+
+  const originalCards = Array.from(clientsTrack.querySelectorAll(".client-card"));
+  originalCards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    const logo = clone.querySelector("img");
+    if (logo) logo.alt = "";
+    clientsTrack.appendChild(clone);
+  });
+})();
+
+(() => {
   const timelineItems = document.querySelectorAll(".timeline-item");
   if (!timelineItems.length) return;
 

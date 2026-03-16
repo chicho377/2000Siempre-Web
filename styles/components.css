@@ -360,7 +360,7 @@
   gap: 24px;
   flex-shrink: 0;
   min-width: max-content;
-  animation: clients-scroll 32s linear infinite;
+  animation: clients-scroll 28s linear infinite;
 }
 
 .clients-marquee:hover .clients-track {
@@ -368,7 +368,7 @@
 }
 
 .client-card {
-  min-width: 190px;
+  min-width: 220px;
   padding: 16px 26px;
   border-radius: 999px;
   background: transparent;
@@ -380,11 +380,16 @@
 }
 
 .client-card img {
-  max-width: 150px;
-  max-height: 52px;
+  max-width: 190px;
+  max-height: 68px;
   width: auto;
   height: auto;
   display: block;
+}
+
+.client-card img.logo-ruta27 {
+  max-width: 150px;
+  max-height: 52px;
 }
 
 @keyframes clients-scroll {
@@ -392,7 +397,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 

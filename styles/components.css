@@ -109,8 +109,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 280px;
-  padding: 12px 30px;
+  min-width: 240px;
+  padding: 10px 24px;
+  font-size: 0.95rem;
   border-radius: 999px;
   background: linear-gradient(135deg, var(--brand-blue-dark), var(--brand-blue));
   color: #fff;

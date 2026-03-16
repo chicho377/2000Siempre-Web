@@ -294,8 +294,12 @@
     min-height: 360px;
   }
 
+  .siro-modal-character-row {
+    width: min(520px, 100%);
+  }
+
   .siro-modal-character {
-    max-height: 320px;
+    max-height: 180px;
   }
 
   .siro-modal-villain {
@@ -319,14 +323,25 @@
     padding: 16px;
   }
 
+  .siro-modal-character-row {
+    width: 100%;
+    gap: 6px;
+  }
+
   .siro-modal-character {
-    max-height: 250px;
+    max-height: 120px;
+    padding: 4px;
+  }
+
+  .siro-modal-villain-wrap {
+    padding: 10px;
   }
 
   .siro-modal-villain {
-    width: 120%;
-    opacity: 0.5;
-    transform: translate(6%, -8%) scale(1);
+    width: min(300px, 88%);
+    max-width: 100%;
+    opacity: 0.42;
+    transform: translate(-4%, 8%) scale(0.84);
   }
 
   .process-character-trigger__hint {

@@ -87,3 +87,28 @@
     });
   });
 })();
+
+(() => {
+  const media = document.querySelectorAll("video[data-iphone-apng]");
+  if (!media.length) return;
+
+  const ua = navigator.userAgent || "";
+  const platform = navigator.platform || "";
+  const isIOS =
+    /iPhone|iPod/i.test(ua) ||
+    (platform === "MacIntel" && typeof navigator.maxTouchPoints === "number" && navigator.maxTouchPoints > 1);
+
+  if (!isIOS) return;
+
+  media.forEach((video) => {
+    const apngSrc = video.dataset.iphoneApng;
+    if (!apngSrc) return;
+
+    const img = document.createElement("img");
+    img.className = video.className;
+    img.src = apngSrc;
+    img.alt = "";
+    img.loading = "lazy";
+    video.replaceWith(img);
+  });
+})();

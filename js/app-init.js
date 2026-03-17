@@ -87,3 +87,22 @@
     });
   });
 })();
+
+(() => {
+  const characterWebm = document.querySelector("[data-character-webm]");
+  const characterApng = document.querySelector("[data-character-apng]");
+  if (!characterWebm || !characterApng) return;
+
+  const userAgent = navigator.userAgent || "";
+  const isIOS = /iPhone|iPad|iPod/i.test(userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  if (isIOS) {
+    characterWebm.style.display = "none";
+    characterApng.style.display = "block";
+    return;
+  }
+
+  characterWebm.style.display = "block";
+  characterApng.style.display = "none";
+})();

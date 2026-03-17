@@ -216,6 +216,18 @@
   display: block;
 }
 
+.process-character__fallback {
+  display: none;
+}
+
+.process-character-trigger.is-ios-fallback .process-character__media {
+  display: none;
+}
+
+.process-character-trigger.is-ios-fallback .process-character__fallback {
+  display: block;
+}
+
 .stats-special::after {
   content: "";
   position: absolute;

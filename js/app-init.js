@@ -87,3 +87,24 @@
     });
   });
 })();
+
+
+(() => {
+  const characterVideo = document.querySelector(".process-character__media");
+  if (!characterVideo) return;
+
+  const isiPhone = /iPhone/i.test(navigator.userAgent);
+  const iosSource = characterVideo.querySelector('source[data-ios-only="true"]');
+  const webmSource = characterVideo.querySelector('source[type="video/webm"]');
+
+  if (!isiPhone && iosSource) {
+    iosSource.remove();
+    characterVideo.load();
+    return;
+  }
+
+  if (isiPhone && webmSource) {
+    webmSource.remove();
+    characterVideo.load();
+  }
+})();

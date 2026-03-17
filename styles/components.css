@@ -210,9 +210,22 @@
 }
 
 .process-character__media,
-.process-character img {
+.process-character__media img,
+.process-character__fallback {
   width: 100%;
   height: auto;
+  display: block;
+}
+
+.process-character__fallback {
+  display: none;
+}
+
+.process-character-trigger.is-ios-fallback .process-character__media {
+  display: none;
+}
+
+.process-character-trigger.is-ios-fallback .process-character__fallback {
   display: block;
 }
 

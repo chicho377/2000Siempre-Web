@@ -87,3 +87,16 @@
     });
   });
 })();
+
+
+(() => {
+  const characterTrigger = document.querySelector(".process-character-trigger");
+  if (!characterTrigger) return;
+
+  const isIOS = /iP(ad|hone|od)/.test(navigator.userAgent)
+    || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  if (isIOS) {
+    characterTrigger.classList.add("is-ios-fallback");
+  }
+})();

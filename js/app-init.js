@@ -87,3 +87,15 @@
     });
   });
 })();
+
+(() => {
+  const characterWebm = document.querySelector("[data-character-webm]");
+  const characterApng = document.querySelector("[data-character-apng]");
+  if (!characterWebm || !characterApng) return;
+
+  const isIPhone = /iPhone/i.test(navigator.userAgent || "");
+  if (!isIPhone) return;
+
+  characterWebm.classList.add("d-none");
+  characterApng.classList.remove("d-none");
+})();

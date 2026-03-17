@@ -216,6 +216,22 @@
   display: block;
 }
 
+.process-character__media--iphone {
+  display: none;
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (hover: none) and (pointer: coarse) {
+    .process-character video.process-character__media {
+      display: none;
+    }
+
+    .process-character__media--iphone {
+      display: block;
+    }
+  }
+}
+
 .stats-special::after {
   content: "";
   position: absolute;

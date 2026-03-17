@@ -87,3 +87,22 @@
     });
   });
 })();
+(() => {
+  const iosCharacterVideo = document.querySelector(".process-character__media");
+  if (!iosCharacterVideo) return;
+
+  const defaultSrc = iosCharacterVideo.dataset.defaultSrc;
+  const iosSrc = iosCharacterVideo.dataset.iosSrc;
+  if (!defaultSrc || !iosSrc) return;
+
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  if (!isIOS) return;
+
+  iosCharacterVideo.innerHTML = `
+    <source src="${iosSrc}" type="video/quicktime" />
+    <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
+  `;
+  iosCharacterVideo.load();
+})();

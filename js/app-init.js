@@ -87,3 +87,23 @@
     });
   });
 })();
+(() => {
+  const characterVideo = document.querySelector(".process-character__media");
+  if (!characterVideo) return;
+
+  const defaultSrc = characterVideo.dataset.defaultSrc;
+  const iosSrc = characterVideo.dataset.iosSrc;
+  if (!defaultSrc || !iosSrc) return;
+
+  const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+  const videoSrc = isIOS ? iosSrc : defaultSrc;
+
+  if (characterVideo.getAttribute("src") !== videoSrc) {
+    characterVideo.setAttribute("src", videoSrc);
+    characterVideo.load();
+  }
+
+  characterVideo.play().catch(() => {});
+})();

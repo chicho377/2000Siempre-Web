@@ -216,6 +216,10 @@
   display: block;
 }
 
+video {
+  background: transparent;
+}
+
 .stats-special::after {
   content: "";
   position: absolute;

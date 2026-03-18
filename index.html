@@ -514,10 +514,7 @@
       data-i18n-attrs="aria-label:siro.modalTriggerAria"
       aria-label="Abrir historia completa de Ciro"
     >
-      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
-        <source src="./personaje2.webm" type="video/webm" />
-        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
-      </video>
+      <canvas id="ciroCanvas" class="process-character__media"></canvas>
       <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
     </button>
   </section>
@@ -1257,5 +1254,79 @@
   <script src="js/contact-form.js"></script>
   <script src="js/gallery-modal.js"></script>
   <script src="js/gallery-toggle.js"></script>
+  <script>
+    (function () {
+      const canvas = document.getElementById("ciroCanvas");
+      if (!canvas) return;
+
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+
+      const video = document.createElement("video");
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      video.playsInline = true;
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      const source = document.createElement("source");
+
+      if (isSafari) {
+        source.src = "./personaje.mov";
+        source.type = "video/quicktime";
+      } else {
+        source.src = "./personaje2.webm";
+        source.type = "video/webm";
+      }
+
+      video.appendChild(source);
+      video.style.display = "none";
+      document.body.appendChild(video);
+
+      video.addEventListener("loadedmetadata", () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+      });
+
+      function draw() {
+        if (!video.paused && !video.ended && video.readyState >= 2) {
+          ctx.drawImage(video, 0, 0);
+          const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const d = frame.data;
+
+          for (let i = 0; i < d.length; i += 4) {
+            const r = d[i];
+            const g = d[i + 1];
+            const b = d[i + 2];
+            const max = Math.max(r, g, b);
+
+            if (max < 20) {
+              d[i + 3] = 0;
+            } else if (max < 50) {
+              d[i + 3] = Math.round(((max - 20) / 30) * 255);
+            }
+          }
+
+          ctx.putImageData(frame, 0, 0);
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      video.addEventListener("play", draw);
+      video.load();
+      video.play().catch(() => {
+        document.addEventListener(
+          "click",
+          () => {
+            video.play();
+          },
+          { once: true }
+        );
+      });
+    })();
+  </script>
 </body>
 </html>

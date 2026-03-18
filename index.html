@@ -514,10 +514,11 @@
       data-i18n-attrs="aria-label:siro.modalTriggerAria"
       aria-label="Abrir historia completa de Ciro"
     >
-      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
+      <video class="process-character__media" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="./img/especialSiempre/Special SiempreSinFondo.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <source src="./personaje.mov" type="video/quicktime" />
         <source src="./personaje2.webm" type="video/webm" />
-        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
       </video>
+      <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="Ciro en su forma principal" style="display:none;" />
       <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
     </button>
   </section>

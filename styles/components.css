@@ -216,6 +216,11 @@
   display: block;
 }
 
+.process-character__media {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
 .stats-special::after {
   content: "";
   position: absolute;
@@ -1201,4 +1206,3 @@ footer {
   border: 1px dashed rgba(10, 42, 95, 0.22);
   background: rgba(255, 255, 255, 0.74);
 }
-

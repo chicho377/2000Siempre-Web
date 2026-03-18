@@ -1202,3 +1202,10 @@ footer {
   background: rgba(255, 255, 255, 0.74);
 }
 
+
+#ciroCanvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}

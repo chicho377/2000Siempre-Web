@@ -397,6 +397,9 @@
           <img src="./img/LogosCarruselGris/logoAD.png" alt="Logo Adastra" />
         </div>
         <div class="client-card">
+          <img src="./img/LogosCarruselGris/logoAeris.png" alt="Logo Aeris" />
+        </div>
+        <div class="client-card">
           <img src="./img/LogosCarruselGris/logoBN.png" alt="Logo BN" />
         </div>
         <div class="client-card">
@@ -510,10 +513,28 @@
       data-i18n-attrs="aria-label:siro.modalTriggerAria"
       aria-label="Abrir historia completa de Ciro"
     >
-      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
-        <source src="./personaje2.webm" type="video/webm" />
-        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
-      </video>
+      <div id="processCharacterMediaContainer"></div>
+      <script>
+        (() => {
+          const mediaContainer = document.getElementById("processCharacterMediaContainer");
+          if (!mediaContainer) return;
+
+          const fallbackImage = "./img/especialSiempre/Special SiempreSinFondo.png";
+          const isIPhone = /iPhone/i.test(navigator.userAgent || "");
+
+          if (isIPhone) {
+            mediaContainer.innerHTML = `<img class="process-character__media" src="${fallbackImage}" alt="" />`;
+            return;
+          }
+
+          mediaContainer.innerHTML = `
+            <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
+              <source src="./personaje2.webm" type="video/webm" />
+              <img src="${fallbackImage}" alt="" />
+            </video>
+          `;
+        })();
+      </script>
       <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
     </button>
   </section>
@@ -1064,6 +1085,7 @@
                   <option data-i18n="contact.projectOptionCommercial">Comercial</option>
                   <option data-i18n="contact.projectOptionIndustrial">Industrial</option>
                   <option data-i18n="contact.projectOptionPublic">Infraestructura pública</option>
+                  <option data-i18n="contact.projectOptionOther">Otros</option>
                 </select>
                 <div class="invalid-feedback" data-i18n="contact.projectTypeError">Selecciona un tipo de proyecto.</div>
               </div>

@@ -49,6 +49,14 @@
   }
 
   if (navbarCollapse && navbarToggler && navbarLinks.length && window.bootstrap) {
+    navbarCollapse.addEventListener("show.bs.collapse", () => {
+      navbar?.classList.add("menu-open");
+    });
+
+    navbarCollapse.addEventListener("hidden.bs.collapse", () => {
+      navbar?.classList.remove("menu-open");
+    });
+
     navbarLinks.forEach((link) => {
       link.addEventListener("click", () => {
         if (!navbarCollapse.classList.contains("show")) return;

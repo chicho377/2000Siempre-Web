@@ -514,10 +514,7 @@
       data-i18n-attrs="aria-label:siro.modalTriggerAria"
       aria-label="Abrir historia completa de Ciro"
     >
-      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
-        <source src="./personaje2.webm" type="video/webm" />
-        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
-      </video>
+      <canvas id="ciroCanvas" class="process-character__media"></canvas>
       <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
     </button>
   </section>
@@ -1257,5 +1254,120 @@
   <script src="js/contact-form.js"></script>
   <script src="js/gallery-modal.js"></script>
   <script src="js/gallery-toggle.js"></script>
+  <script>
+(function () {
+  const isSafari = !!(
+    navigator.vendor &&
+    navigator.vendor.indexOf('Apple') > -1 &&
+    !navigator.userAgent.match(/CriOS/i) &&
+    !navigator.userAgent.match(/FxiOS/i)
+  );
+
+  const container = document.querySelector('.process-character-trigger');
+
+  if (!isSafari) {
+    const video = document.createElement('video');
+    video.className = 'process-character__media';
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    const source = document.createElement('source');
+    source.src = './personaje2.webm';
+    source.type = 'video/webm';
+    video.appendChild(source);
+    container.insertBefore(video, container.firstChild);
+    return;
+  }
+
+  // Safari: Canvas + MOV
+  const canvas = document.getElementById('ciroCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const video = document.createElement('video');
+  video.loop = true;
+  video.muted = true;
+  video.playsInline = true;
+  video.setAttribute('playsinline', '');
+  video.setAttribute('webkit-playsinline', '');
+  video.style.position = 'fixed';
+  video.style.top = '-9999px';
+  video.style.opacity = '0';
+  video.style.pointerEvents = 'none';
+  document.body.appendChild(video);
+
+  const source = document.createElement('source');
+  source.src = './personaje.mov';
+  source.type = 'video/quicktime';
+  video.appendChild(source);
+
+  video.addEventListener('loadedmetadata', () => {
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+  });
+
+  function draw() {
+    if (!video.paused && !video.ended && video.readyState >= 2) {
+      ctx.drawImage(video, 0, 0);
+      const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const d = frame.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const max = Math.max(d[i], d[i + 1], d[i + 2]);
+        if (max < 20) {
+          d[i + 3] = 0;
+        } else if (max < 50) {
+          d[i + 3] = Math.round((max - 20) / 30 * 255);
+        }
+      }
+      ctx.putImageData(frame, 0, 0);
+    }
+    requestAnimationFrame(draw);
+  }
+
+  video.addEventListener('play', draw);
+  video.load();
+
+  video.addEventListener('error', (e) => {
+    console.error('Video error:', video.error);
+    alert('Video error: ' + (video.error ? video.error.message : 'unknown'));
+  });
+
+  video.addEventListener('loadeddata', () => {
+    console.log('Video loaded OK, duration:', video.duration);
+    alert('Video OK: ' + video.duration + 's');
+  });
+
+  video.addEventListener('stalled', () => {
+    console.warn('Video stalled');
+    alert('Video stalled - archivo muy pesado o no carga');
+  });
+
+  // Intentar play al cargar
+  video.play().catch(() => {});
+
+  // Reintentar cuando el usuario toca/scrollea la página
+  const tryPlay = () => {
+    if (video.paused) {
+      video.play().catch(() => {});
+    }
+  };
+
+  document.addEventListener('touchstart', tryPlay, { once: true });
+  document.addEventListener('scroll', tryPlay, { once: true });
+  document.addEventListener('click', tryPlay, { once: true });
+
+  // Usar IntersectionObserver para intentar play cuando el canvas es visible
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play().catch(() => {});
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(canvas);
+})();
+</script>
 </body>
 </html>

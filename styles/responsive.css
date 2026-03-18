@@ -180,36 +180,52 @@
   }
 
   .navbar .nav-link {
-    padding: 12px 14px;
-    font-size: 1.05rem;
+    padding: 12px 18px;
+    font-size: 0.9rem;
     width: 100%;
-    text-align: left;
-    background: linear-gradient(135deg, rgba(11, 61, 145, 0.08), rgba(11, 61, 145, 0.02));
-    border: 1px solid rgba(11, 61, 145, 0.1);
-    box-shadow: 0 10px 18px rgba(3, 18, 48, 0.06);
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #021d1a;
+    background: linear-gradient(180deg, #ffffff, #f3f6f7);
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 6px 14px rgba(1, 10, 9, 0.2);
+    border-radius: 999px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0;
   }
 
   .navbar .nav-link:hover,
   .navbar .nav-link:focus {
-    background: linear-gradient(135deg, rgba(11, 61, 145, 0.14), rgba(244, 124, 32, 0.08));
+    color: #021d1a;
+    background: linear-gradient(180deg, #ffffff, #ebf0f1);
   }
 
   .navbar-collapse {
     margin-top: 12px;
-    padding: 12px;
-    border-radius: 16px;
-    background: linear-gradient(140deg, rgba(255, 255, 255, 0.98), rgba(235, 242, 255, 0.95));
-    box-shadow: 0 18px 38px rgba(3, 18, 48, 0.18);
-    border: 1px solid rgba(11, 61, 145, 0.12);
+    padding: 18px 16px 16px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(0, 62, 52, 0.98), rgba(0, 87, 73, 0.98));
+    box-shadow: 0 18px 34px rgba(0, 24, 22, 0.45);
+    border: 1px solid rgba(95, 192, 175, 0.38);
     width: 100%;
     max-height: calc(100vh - 90px);
     overflow-y: auto;
     opacity: 0;
     transform: translateY(-8px);
     transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .navbar-collapse::before {
+    content: "";
+    display: block;
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 16px;
+    background: url("../Logo_2000_SIEMPRE_SinFondo.png") center/contain no-repeat;
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.35));
   }
 
   .navbar-collapse.show {
@@ -220,6 +236,21 @@
   .navbar-collapse.collapsing {
     opacity: 0;
     transform: translateY(-6px);
+  }
+
+  .navbar-collapse .d-flex {
+    width: 100%;
+    margin: 10px 0 0 !important;
+  }
+
+  .navbar-collapse #languageToggle {
+    width: 100%;
+    border-radius: 999px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-color: transparent;
+    color: #022724;
   }
 }
 

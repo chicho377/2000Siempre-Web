@@ -514,10 +514,28 @@
       data-i18n-attrs="aria-label:siro.modalTriggerAria"
       aria-label="Abrir historia completa de Ciro"
     >
-      <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
-        <source src="./personaje2.webm" type="video/webm" />
-        <img src="./img/especialSiempre/Special SiempreSinFondo.png" alt="" />
-      </video>
+      <div id="processCharacterMediaContainer"></div>
+      <script>
+        (() => {
+          const mediaContainer = document.getElementById("processCharacterMediaContainer");
+          if (!mediaContainer) return;
+
+          const fallbackImage = "./img/especialSiempre/Special SiempreSinFondo.png";
+          const isIPhone = /iPhone/i.test(navigator.userAgent || "");
+
+          if (isIPhone) {
+            mediaContainer.innerHTML = `<img class="process-character__media" src="${fallbackImage}" alt="" />`;
+            return;
+          }
+
+          mediaContainer.innerHTML = `
+            <video class="process-character__media" autoplay muted loop playsinline preload="metadata">
+              <source src="./personaje2.webm" type="video/webm" />
+              <img src="${fallbackImage}" alt="" />
+            </video>
+          `;
+        })();
+      </script>
       <span class="process-character-trigger__hint" data-i18n="siro.videoHint">Haz clic para conocer a Ciro</span>
     </button>
   </section>

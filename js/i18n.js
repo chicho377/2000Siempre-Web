@@ -1,7 +1,7 @@
 (() => {
   const translations = {
     es: {
-      "page.title": "2000 Siempre - Constructora y otros",
+      "page.title": "2000 Siempre | Constructora en Costa Rica",
       "topbar.contact": "Contacto",
       "topbar.jobs": "Empleo",
       "nav.about": "Nosotros",
@@ -30,7 +30,7 @@
       "heroVideo.fallback": "Tu navegador no soporta la reproducción de video.",
       "about.label": "Nosotros",
       "about.title": "¿Qué es 2000 Siempre?",
-      "about.description": "Es una empresa familiar dedicada a la construcción y otros negocios, cuya idea es brindar proyectos y experiencias de calidad, formados y respaldados sobre principios espirituales.",
+      "about.description": "Es una empresa familiar dedicada a la construcción en Costa Rica, especializada en obras civiles, maquinaria pesada e infraestructura para proyectos públicos y privados. Nuestra misión es brindar proyectos y experiencias de calidad, formados y respaldados sobre principios espirituales, responsabilidad y compromiso con cada cliente.",
       "about.vision.title": "Visión",
       "about.vision.desc": "Lograr el avance constructivo con un servicio de calidad a un costo accesible ante la demanda.",
       "about.mission.title": "Misión",
@@ -287,7 +287,7 @@
       "form.alert.failure.button": "Entendido"
     },
     en: {
-      "page.title": "2000 Siempre - Construction and more",
+      "page.title": "2000 Siempre | Construction Company in Costa Rica",
       "topbar.contact": "Contact",
       "topbar.jobs": "Careers",
       "nav.about": "About us",
@@ -316,7 +316,7 @@
       "heroVideo.fallback": "Your browser does not support video playback.",
       "about.label": "About us",
       "about.title": "What is 2000 Siempre?",
-      "about.description": "It is a family-owned company dedicated to construction and other businesses, with the goal of delivering high-quality projects and experiences, built and supported on spiritual principles.",
+      "about.description": "It is a family-owned company dedicated to construction in Costa Rica, specialized in civil works, heavy machinery, and infrastructure for public and private projects. Our mission is to deliver high-quality projects and experiences, built and supported on spiritual principles, responsibility, and commitment to every client.",
       "about.vision.title": "Vision",
       "about.vision.desc": "To achieve construction progress with quality service at an affordable cost in response to demand.",
       "about.mission.title": "Mission",
